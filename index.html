@@ -115,7 +115,7 @@ box-shadow: rgb(71 71 72 / 100%) 0px 2px;
 					    
 /*buttons*/
 #msform .action-button {
-	width: 100px;
+	/*width: 100px;
 	background: #27AE60;
 	font-weight: bold;
 	color: white;
@@ -123,7 +123,24 @@ box-shadow: rgb(71 71 72 / 100%) 0px 2px;
 	border-radius: 1px;
 	cursor: pointer;
 	padding: 10px 5px;
-	margin: 10px 5px;
+	margin: 10px 5px;*/
+					    
+    position: relative;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    transition-property: background-color, color, border-color, opacity, box-shadow;
+    transition-timing-function: ease-out;
+    outline: none;
+    border: 1px solid transparent;
+    margin: 0px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
+    padding: 6px 14px;
+    min-height: 40px;
+    background-color: rgb(23, 152, 205);
+    color: rgb(255, 255, 255);
+    border-radius: 4px;  
 }
 #msform .action-button:hover, #msform .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
