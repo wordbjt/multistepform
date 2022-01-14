@@ -327,7 +327,7 @@ box-shadow: rgb(71 71 72 / 100%) 0px 2px;
 //jQuery time
 var current_fs, next_fs, previous_fs; //fieldsets
 //var left, opacity, scale; //fieldset properties which we will animate
-var top, opacity, scale; //fieldset properties which we will animate
+var right, opacity, scale; //fieldset properties which we will animate
 var animating; //flag to prevent quick multi-click glitches
 
 $(".next").click(function () {
@@ -351,14 +351,14 @@ $(".next").click(function () {
       //2. bring next_fs from the right(50%)
       //left = now * 50 + "%";
       //2. bring next_fs from the bottom(50%)
-      top = now;
+      right = now * 50 + "%";
       //3. increase opacity of next_fs to 1 as it moves in
       opacity = 1 - now;
       current_fs.css({
         'transform': 'scale(' + scale + ')',
         'position': 'absolute' });
       //next_fs.css({ 'left': left, 'opacity': opacity });
-      next_fs.css({ 'top': top, 'opacity': opacity });
+      next_fs.css({ 'right': right, 'opacity': opacity });
     },
     duration: 800,
     complete: function () {
