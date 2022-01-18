@@ -424,7 +424,7 @@ $(".submit").click(function () {
 //jQuery time
 var current_fs, next_fs, previous_fs; //fieldsets
 //var left, opacity, scale; //fieldset properties which we will animate
-var bottom;
+//var bottom;
 var animating; //flag to prevent quick multi-click glitches
 
 $(".next").click(function(){
@@ -438,7 +438,8 @@ $(".next").click(function(){
 	$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 	
 	//show the next fieldset
-	next_fs.show(); 
+	//next_fs.show(); 
+	next_fs.slideUp();
 	//hide the current fieldset with style
 	current_fs.animate({opacity: 1}, {
 		step: function(now, mx) {
@@ -447,7 +448,7 @@ $(".next").click(function(){
 			//scale = 1 - (1 - now) * 0.2;
 			//2. bring next_fs from the right(50%)
 			//left = (now * 50)+"%";
-			bottom = (now * 50)+"%";		       
+			//bottom = (now * 50)+"%";		       
 			//3. increase opacity of next_fs to 1 as it moves in
 			//opacity = 1 - now;
 			//current_fs.css({
@@ -456,11 +457,11 @@ $(".next").click(function(){
 	 current_fs.css({
         //'transform': 'scale('+scale+')',
         //'position': 'relative'
-	  'position': 'absolute'
+	 // 'position': 'absolute'
       });
 			//next_fs.css({'left': left, 'opacity': opacity});
 			//next_fs.css({'bottom': bottom, 'opacity': opacity});
-			next_fs.css({'bottom': bottom});
+			//next_fs.css({'bottom': bottom});
 		}, 
 		duration: 800, 
 		complete: function(){
