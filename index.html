@@ -440,7 +440,7 @@ $(".next").click(function(){
 	//show the next fieldset
 	next_fs.show(); 
 	//hide the current fieldset with style
-	current_fs.animate({opacity: 0}, {
+	current_fs.animate({opacity: 1}, {
 		step: function(now, mx) {
 			//as the opacity of current_fs reduces to 0 - stored in "now"
 			//1. scale current_fs down to 80%
@@ -484,7 +484,7 @@ $(".previous").click(function(){
 	//show the previous fieldset
 	previous_fs.show(); 
 	//hide the current fieldset with style
-	current_fs.animate({opacity: 0}, {
+	current_fs.animate({opacity: 1}, {
 		step: function(now, mx) {
 			//as the opacity of current_fs reduces to 0 - stored in "now"
 			//1. scale previous_fs from 80% to 100%
@@ -497,7 +497,8 @@ $(".previous").click(function(){
 			//current_fs.css({'left': left});
 			current_fs.css({'bottom': bottom});			   
 			//previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
-			//previous_fs.css({'opacity': opacity});	    
+			//previous_fs.css({'opacity': opacity});
+			previous_fs.css({ });
 		}, 
 		duration: 800, 
 		complete: function(){
