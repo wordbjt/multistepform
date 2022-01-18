@@ -450,9 +450,12 @@ $(".next").click(function(){
 			bottom = (now * 50)+"%";		       
 			//3. increase opacity of next_fs to 1 as it moves in
 			opacity = 1 - now;
-			current_fs.css({
+			//current_fs.css({
+        //'transform': 'scale('+scale+')',
+        //'position': 'absolute'
+	 current_fs.css({
         'transform': 'scale('+scale+')',
-        'position': 'absolute'
+        'position': 'relative'
       });
 			//next_fs.css({'left': left, 'opacity': opacity});
 			  next_fs.css({'bottom': bottom, 'opacity': opacity});
