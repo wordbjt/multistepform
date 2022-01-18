@@ -424,7 +424,7 @@ $(".submit").click(function () {
 //jQuery time
 var current_fs, next_fs, previous_fs; //fieldsets
 //var left, opacity, scale; //fieldset properties which we will animate
-//var bottom;
+var bottom, opacity, scale;
 var animating; //flag to prevent quick multi-click glitches
 
 $(".next").click(function(){
@@ -438,30 +438,29 @@ $(".next").click(function(){
 	$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
 	
 	//show the next fieldset
-	//next_fs.show(); 
-	next_fs.slideUp();
+	next_fs.show(); 
 	//hide the current fieldset with style
-	current_fs.animate({opacity: 1}, {
+	current_fs.animate({opacity: 0}, {
 		step: function(now, mx) {
 			//as the opacity of current_fs reduces to 0 - stored in "now"
 			//1. scale current_fs down to 80%
-			//scale = 1 - (1 - now) * 0.2;
+			scale = 1 - (1 - now) * 0.2;
 			//2. bring next_fs from the right(50%)
 			//left = (now * 50)+"%";
-			//bottom = (now * 50)+"%";		       
+			bottom = (now * 50)+"%";		       
 			//3. increase opacity of next_fs to 1 as it moves in
-			//opacity = 1 - now;
+			opacity = 1 - now;
 			//current_fs.css({
         //'transform': 'scale('+scale+')',
         //'position': 'absolute'
 	 current_fs.css({
         //'transform': 'scale('+scale+')',
         //'position': 'relative'
-	 // 'position': 'absolute'
+	   'position': absolute
       });
 			//next_fs.css({'left': left, 'opacity': opacity});
 			//next_fs.css({'bottom': bottom, 'opacity': opacity});
-			//next_fs.css({'bottom': bottom});
+			next_fs.css({'bottom': bottom});
 		}, 
 		duration: 800, 
 		complete: function(){
@@ -486,21 +485,19 @@ $(".previous").click(function(){
 	//show the previous fieldset
 	previous_fs.show(); 
 	//hide the current fieldset with style
-	current_fs.animate({opacity: 1}, {
+	current_fs.animate({opacity: 0}, {
 		step: function(now, mx) {
 			//as the opacity of current_fs reduces to 0 - stored in "now"
 			//1. scale previous_fs from 80% to 100%
-			//scale = 0.8 + (1 - now) * 0.2;
+			scale = 0.8 + (1 - now) * 0.2;
 			//2. take current_fs to the right(50%) - from 0%
 			//left = ((1-now) * 50)+"%";
 			bottom = ((1-now) * 50)+"%";			 
 			//3. increase opacity of previous_fs to 1 as it moves in
-			//opacity = 1 - now;
+			opacity = 1 - now;
 			//current_fs.css({'left': left});
 			current_fs.css({'bottom': bottom});			   
-			//previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
-			//previous_fs.css({'opacity': opacity});
-			previous_fs.css({ });
+			previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
 		}, 
 		duration: 800, 
 		complete: function(){
