@@ -394,7 +394,10 @@ $(".previous").click(function () {
       //3. increase opacity of previous_fs to 1 as it moves in
       opacity = 1 - now;
       //current_fs.css({ 'left': left });
-      current_fs.css({ 'bottom': bottom });
+      //current_fs.css({ 'bottom': bottom });			   
+	current_fs.css({			   
+	'bottom': 'bottom',
+        'position': 'relative' });
       previous_fs.css({ 'transform': 'scale(' + scale + ')', 'opacity': opacity });
     },
     duration: 800,
