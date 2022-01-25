@@ -122,7 +122,8 @@
     function gotoDiv(number)
     {
       if(number == 0)
-        $("#block-up-arrow").hide();
+        //$("#block-up-arrow").hide();
+	  $("#block-up-arrow").show();
       else
         $("#block-up-arrow").show();
       if(number == totalDivs-1)
