@@ -66,13 +66,23 @@
         arrange();
       });
 
-      $("#block-up-arrow").click(function() {
+      //$("#block-up-arrow").click(function() {
+      //  goUp();
+      //});
+
+      //$("#block-down-arrow").click(function() {
+      //  goDown();
+      //});
+	    
+	    
+      $(".next").click(function() {
         goUp();
       });
 
-      $("#block-down-arrow").click(function() {
+      $(".previous").click(function() {
         goDown();
       });
+
 
       $(document).keydown(function(e){
           if (e.keyCode == 37 || e.keyCode == 38) {
