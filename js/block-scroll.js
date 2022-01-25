@@ -75,11 +75,11 @@
       //});
 	    
 	    
-      $(".next").click(function() {
+      $(".previous").click(function() {
         goUp();
       });
 
-      $(".previous").click(function() {
+      $(".next").click(function() {
         goDown();
       });
 
