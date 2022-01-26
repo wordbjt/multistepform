@@ -607,9 +607,11 @@ $(document).ready(function() {
     if($(this).attr('id') == 'checkbox-online') {		
     $('#submit-form-11').fadeIn('slow');
     $('#continue-form-11').fadeOut('slow');
+    $('.conditional-section').hide();
   } else {
     $('#submit-form-11').fadeOut('slow');
     $('#continue-form-11').fadeIn('slow');
+    $('.conditional-section').show();
   }                   
 });
 			
@@ -619,9 +621,11 @@ $(document).ready(function() {
    $('input[type="radio"]').click(function() {
     if($(this).attr('id') == 'checkbox-facetoface') {			
     $('#continue-form-11').fadeIn('slow');
+    $('.conditional-section').show();			
   } else {
     $('#continue-form-11').fadeOut('slow');
-  }                   
+    $('.conditional-section').hide();		
+  }
 });
 			
 });			
