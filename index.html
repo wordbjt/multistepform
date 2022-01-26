@@ -372,8 +372,12 @@ $(function() {
 </script>
 				     
 <script>
-$('#checkbox-online').change(function(){
-  if (this.checked) {
+//$('#checkbox-online').change(function(){
+//  if (this.checked) {
+				     
+$(document).ready(function() {
+   $('input[type="radio"]').click(function() {
+    if($(this).attr('id') == 'checkbox-online') {		
     $('#submit-form-11').fadeIn('slow');
     $('#continue-form-11').fadeOut('slow');
   } else {
@@ -381,14 +385,20 @@ $('#checkbox-online').change(function(){
     $('#continue-form-11').fadeIn('slow');
   }                   
 });
-
-$('#checkbox-facetoface').change(function(){
-  if (this.checked) {
+			
+//$('#checkbox-facetoface').change(function(){
+// if (this.checked) {
+			
+$(document).ready(function() {
+   $('input[type="radio"]').click(function() {
+    if($(this).attr('id') == 'checkbox-facetoface') {			
     $('#continue-form-11').fadeIn('slow');
   } else {
     $('#continue-form-11').fadeOut('slow');
   }                   
 });
+			
+});			
 				     
 </script>
                                                                                   
