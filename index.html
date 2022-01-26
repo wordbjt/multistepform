@@ -712,6 +712,7 @@ margin-top: 25px;
     <div class="heading">
     	<h3 class="fs-subtitle">Step 12</h3>
     	<h2 class="fs-title">Would you like a fundraising pack? *</h2>
+	<p>To help your fundraising endeavours, we’ve created a fundraising pack with everything you’ll need to take the hassle out of planning your activities. Would you like a fundraising pack?</p>
     </div>
 
     <div class="radiobtn">
@@ -744,7 +745,63 @@ margin-top: 25px;
     </div>
   </fieldset>
   </div>
-										  
+
+  <div class="conditional-section">
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 13</h3>												  
+    	<h2 class="fs-title">Title of fundraising activity or event *</h2>
+    </div>
+
+    <input type="text" name="event_title" placeholder="Activity or event title" />
+
+    <div class="action-wrapper">
+    	<input type="button" name="previous" id="block-up-arrow" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" id="block-down-arrow" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <div class="conditional-section">
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 14</h3>												  
+    	<h2 class="fs-title">Venue *</h2>
+    </div>
+
+    <input type="text" name="venue" placeholder="Venue" />
+
+    <div class="action-wrapper">
+    	<input type="button" name="previous" id="block-up-arrow" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" id="block-down-arrow" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <div class="conditional-section">
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 15</h3>												  
+    	<h2 class="fs-title">Start Date *</h2>
+    </div>
+
+    <input type="text" name="date" placeholder="Date" />
+    <input type="text" name="month" placeholder="Month" />
+    <input type="text" name="year" placeholder="Year" />
+
+    <!-- Hidden field to combine 3 fields above -->
+    <input type="hidden" name="dob" />
+
+    <div class="action-wrapper">
+    	<input type="button" name="previous" id="block-up-arrow" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" id="block-down-arrow" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
   <div class="conditional-section">                                                                         
   <fieldset>
     <div class="heading">
