@@ -96,7 +96,7 @@ body {
 	display: none;
 }
 /*inputs*/
-#msform input:not(.action-button), 	    
+#msform input:not(.action-button):not(.radio-button), 	    
 #msform textarea {
 	/*padding: 15px;
 	border: 1px solid #ccc;
@@ -140,43 +140,7 @@ body {
 color: rgba(71, 71, 72, 1.0);					    
 -webkit-text-fill-color: rgba(71, 71, 72, 1.0);
 box-shadow: rgb(71 71 72 / 100%) 0px 2px;					    
-}
-					    
- 
-#msform input:not(.radio-button) {    
-    display: block;
-    width: 100%;
-    font-family: inherit;
-    color: rgb(71, 71, 72);
-    padding: 0px 0px 8px;
-    border: none;
-    outline: none;
-    border-radius: 0px;
-    appearance: none;
-    background-image: none;
-    background-position: initial;
-    background-size: initial;
-    background-repeat: initial;
-    background-attachment: initial;
-    background-origin: initial;
-    background-clip: initial;
-    transform: translateZ(0px);
-    font-size: 30px;
-    -webkit-font-smoothing: antialiased;
-    line-height: unset;
-    -webkit-text-fill-color: rgba(71, 71, 72, 0.3);
-    animation: 1ms ease 0s 1 normal none running native-autofill-in;
-    transition: background-color 1e+08s ease 0s, box-shadow 0.1s ease-out 0s;
-    box-shadow: rgb(71 71 72 / 30%) 0px 1px;
-    background-color: transparent !important; 
-    margin-bottom: 15px;
-}
-					    
-#msform input:not(.radio-button):focus, #msform textarea:focus {
-color: rgba(71, 71, 72, 1.0);					    
--webkit-text-fill-color: rgba(71, 71, 72, 1.0);
-box-shadow: rgb(71 71 72 / 100%) 0px 2px;					    
-}
+} 
 					    
 					    
 /*buttons*/
