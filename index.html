@@ -94,6 +94,11 @@ body {
 #msform fieldset:not(:first-of-type) {
 	display: none;
 }
+
+.heading {
+margin-bottom: 20px;					    
+}
+
 /*inputs*/
 #msform input:not(.action-button):not(.radio-button), 	    
 #msform textarea {
@@ -133,7 +138,6 @@ body {
     box-shadow: rgb(71 71 72 / 30%) 0px 1px;
     background-color: transparent !important; 
     margin-top: 25px;
-    margin-bottom: 15px;
 }
 					    
 #msform input:focus, #msform textarea:focus {
@@ -468,7 +472,10 @@ margin-top: 25px;
   <!-- fieldsets -->
   <div>
   <fieldset>
-    <h2 class="fs-section-title">Fundraise for Compassion</h2>
+    <div class="heading">
+    	<h2 class="fs-section-title">Fundraise for Compassion</h2>
+    </div>
+
     <p>Thanks for using your time and talents to fundraise for Compassion and help give children a hope more powerful than poverty. Please tell us about how you are going to fundraise so we can best support you.</p>
     <br>
     <div class="action-wrapper">
@@ -479,11 +486,13 @@ margin-top: 25px;
                                                                             
   <div>                                                                          
   <fieldset>
-    <h3 class="fs-subtitle">Step 1</h3>											  
-    <h2 class="fs-title">Name *</h2>
-    
+    <div class="heading">											  
+    	<h3 class="fs-subtitle">Step 1</h3>											  
+    	<h2 class="fs-title">Name *</h2>
+    </div>
+
     <input type="text" name="name" placeholder="Name" />
- 						      
+
     <div class="action-wrapper">				
     <input type="button" name="previous" id="block-up-arrow" class="previous action-button" value="Previous" />
     <input type="button" name="next" id="block-down-arrow" class="next action-button" value="Next" />
@@ -495,11 +504,13 @@ margin-top: 25px;
 												  
   <div> 												  
   <fieldset>
-    <h3 class="fs-subtitle">Step 2</h3>												  
-    <h2 class="fs-title">Organisation/Company:</h2>
-    
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 2</h3>												  
+    	<h2 class="fs-title">Organisation/Company:</h2>
+    </div>
+
     <input type="text" name="company" placeholder="Organisation/Company" />
-									
+
     <div class="action-wrapper">				
     	<input type="button" name="previous" id="block-up-arrow" class="previous action-button" value="Previous" />
     	<input type="button" name="next" id="block-down-arrow" class="next action-button" value="Next" />
@@ -508,11 +519,15 @@ margin-top: 25px;
   </fieldset>
   </div>
 											  
-  <div>                                                                         
+  <div>
   <fieldset>
-    <h3 class="fs-subtitle">Step 3</h3>
-    <h2 class="fs-title">Address *</h2>
-    <textarea name="address" placeholder="Address"></textarea>				  
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 3</h3>
+    	<h2 class="fs-title">Address *</h2>
+    </div>
+
+    <textarea name="address" placeholder="Address"></textarea>
+
     <div class="action-wrapper">				
     	<input type="button" name="previous" id="block-up-arrow" class="previous action-button" value="Previous" />
     	<input type="button" name="next" id="block-down-arrow" class="next action-button" value="Next" />
@@ -521,13 +536,15 @@ margin-top: 25px;
   </fieldset>
   </div>
 												      
-  <div> 												  
+  <div>
   <fieldset>
-    <h3 class="fs-subtitle">Step 4</h3>												  
-    <h2 class="fs-title">Suburb *</h2>
-    
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 4</h3>												  
+    	<h2 class="fs-title">Suburb *</h2>
+    </div>
+
     <input type="text" name="suburb" placeholder="Suburb" />
-									
+
     <div class="action-wrapper">
     	<input type="button" name="previous" id="block-up-arrow" class="previous action-button" value="Previous" />
     	<input type="button" name="next" id="block-down-arrow" class="next action-button" value="Next" />
@@ -538,11 +555,13 @@ margin-top: 25px;
 	
   <div> 												  
   <fieldset>
-    <h3 class="fs-subtitle">Step 5</h3>												  
-    <h2 class="fs-title">State *</h2>
-    
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 5</h3>												  
+    	<h2 class="fs-title">State *</h2>
+    </div>
+
     <input type="text" name="state" placeholder="State" />
-									
+
     <div class="action-wrapper">
     	<input type="button" name="previous" id="block-up-arrow" class="previous action-button" value="Previous" />
     	<input type="button" name="next" id="block-down-arrow" class="next action-button" value="Next" />
@@ -553,11 +572,12 @@ margin-top: 25px;
 												      
   <div>											  
   <fieldset>
-    <h3 class="fs-subtitle">Step 6</h3>												  
-    <h2 class="fs-title">Postcode *</h2>
-    
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 6</h3>												  
+    	<h2 class="fs-title">Postcode *</h2>
+    </div>
     <input type="text" name="postcode" placeholder="Postcode" />
-									
+
     <div class="action-wrapper">
     	<input type="button" name="previous" id="block-up-arrow" class="previous action-button" value="Previous" />
     	<input type="button" name="next" id="block-down-arrow" class="next action-button" value="Next" />
@@ -565,14 +585,16 @@ margin-top: 25px;
 
   </fieldset>
   </div>
-												      
-  <div>											  
+
+  <div>
   <fieldset>
-    <h3 class="fs-subtitle">Step 7</h3>												  
-    <h2 class="fs-title">Phone Number *</h2>
-    
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 7</h3>												  
+    	<h2 class="fs-title">Phone Number *</h2>
+    </div>
+
     <input type="tel" name="phone" placeholder="Phone Number" />
-									
+
     <div class="action-wrapper">
     	<input type="button" name="previous" id="block-up-arrow" class="previous action-button" value="Previous" />
     	<input type="button" name="next" id="block-down-arrow" class="next action-button" value="Next" />
@@ -580,14 +602,16 @@ margin-top: 25px;
 
   </fieldset>
   </div>
-												      
-  <div>											  
+
+  <div>
   <fieldset>
-    <h3 class="fs-subtitle">Step 8</h3>												  
-    <h2 class="fs-title">Email *</h2>
-    
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 8</h3>												  
+    	<h2 class="fs-title">Email *</h2>
+   </div>
+
     <input type="text" name="email" placeholder="Email" />
-									
+
     <div class="action-wrapper">
     	<input type="button" name="previous" id="block-up-arrow" class="previous action-button" value="Previous" />
     	<input type="button" name="next" id="block-down-arrow" class="next action-button" value="Next" />
@@ -598,12 +622,14 @@ margin-top: 25px;
 												      
   <div>											  
   <fieldset>
-    <h3 class="fs-subtitle">Step 9</h3>												  
-    <h2 class="fs-title">Compassion Supporter ID#</h2>
-    <p>(Applicable for exisiting Compassion supporters)</p>
-    
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 9</h3>												  
+    	<h2 class="fs-title">Compassion Supporter ID#</h2>
+    	<p>(Applicable for exisiting Compassion supporters)</p>
+    </div>
+
     <input type="text" name="supporder_ID" placeholder="Supporder ID" />
-									
+
     <div class="action-wrapper">
     	<input type="button" name="previous" id="block-up-arrow" class="previous action-button" value="Previous" />
     	<input type="button" name="next" id="block-down-arrow" class="next action-button" value="Next" />
@@ -614,25 +640,27 @@ margin-top: 25px;
 										  
   <div class="col-2" id="conditional">									  
   <fieldset>
-    <h3 class="fs-subtitle">Step 11</h3>				     
-    <h2 class="fs-title">How will you be fundraising?:</h2>
-			
-    <div class="radiobtn">		   
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 11</h3>				     
+    	<h2 class="fs-title">How will you be fundraising?:</h2>
+    </div>
+
+    <div class="radiobtn">
     	<input type="radio" name="fundraise" id="checkbox-online" class="radio-button" value="online"/>
     	<label for="checkbox-online">Online</label>
     </div>	     
-	
+
     <div class="radiobtn">
     	<input type="radio" name="fundraise" id="checkbox-facetoface" class="radio-button" value="face to face"/>						
 	<label for="checkbox-facetoface">Face to face</label>
     </div>
-					
+
     <div class="action-wrapper">		 
     <div id="continue-form-11" class="">
     	<input type="button" name="previous" id="block-up-arrow" class="previous action-button" value="Previous" />
     	<input type="button" name="next" id="block-down-arrow" class="next action-button" value="Next" />
     </div>
-												  
+
     <div id="submit-form-11" class="" style="display: none;">
     	<input type="submit" name="submit" class="submit action-button" value="Submit" />			     
     </div>
@@ -644,14 +672,16 @@ margin-top: 25px;
 										  
   <div class="col-2 conditional-section">                                                                         
   <fieldset>
-    <h3 class="fs-subtitle">Step 12</h3>
-    <h2 class="fs-title">Would you like a fundraising pack? *</h2>
-			   
-    <div class="radiobtn">		   
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 12</h3>
+    	<h2 class="fs-title">Would you like a fundraising pack? *</h2>
+    </div>
+
+    <div class="radiobtn">
     	<input type="radio" name="fundraise" id="radio-fundraise-yes" class="radio-button" value="Yes"/>
     	<label for="radio-fundraise-yes">Yes</label>
-    </div>	     
-	
+    </div>
+
     <div class="radiobtn">
     	<input type="radio" name="fundraise" id="radio-fundraise-no" class="radio-button" value="No"/>						
 	<label for="radio-fundraise-no">No</label>
@@ -664,10 +694,13 @@ margin-top: 25px;
 
   </fieldset>
   </div>
-												  
+
   <div class="conditional-section">                                                                         
   <fieldset>
-    <h2 class="fs-section-title">Please tell us about your proposed fundraising event.</h2>
+    <div class="heading">
+	<h2 class="fs-section-title">Please tell us about your proposed fundraising event.</h2>
+    </div>
+
     <div class="action-wrapper">				
     	<input type="button" name="previous" id="block-up-arrow" class="previous action-button" value="Previous" />
     	<input type="button" name="next" id="block-down-arrow" class="next action-button" value="Next" />
@@ -677,8 +710,10 @@ margin-top: 25px;
 										  
   <div class="conditional-section">                                                                         
   <fieldset>
-    <h3 class="fs-subtitle">Step ????</h3>				  
-    <h2 class="fs-title">alkdsjklasjdlkajsdklajsd</h2>
+    <div class="heading">
+  	<h3 class="fs-subtitle">Step ????</h3>				  
+    	<h2 class="fs-title">alkdsjklasjdlkajsdklajsd</h2>
+    </div>
     <textarea name="address" placeholder="Address"></textarea>
     <input type="button" name="previous" class="previous action-button" value="Previous" />
     <input type="submit" name="submit" class="submit action-button" value="Submit" />
