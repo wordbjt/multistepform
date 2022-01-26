@@ -339,7 +339,7 @@ box-shadow: rgb(71 71 72 / 100%) 0px 2px;
     	<input type="button" name="next" id="block-down-arrow" class="next action-button" value="Next" />
     </div>
 												  
-    <div id="submit-form-11" class="">
+    <div id="submit-form-11" class="" style="display: none;">
     	<input type="submit" name="submit" class="submit action-button" value="Submit" />			     
     </div>											  
 					   
@@ -375,8 +375,10 @@ $(function() {
 $('#checkbox-online').change(function(){
   if (this.checked) {
     $('#submit-form-11').fadeIn('slow');
+    $('#continue-form-11').fadeOut('slow');
   } else {
     $('#submit-form-11').fadeOut('slow');
+    $('#continue-form-11').fadeIn('slow');
   }                   
 });
 
