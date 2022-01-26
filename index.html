@@ -308,6 +308,18 @@ box-shadow: rgb(71 71 72 / 100%) 0px 2px;
   }
 }
 
+/* DATE */
+
+.date-wrapper input {
+width: 33%;
+display: inline-block
+}
+
+.date-wrapper .date-spacer {
+display: inlin-block;	     
+}
+	     
+	     
 .action-wrapper {
 margin-top: 25px;     
 }
@@ -631,7 +643,7 @@ margin-top: 25px;
 
   </fieldset>
   </div>
-												      
+
   <div>											  
   <fieldset>
     <div class="heading">
@@ -787,9 +799,13 @@ margin-top: 25px;
     	<h2 class="fs-title">Start Date *</h2>
     </div>
 
-    <input type="text" name="date" placeholder="Date" />
-    <input type="text" name="month" placeholder="Month" />
-    <input type="text" name="year" placeholder="Year" />
+    <div class="date-wrapper">
+    	<input type="text" name="date" placeholder="Date" />
+    		<div class="date-spacer"><div>/</div></div>
+    	<input type="text" name="month" placeholder="Month" />
+    		<div class="date-spacer"><div>/</div></div>
+    	<input type="text" name="year" placeholder="Year" />
+    </div>
 
     <!-- Hidden field to combine 3 fields above -->
     <input type="hidden" name="start_date" />
@@ -815,7 +831,7 @@ margin-top: 25px;
   </div>
 										  
 </form>
-										  
+
 </body>
                                                                                   
 <script>
