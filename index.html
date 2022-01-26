@@ -599,11 +599,9 @@ $(function() {
 </script>
 				     
 <script>
-//$('#checkbox-online').change(function(){
-//  if (this.checked) {
 				     
 $(document).ready(function() {
-   $('input[type="radio"]').click(function() {
+   $('#conditional input[type="radio"]').click(function() {
     if($(this).attr('id') == 'checkbox-online') {		
     $('#submit-form-11').fadeIn('slow');
     $('#continue-form-11').fadeOut('slow');
@@ -615,10 +613,7 @@ $(document).ready(function() {
   }                   
 });
 			
-//$('#checkbox-facetoface').change(function(){
-// if (this.checked) {
-			
-   $('input[type="radio"]').click(function() {
+   $('#conditional input[type="radio"]').click(function() {
     if($(this).attr('id') == 'checkbox-facetoface') {			
     $('#continue-form-11').fadeIn('slow');
     $('.conditional-section').show();			
