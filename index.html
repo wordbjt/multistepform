@@ -413,14 +413,21 @@ box-shadow: rgb(71 71 72 / 100%) 0px 2px;
   </fieldset>
   </div>
 
-  <div class="radiobtn">												  
+  <div>												  
   <fieldset>
     <h2 class="fs-title">How will you be fundraising?:</h2>
     <h3 class="fs-subtitle">Step 11</h3>
  
-    <input type="radio" name="fundraise" id="checkbox-online" class="radio-button"/>
-    <input type="radio" name="fundraise" id="checkbox-facetoface" class="radio-button"/>						
-												  
+    <div class="radiobtn">		   
+    	<input type="radio" name="fundraise" id="checkbox-online" class="radio-button" value="online"/>
+    	<label for="checkbox-online">Online</label>
+    </div>	     
+	
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise" id="checkbox-facetoface" class="radio-button" value="face to face"/>						
+	<label for="checkbox-facetoface">Face to face</label>
+    </div>
+			 
     <div id="continue-form-11" class="">
     	<input type="button" name="previous" id="block-up-arrow" class="previous action-button" value="Previous" />
     	<input type="button" name="next" id="block-down-arrow" class="next action-button" value="Next" />
