@@ -945,7 +945,7 @@ $(document).ready(function() {
       	$(".next").click(function() {
         // goDown();
 		var validator = $( "#msform" ).validate();
-		var currentInput = $(".active-div input").not(':input[type=button]');
+		var currentInput = $(".active-div input").not(".action-button");
 		validator.element(currentInput);
       	});	   
 });
