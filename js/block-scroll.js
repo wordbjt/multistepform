@@ -81,6 +81,9 @@
 
       $(".next").click(function() {
         goDown();
+	var validator = $( "#myform" ).validate();
+	var currentInput = $(".active-div input").not(":input[type=button]");
+	validator.element(currentInput);
       });
 
 
