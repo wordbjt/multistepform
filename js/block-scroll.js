@@ -80,7 +80,6 @@
       });
 
       $(".next").click(function() {
-	$( "#msform" ).validate(".active-div input").not(':button');
         goDown();
       });
 
