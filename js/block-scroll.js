@@ -136,7 +136,7 @@
       if(activeDiv < totalDivs - 1 && !activelyScrolling)
       {
         gotoDiv(activeDiv+1);
-	$(activeDiv).addClass("active-div");
+	$(theDivs[activeDiv]).addClass("active-div");
       }
     }
 
