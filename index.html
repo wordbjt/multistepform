@@ -152,11 +152,12 @@ p.content {
     -webkit-appearance: none;
 }
 					    
-#msform input:focus, #msform textarea:focus {
+#msform input:focus, 
+#msform textarea:focus {
 color: rgba(71, 71, 72, 1.0);					    
 -webkit-text-fill-color: rgba(71, 71, 72, 1.0);
 box-shadow: rgb(71 71 72 / 100%) 0px 2px;					    
-} 
+}
 					    
 /* RADIO INPUT */
 
@@ -894,7 +895,7 @@ $(document).ready(function(){
     var startDateValue = startDayValue+'/'+startMonthValue+'/'+startYearValue;
 
     $("input[name=start_date]").val(startDateValue); // this will set hidden field value
-    alert(startDateValue);
+    //alert(startDateValue);
   });
 });
 </script>				     
