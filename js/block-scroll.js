@@ -80,9 +80,7 @@
       });
 
       $(".next").click(function() {
-		var validator = $( "#msform" ).validate();
-		var currentInput = $(".active-div input").not(':button');
-		validator.element(currentInput);
+	$( "#msform" ).validate(".active-div input").not(':button');
         goDown();
       });
 
