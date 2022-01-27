@@ -127,7 +127,8 @@
       if(activeDiv > 0 && !activelyScrolling)
       {
         gotoDiv(activeDiv-1);
-	//$(activeDiv).addClass("active-div");
+	$(theDivs[activeDiv]).addClass("active-div");
+	$(theDivs[activeDiv+1]).removeClass("active-div");
       }
     }
 
@@ -137,6 +138,7 @@
       {
         gotoDiv(activeDiv+1);
 	$(theDivs[activeDiv]).addClass("active-div");
+	$(theDivs[activeDiv-1]).removeClass("active-div");
       }
     }
 
