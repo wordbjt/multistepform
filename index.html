@@ -551,7 +551,7 @@ margin-top: 25px;
     	<h2 class="fs-title">Name *</h2>
     </div>
 
-    <input type="text" name="name" placeholder="Name" />
+    <input type="text" name="name" placeholder="Name" required />
 
     <div class="action-wrapper">				
     <input type="button" name="previous" id="block-up-arrow" class="previous action-button" value="Previous" />
@@ -922,8 +922,11 @@ $(document).ready(function(){
 </script>
 			      
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script>
-    $("#msform").validate();
+	$(document).ready(function() {
+	$("#basic-form").validate();
+	});
 </script>
                                                                                   
 </html>
