@@ -936,7 +936,16 @@ $(document).ready(function(){
 
 <script>
 $(document).ready(function() {
-	$("#msform").validate();	   
+	$("#msform").validate();
+		   
+    $('input').on('blur', function() {
+        if ($(".active-div input").not(':button').valid()) {
+            $('.next').prop('disabled', false);  
+        } else {
+            $('.next').prop('disabled', 'disabled');
+        }
+    });		   
+
 });
 </script>
 
