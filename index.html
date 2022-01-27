@@ -882,5 +882,21 @@ $(document).ready(function() {
 });			
 				     
 </script>
+				     
+<script>
+$(document).ready(function(){
+  $("#startDay, #startMonth, #startYear").on("input", function() {
+    var getDayValue = $("#startDay").val(); // this gives textbox value   
+    var getMonthValue = $("#startMonth").val(); // this gives textbox value  
+    var getYearValue = $("#startYear").val(); // this gives textbox value
+
+    // put it all together
+    var startDateValue = month+'/'+day+'/'+year;
+
+    $("input[name=start_date]").val(startDateValue); // this will set hidden field value
+    alert(startDateValue);
+  });
+});
+</script>				     
                                                                                   
 </html>
