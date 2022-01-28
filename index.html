@@ -942,7 +942,9 @@ $(document).ready(function(){
 <script>
 $(document).ready(function() {
 	$("#msform").validate({
-		   
+	
+	ignore: [],
+
 rules: {
           name: {
               required: true,
@@ -976,13 +978,6 @@ rules: {
       		required: true
     	  }
       }
-		   
-      ignore: [],
-	rules: {
-	  contactpreference: {
-      		required: true
-    	  }	   
-	}
 });
 
     $('input, textarea').on('blur', function() {
