@@ -722,12 +722,12 @@ input.action-button:disabled {
     </div>
 
     <div class="radiobtn">
-    	<input type="radio" name="contactpreference" id="radio-contact-phone" class="radio-button" value="Phone"/>
+    	<input type="radio" name="contactpreference" id="radio-contact-phone" class="radio-button contact-preference" value="Phone"/>
     	<label for="radio-contact-phone">Phone</label>
     </div>
 
     <div class="radiobtn">
-    	<input type="radio" name="contactpreference" id="radio-contact-email" class="radio-button" value="Email"/>						
+    	<input type="radio" name="contactpreference" id="radio-contact-email" class="radio-button contact-preference" value="Email"/>						
 	<label for="radio-contact-email">Email</label>
     </div>
 
@@ -973,8 +973,11 @@ rules: {
               email: true
           },
 	  contactpreference: {
-              required: true
-          }
+      		require_from_group: [1, ".phone-group"]
+    	  },
+    	  contactpreference: {
+      		require_from_group: [1, ".phone-group"]
+    	  }
       }
 });		   
 
