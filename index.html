@@ -958,7 +958,7 @@ rules: {
       }
 });		   
 
-    $('input').on('blur', function() {
+    $('input, textarea').on('blur', function() {
         if ($(".active-div input").not(':button').valid()) {
             $('.active-div .next').prop('disabled', false);  
         } else {
