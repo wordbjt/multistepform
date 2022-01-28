@@ -562,7 +562,7 @@ label.error {
     	<h2 class="fs-title">Name *</h2>
     </div>
 
-    <input type="text" name="name" placeholder="Name" required />
+    <input type="text" name="name" placeholder="Name"/>
 
     <div class="action-wrapper">				
     <input type="button" name="previous" id="block-up-arrow" class="previous action-button" value="Previous" />
@@ -938,6 +938,25 @@ $(document).ready(function(){
 $(document).ready(function() {
 	$("#msform").validate();
 		   
+rules: {
+          name: {
+              required: true,
+              minlength: 3
+          },
+          address: {
+              required: true,
+              minlength: 3
+          },
+          suburb: {
+              required: true,
+              minlength: 3
+          },
+          email: {
+              required: true,
+              email: true
+          }
+      }
+
     $('input').on('blur', function() {
         if ($(".active-div input").not(':button').valid()) {
             $('.active-div .next').prop('disabled', false);  
