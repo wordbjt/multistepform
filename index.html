@@ -682,7 +682,7 @@ input.action-button:disabled {
   <div>
   <fieldset>
     <div class="heading">
-    	<h3 class="fs-subtitle">Step 8</h3>												  
+    	<h3 class="fs-subtitle">Step 8</h3>
     	<h2 class="fs-title">Email *</h2>
    </div>
 
@@ -973,13 +973,13 @@ rules: {
               email: true
           },
 	  contactpreference: {
-      		require_from_group: [1, ".phone-group"]
+      		require_from_group: [1, ".contact-preference"]
     	  },
     	  contactpreference: {
-      		require_from_group: [1, ".phone-group"]
+      		require_from_group: [1, ".contact-preference"]
     	  }
       }
-});		   
+});
 
     $('input, textarea').on('blur', function() {
         if ($(".active-div input, .active-div textarea").not(':button').valid()) {
