@@ -936,7 +936,7 @@ $(document).ready(function(){
 
 <script>
 $(document).ready(function() {
-	$("#msform").validate();
+	$("#msform").validate({
 		   
 rules: {
           name: {
@@ -956,6 +956,7 @@ rules: {
               email: true
           }
       }
+});		   
 
     $('input').on('blur', function() {
         if ($(".active-div input").not(':button').valid()) {
