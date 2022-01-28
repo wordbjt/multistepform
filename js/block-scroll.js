@@ -108,28 +108,28 @@
 			if(e.originalEvent.wheelDelta > 119) {
 				goUp();
 				// Add or Remove active-div class
-				$(theDivs[activeDiv]).addClass("active-div");
-	                        $(theDivs[activeDiv+1]).removeClass("active-div");
+				//$(theDivs[activeDiv]).addClass("active-div");
+	                        //$(theDivs[activeDiv+1]).removeClass("active-div");
 			}
 			else if (e.originalEvent.wheelDelta < -119) {
 				goDown();
 				// Add or Remove active-div class
-				$(theDivs[activeDiv]).addClass("active-div");
-				$(theDivs[activeDiv-1]).removeClass("active-div");
+				//$(theDivs[activeDiv]).addClass("active-div");
+				//$(theDivs[activeDiv-1]).removeClass("active-div");
 			}
 		});
 		$(window).bind('DOMMouseScroll', function(e){
 			if(e.originalEvent.detail < 0) {
 				goUp();
 				// Add or Remove active-div class
-				$(theDivs[activeDiv]).addClass("active-div");
-	                        $(theDivs[activeDiv+1]).removeClass("active-div");
+				//$(theDivs[activeDiv]).addClass("active-div");
+	                        //$(theDivs[activeDiv+1]).removeClass("active-div");
 			}
 			else if (e.originalEvent.detail > 0) {
 				goDown();
 				// Add or Remove active-div class
-				$(theDivs[activeDiv]).addClass("active-div");
-				$(theDivs[activeDiv-1]).removeClass("active-div");
+				//$(theDivs[activeDiv]).addClass("active-div");
+				//$(theDivs[activeDiv-1]).removeClass("active-div");
 			}
 		});
     }
