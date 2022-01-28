@@ -976,9 +976,37 @@ rules: {
         } else {
             $('.active-div .next').prop('disabled', 'disabled');
         }
-    });		   
+    });	
+						       
+//setup before functions
+var typingTimer;                //timer identifier
+var doneTypingInterval = 5000;  //time in ms, 5 second for example
+var $input = $('input, textarea');
+
+//on keyup, start the countdown
+$input.on('keyup', function () {
+  clearTimeout(typingTimer);
+  typingTimer = setTimeout(doneTyping, doneTypingInterval);
+});
+
+//on keydown, clear the countdown 
+$input.on('keydown', function () {
+  clearTimeout(typingTimer);
+});
+
+//user is "finished typing," do something
+function doneTyping () {
+  //do something
+  if ($(".active-div input, .active-div textarea").not(':button').valid()) {
+    $('.active-div .next').prop('disabled', false);  
+} else {
+    $('.active-div .next').prop('disabled', 'disabled');
+}
+}
 
 });
 </script>
+						       
+						       
 
 </html>
