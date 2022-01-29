@@ -144,10 +144,10 @@
 						       
         //if ($('.required-field.active-div input, .required-field.active-div textarea').not(':button').valid()) {
 	  if ($(theDivs[activeDiv]).hasClass(".required-field")) {
-            $('.required-field.active-div .next').prop('disabled', false); 
+	      $('.required-field.active-div .next').prop('disabled', 'disabled');
 	    //$('.required-field.active-div .next').css("display", "inline-block");
         } else {
-            $('.required-field.active-div .next').prop('disabled', 'disabled');
+	      $('.required-field.active-div .next').prop('disabled', false); 
 	    //$('.required-field.active-div .next').css("display", "none");
         }
 
