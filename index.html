@@ -987,9 +987,9 @@ rules: {
     //    }
     //});
 
-	//$('.active-div .radio-button').change(function(){
-	  $('.active-div .fs-title').click(function(){
-		alert('title clicked!');
+	$('.active-div .radio-button').on('change', function(){
+	  
+		alert('change!');
 
 		if ($('.active-div input.radio-button').valid()) {
 		$('.active-div .required-field .next').prop('disabled', false);  
