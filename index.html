@@ -986,6 +986,15 @@ rules: {
     //        $('.active-div .next').prop('disabled', 'disabled');
     //    }
     //});
+	
+							 
+	$(".active-div input:radio").change(function(){
+		if ($(".active-div input:radio").valid()) {
+		$('.active-div .required-field .next').prop('disabled', false);  
+		} else {
+		$('.active-div .required-field .next').prop('disabled', 'disabled');
+		}
+	});
 
 
 //setup before functions
