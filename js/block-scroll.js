@@ -101,7 +101,7 @@
     	if(keycode == '13') {
 	     goDown();
              return false;	
-              alert('You pressed a "enter" key in input');  
+              alert('You pressed a "enter" key in input');
     	}
       });
 		$(window).bind('mousewheel', function(e){
