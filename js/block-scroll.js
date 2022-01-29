@@ -139,11 +139,15 @@
         gotoDiv(activeDiv+1);
 	$(theDivs[activeDiv]).addClass("active-div");
 	$(theDivs[activeDiv-1]).removeClass("active-div");
-	//if ($(".active-div input, .active-div textarea").not(':button').valid()) {
-        //    $('.active-div .next').prop('disabled', false);  
-        //} else {
-        //   $('.active-div .next').prop('disabled', 'disabled');
-        //}
+	      
+	// If has required-field disable next button
+						       
+        if ($('.required-field.active-div input, .required-field.active-div textarea').not(':button').valid()) {
+            $('.required-field.active-div .next').prop('disabled', false);  
+        } else {
+            $('.required-field.active-div .next').prop('disabled', 'disabled');
+        }
+
       }
     }
 
