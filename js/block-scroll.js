@@ -139,7 +139,8 @@
         gotoDiv(activeDiv+1);
 	$(theDivs[activeDiv]).addClass("active-div");
 	$(theDivs[activeDiv-1]).removeClass("active-div");
-	      
+      }
+	    
 	// If has required-field disable next button
 						       
         //if ($('.required-field.active-div input, .required-field.active-div textarea').not(':button').valid()) {
@@ -149,9 +150,7 @@
         } else {
 	      $('.required-field.active-div .next').prop('disabled', false); 
 	    //$('.required-field.active-div .next').css("display", "none");
-        }
-
-      }
+        }	    
     }
 
     function gotoDiv(number)
