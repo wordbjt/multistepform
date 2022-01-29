@@ -996,8 +996,8 @@ rules: {
 	//	}
 	//});
 							 
-							 
-  $('.active-div .radiobtn').click(function() {
+  $('input.radio-button').on('blur', function() {							 
+  //$('.active-div .radiobtn').click(function() {
     if (!$("input[name='contactpreference']:checked").valid()) {
        alert('Nothing is checked!');
         return false;
