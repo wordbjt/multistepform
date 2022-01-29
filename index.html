@@ -986,21 +986,18 @@ rules: {
     //        $('.active-div .next').prop('disabled', 'disabled');
     //    }
     //});
-	
-	
+
 	//$('.active-div .radio-button').change(function(){
-	  $('.active-div .radiobtn label').click() {
-		alert('label clicked!');					 
+	  $('.active-div .radiobtn label').click(function(){
+		alert('label clicked!');
+							 
 		if ($('.active-div input.radio-button').valid()) {
 		$('.active-div .required-field .next').prop('disabled', false);  
 		} else {
 		$('.active-div .required-field .next').prop('disabled', 'disabled');
 		}
 	});
-							 
-//$("p").click(function(){
-//  alert("The paragraph was clicked.");
-//});
+
 
 
 //setup before functions
