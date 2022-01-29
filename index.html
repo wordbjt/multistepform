@@ -979,33 +979,13 @@ rules: {
       }
 });
 
-    //$('input, textarea').on('blur', function() {
-    //    if ($(".active-div input, .active-div textarea").not(':button').valid()) {
-    //        $('.active-div .next').prop('disabled', false);  
-    //    } else {
-    //        $('.active-div .next').prop('disabled', 'disabled');
-    //    }
-    //});
-
-	//$('.active-div .radio-button').on('change', function(){
-	//	alert('change!');
-	//	if ($('.active-div input.radio-button').valid()) {
-	//	$('.active-div .required-field .next').prop('disabled', false);  
-	//	} else {
-	//	$('.active-div .required-field .next').prop('disabled', 'disabled');
-	//	}
-	//});
-							 
-  $('input.radio-button').on('blur', function() {							 
-  //$('.active-div .radiobtn').click(function() {
-    if (!$("input[name='contactpreference']:checked").valid()) {
-       alert('Nothing is checked!');
-        return false;
-    }
-    else {
-      alert('One of the radio buttons is checked!');
-    }
-  });
+    $('input, textarea').on('blur', function() {
+        if ($(".active-div input, .active-div textarea").not(':button').valid()) {
+            $('.active-div .next').prop('disabled', false);  
+        } else {
+            $('.active-div .next').prop('disabled', 'disabled');
+        }
+    });
 
 
 //setup before functions
