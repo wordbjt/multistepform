@@ -987,8 +987,8 @@ rules: {
     //    }
     //});
 	
-							 
-	$('.active-div input.radio-button').change(function(){
+	$('input.student-course-disability').on("change", function() {
+	//$('.active-div input.radio-button').change(function(){
 		if ($('.active-div input.radio-button').valid()) {
 		$('.active-div .required-field .next').prop('disabled', false);  
 		} else {
