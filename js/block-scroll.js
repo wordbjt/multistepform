@@ -133,7 +133,7 @@
 	// Radio Button
 	if ($('.active-div').hasClass("radio-field")) {
 		//if (!$(".active-div input[type='radio']:checked").valid()) {
-		if (!$(".active-div input[type='radio']).is(':checked')) {
+		if (!$(".active-div input[type='radio']").is(':checked')) {
 			$('.active-div .next').prop('disabled', 'disabled'); 
         		alert('Nothing is checked!');
         		return false;
@@ -172,7 +172,7 @@
 	$(".active-div .radiobtn").unbind("click").bind("click", function() {
   	//$('input').on('blur', function() {
 		//if (!$(".active-div input[type='radio']:checked").valid()) {
-    		if (!$(".active-div input[type='radio']).is(':checked')) {
+    		if (!$(".active-div input[type='radio']").is(':checked')) {
 			$('.active-div .next').prop('disabled', 'disabled'); 
         		alert('Nothing is checked!');
         		return false;
@@ -186,7 +186,7 @@
 	// Radio button on active div next
 	if ($('.active-div').hasClass("radio-field")) {
 		//if (!$(".active-div input[type='radio']:checked").valid()) {
-		if (!$(".active-div input[type='radio']).is(':checked')) {
+		if (!$(".active-div input[type='radio']").is(':checked')) {
 			$('.active-div .next').prop('disabled', 'disabled'); 
         		alert('Nothing is checked!');
         		return false;
