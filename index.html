@@ -1033,10 +1033,12 @@ $(document).ready(function() {
   $('.radiobtn').click(function() {
   //$('input').on('blur', function() {
     if (!$("input[name='contactpreference']:checked").valid()) {
-       alert('Nothing is checked!');
+	$('.active-div .next').prop('disabled', false); 
+        alert('Nothing is checked!');
         return false;
     }
     else {
+      $('.active-div .next').prop('disabled', 'disabled');
       alert('One of the radio buttons is checked!');
     }
   });
