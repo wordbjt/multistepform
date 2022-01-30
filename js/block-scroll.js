@@ -131,7 +131,7 @@
 	$(theDivs[activeDiv+1]).removeClass("active-div");
 	      
 	// Radio Button
-
+	if ($('.active-div').hasClass("radio-field")) {
 		if (!$(".active-div input[type='radio']:checked").valid()) {
 			$('.active-div .next').prop('disabled', 'disabled'); 
         		alert('Nothing is checked!');
@@ -141,6 +141,8 @@
       			$('.active-div .next').prop('disabled', false); 
       			alert('One of the radio buttons is checked!');
     		}
+	}
+	      
       }
     }
 
@@ -181,7 +183,7 @@
   	});
 	      
 	// Radio button on active div next
-
+	if ($('.active-div').hasClass("radio-field")) {
 		if (!$(".active-div input[type='radio']:checked").valid()) {
 			$('.active-div .next').prop('disabled', 'disabled'); 
         		alert('Nothing is checked!');
@@ -191,7 +193,8 @@
       			$('.active-div .next').prop('disabled', false); 
       			alert('One of the radio buttons is checked!');
     		}
-
+	}
+	      
       }
     }
 
