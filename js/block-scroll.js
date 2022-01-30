@@ -163,7 +163,7 @@
 	    //$('.required-field.active-div .next').css("display", "none");
         }
 	      
-	// Radio button
+	// Radio button on click
 	      
 	//$('.active-div .radiobtn').click(function() {
 	$(".active-div .radiobtn").unbind("click").bind("click", function() {
@@ -179,7 +179,19 @@
       			alert('One of the radio buttons is checked!');
     		}
   	});
-   
+	      
+	// Radio button on active div next
+
+		if (!$(".active-div input[type='radio']:checked").valid()) {
+			$('.active-div .next').prop('disabled', 'disabled'); 
+        		alert('Nothing is checked!');
+        		return false;
+    		}
+    		else {
+      			$('.active-div .next').prop('disabled', false); 
+      			alert('One of the radio buttons is checked!');
+    		}
+
       }
     }
 
