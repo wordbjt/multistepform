@@ -136,7 +136,7 @@
 		if ($(".active-div input[type='radio']").is(':checked')) {
       			$('.active-div .next').prop('disabled', false); 
       			alert('One of the radio buttons is checked!');
-        		return false;
+        		//return false;
     		}
     		else {
 			$('.active-div .next').prop('disabled', 'disabled'); 
@@ -176,7 +176,7 @@
     		if ($(".active-div input[type='radio']").is(':checked')) {
 			$('.active-div .next').prop('disabled', false); 
       			alert('One of the radio buttons is checked!');
-        		return false;
+        		//return false;
     		}
     		else {
 			$('.active-div .next').prop('disabled', 'disabled'); 
@@ -190,7 +190,7 @@
 		if ($(".active-div input[type='radio']").is(':checked')) {
 			$('.active-div .next').prop('disabled', false); 
       			alert('One of the radio buttons is checked!');
-        		return false;
+        		//return false;
     		}
     		else {
       			$('.active-div .next').prop('disabled', 'disabled'); 
