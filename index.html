@@ -1033,7 +1033,7 @@ $(document).ready(function() {
   $('.active-div .radiobtn').click(function() {
   //$('input').on('blur', function() {
     //if (!$("input[name='contactpreference']:checked").valid()) {
-    if (!$(".active-div input.radio-button:checked").valid()) {
+    if (!$(".active-div input[type='radio']:checked").valid()) {
 	$('.active-div .next').prop('disabled', 'disabled'); 
         alert('Nothing is checked!');
         return false;
