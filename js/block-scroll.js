@@ -170,8 +170,8 @@
 	//$('.active-div .radiobtn').click(function() {
 	$(".active-div .radiobtn").unbind("click").bind("click", function() {
   	//$('input').on('blur', function() {
-    		//if (!$("input[name='contactpreference']:checked").valid()) {
-    		if (!$(".active-div input[type='radio']:checked").valid()) {
+		//if (!$(".active-div input[type='radio']:checked").valid()) {
+    		if (!$(".active-div input[type='radio']").valid()) {
 			$('.active-div .next').prop('disabled', 'disabled'); 
         		alert('Nothing is checked!');
         		return false;
@@ -184,7 +184,8 @@
 	      
 	// Radio button on active div next
 	if ($('.active-div').hasClass("radio-field")) {
-		if (!$(".active-div input[type='radio']:checked").valid()) {
+		//if (!$(".active-div input[type='radio']:checked").valid()) {
+		if (!$(".active-div input[type='radio']").valid()) {
 			$('.active-div .next').prop('disabled', 'disabled'); 
         		alert('Nothing is checked!');
         		return false;
