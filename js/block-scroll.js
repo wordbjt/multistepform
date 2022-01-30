@@ -172,14 +172,14 @@
 	$(".active-div .radiobtn").unbind("click").bind("click", function() {
   	//$('input').on('blur', function() {
 		//if (!$(".active-div input[type='radio']:checked").valid()) {
-    		if (!$(".active-div input[type='radio']").is(':checked')) {
-			$('.active-div .next').prop('disabled', 'disabled'); 
-        		alert('Nothing is checked!');
+    		if $(".active-div input[type='radio']").is(':checked') {
+			$('.active-div .next').prop('disabled', false); 
+      			alert('One of the radio buttons is checked!');
         		return false;
     		}
     		else {
-      			$('.active-div .next').prop('disabled', false); 
-      			alert('One of the radio buttons is checked!');
+			$('.active-div .next').prop('disabled', 'disabled'); 
+        		alert('Nothing is checked!');
     		}
   	});
 	      
@@ -187,13 +187,13 @@
 	if ($('.active-div').hasClass("radio-field")) {
 		//if (!$(".active-div input[type='radio']:checked").valid()) {
 		if (!$(".active-div input[type='radio']").is(':checked')) {
-			$('.active-div .next').prop('disabled', 'disabled'); 
-        		alert('Nothing is checked!');
+			$('.active-div .next').prop('disabled', false); 
+      			alert('One of the radio buttons is checked!');
         		return false;
     		}
     		else {
-      			$('.active-div .next').prop('disabled', false); 
-      			alert('One of the radio buttons is checked!');
+      			$('.active-div .next').prop('disabled', 'disabled'); 
+        		alert('Nothing is checked!');
     		}
 	}
 	      
