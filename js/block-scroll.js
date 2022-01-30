@@ -129,6 +129,18 @@
         gotoDiv(activeDiv-1);
 	$(theDivs[activeDiv]).addClass("active-div");
 	$(theDivs[activeDiv+1]).removeClass("active-div");
+	      
+	// Radio Button
+
+		if (!$(".active-div input[type='radio']:checked").valid()) {
+			$('.active-div .next').prop('disabled', 'disabled'); 
+        		alert('Nothing is checked!');
+        		return false;
+    		}
+    		else {
+      			$('.active-div .next').prop('disabled', false); 
+      			alert('One of the radio buttons is checked!');
+    		}
       }
     }
 
@@ -157,7 +169,7 @@
 	$(".active-div .radiobtn").unbind("click").bind("click", function() {
   	//$('input').on('blur', function() {
     		//if (!$("input[name='contactpreference']:checked").valid()) {
-    		  if (!$(".active-div input[type='radio']:checked").valid()) {
+    		if (!$(".active-div input[type='radio']:checked").valid()) {
 			$('.active-div .next').prop('disabled', 'disabled'); 
         		alert('Nothing is checked!');
         		return false;
@@ -167,7 +179,7 @@
       			alert('One of the radio buttons is checked!');
     		}
   	});
-	      
+   
       }
     }
 
