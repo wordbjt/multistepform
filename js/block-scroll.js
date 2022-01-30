@@ -198,6 +198,12 @@
     		}
 	}
 	      
+	// If field has value check if valid and enable next
+	      
+	//if($('#myMessage').val() == ''){
+        //   alert('Input can not be left blank');
+   	//}
+	      
       }
     }
 
