@@ -132,7 +132,8 @@
 	      
 	// Radio Button
 	if ($('.active-div').hasClass("radio-field")) {
-		if (!$(".active-div input[type='radio']:checked").valid()) {
+		//if (!$(".active-div input[type='radio']:checked").valid()) {
+		if (!$(".active-div input[type='radio']").valid()) {
 			$('.active-div .next').prop('disabled', 'disabled'); 
         		alert('Nothing is checked!');
         		return false;
