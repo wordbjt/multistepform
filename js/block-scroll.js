@@ -153,7 +153,8 @@
 	      
 	// Radio button
 	      
-	$('.active-div .radiobtn').click(function() {
+	//$('.active-div .radiobtn').click(function() {
+	$(".active-div .radiobtn").unbind("click").bind("click", function() {
   	//$('input').on('blur', function() {
     		//if (!$("input[name='contactpreference']:checked").valid()) {
     		  if (!$(".active-div input[type='radio']:checked").valid()) {
