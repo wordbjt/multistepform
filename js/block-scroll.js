@@ -150,7 +150,24 @@
 	      $('.active-div .required-field .next').prop('disabled', false);
 	    //$('.required-field.active-div .next').css("display", "none");
         }
-      }	    
+	      
+	// Radio button
+	      
+	$('.active-div .radiobtn').click(function() {
+  	//$('input').on('blur', function() {
+    		//if (!$("input[name='contactpreference']:checked").valid()) {
+    		  if (!$(".active-div input[type='radio']:checked").valid()) {
+			$('.active-div .next').prop('disabled', 'disabled'); 
+        		alert('Nothing is checked!');
+        		return false;
+    		}
+    		else {
+      			$('.active-div .next').prop('disabled', false); 
+      			alert('One of the radio buttons is checked!');
+    		}
+  	});
+	      
+      }
     }
 
     function gotoDiv(number)
