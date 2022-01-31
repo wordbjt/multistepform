@@ -197,22 +197,15 @@
     		}
 	}
 	      
-	// If field has value check if valid and enable next
-	        
-	      	if ($(".col-2:not('.radio-field').active-div input, .col-2:not('.radio-field').active-div textarea").not(':button, :radio').val() == '') {
-		alert('Not radio field');
-           	alert('Input or text with no value - do nothing');
-		}
-	        else {
-			if ($(".col-2:not('.radio-field').active-div input:not([type=radio], [type=button]), .col-2:not('.radio-field').active-div textarea").valid()) {
-			$('.active-div .next').prop('disabled', false);
-			alert('Input or text valid');
-			}
-			else {
-    	  		$('.active-div .next').prop('disabled', 'disabled');
-			alert('Input or text not valid');	
-			}
-		}
+  	// If field has value check if valid and enable next
+      
+  	if ($('.active-div input, .active-div textarea').val() == '') {
+        	alert('Empty no value - do nothing');
+  	}
+      	else {
+		$('.active-div .next').prop('disabled', false);
+		alert('Has value - enable next button');
+	}
 	      
       }
     }
