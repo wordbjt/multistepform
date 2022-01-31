@@ -200,32 +200,32 @@
   	// If input text or text area has value enable next
     
         if ($('.active-div input:not([type=radio], [type=button], [type=submit]), .active-div textarea').val() == '') {
-        alert('Input text or textarea is empty - do nothing');
+        //alert('Input text or textarea is empty - do nothing');
         }
         //else {
 	else if (!$('.active-div input:not([type=radio], [type=button], [type=submit]), .active-div textarea').val() == '') {
         $('.active-div .next').prop('disabled', false);
-        alert('Input text or textarea has value - enable next button');
+        //alert('Input text or textarea has value - enable next button');
         }
 	      
 	// If radio input is checked enable next
 
     	if ($('.active-div input[type=radio]').length > 0 ) {
-     	alert('Radio input exists');
+     	//alert('Radio input exists');
 		
 		// If radio input is checked enable next
 	      
         	if ($(".active-div input[type='radio']").is(':checked')) {
 		$('.active-div .next').prop('disabled', false);
-        	alert('Radio input is checked - enable next button');
+        	//alert('Radio input is checked - enable next button');
 		}
         	else if (!$(".active-div input[type='radio']").is(':checked')) {
 		$('.active-div .next').prop('disabled', 'disabled');
-        	alert('Radio input is not checked - disable next button');
+        	//alert('Radio input is not checked - disable next button');
         	}
 		
 	} else {
-	alert('Radio input does not exist');
+	//alert('Radio input does not exist');
 	}
 	
 
