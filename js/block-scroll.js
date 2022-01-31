@@ -197,18 +197,25 @@
     		}
 	}
 	      
-  	// If field has value check enable next
+  	// If input text or text area has value enable next
     
         if ($('.active-div input:not([type=radio], [type=button]), .active-div textarea').val() == '') {
         alert('Empty no value - do nothing');
         }
-	else if (!$(".active-div input[type='radio']").is(':checked')) {
-	$('.active-div .next').prop('disabled', 'disabled');
-        alert('Radio button is not checked - disable next button');	
-	}
         else {
         $('.active-div .next').prop('disabled', false);
         alert('Has value any input - enable next button');
+        }
+	      
+	// If radio input is checked enable next
+    
+        if ($(".active-div input[type='radio']").is(':checked')) {
+	$('.active-div .next').prop('disabled', false);
+        alert('Has value any input - enable next button');
+	}
+        else {
+	$('.active-div .next').prop('disabled', 'disabled');
+        alert('Radio button is not checked - disable next button');
         }
 	      
       }
