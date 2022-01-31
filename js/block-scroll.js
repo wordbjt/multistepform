@@ -171,16 +171,15 @@
 	      
 	//$('.active-div .radiobtn').click(function() {
 	$(".active-div .radiobtn").unbind("click").bind("click", function() {
-  	//$('input').on('blur', function() {
 		//if (!$(".active-div input[type='radio']:checked").valid()) {
     		if ($(".active-div input[type='radio']").is(':checked')) {
 			$('.active-div .next').prop('disabled', false); 
-      			alert('One of the radio buttons is checked!');
+      			//alert('One of the radio buttons is checked!');
         		//return false;
     		}
     		else {
 			$('.active-div .next').prop('disabled', 'disabled'); 
-        		alert('Nothing is checked!');
+        		//alert('Nothing is checked!');
     		}
   	});
 	      
@@ -189,19 +188,19 @@
 		//if (!$(".active-div input[type='radio']:checked").valid()) {
 		if ($(".active-div input[type='radio']").is(':checked')) {
 			$('.active-div .next').prop('disabled', false); 
-      			alert('One of the radio buttons is checked!');
+      			//alert('One of the radio buttons is checked!');
         		//return false;
     		}
     		else {
       			$('.active-div .next').prop('disabled', 'disabled'); 
-        		alert('Nothing is checked!');
+        		//alert('Nothing is checked!');
     		}
 	}
 	      
 	// If field has value check if valid and enable next
 	      
 		if ($('.active-div input, .active-div textarea').val() == '') {
-           	alert('Blank');
+           	//alert('Blank');
 		}
 	        else if ($(".active-div input, .active-div textarea").not(':button, :radio').valid()) {
     		$('.active-div .next').prop('disabled', false);
