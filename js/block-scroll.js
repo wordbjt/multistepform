@@ -200,7 +200,7 @@
   	// If field has value check enable next
     
         if ($('.active-div input:not([type=radio], [type=button]), .active-div textarea').val() == '') || (!$(".active-div input[type='radio']").is(':checked')) {
-        alert('Empty no value not radio - do nothing');
+        alert('Empty no value - do nothing');
         }
 	//else if ($(".active-div input[type='radio']").is(':checked')) {
 	//$('.active-div .next').prop('disabled', false);
