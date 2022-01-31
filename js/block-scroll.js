@@ -199,11 +199,12 @@
 	      
 	// If field has value check if valid and enable next
 	        
-	      	if ($('.active-div input, .active-div textarea').not(':button, :radio').val() == '') {
+	      	if ($(".col-2:not('.radio-field').active-div input, .col-2:not('.radio-field').active-div textarea").not(':button, :radio').val() == '') {
+		alert('Not radio field');
            	alert('Input or text with no value - do nothing');
 		}
-	        else if ($(".col-2:not('.radio-field').active-div")) {
-			alert('Not radio field');
+	        else {
+	        //else if ($(".col-2:not('.radio-field').active-div")) {
 			//if ($(".active-div input, .active-div textarea").not(':button, :radio').valid()) {
 			if ($(".active-div input:not([type=radio], [type=button]), .active-div textarea").valid()) {
 			$('.active-div .next').prop('disabled', false);
