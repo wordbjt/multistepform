@@ -198,17 +198,19 @@
 	}
 	      
 	// If field has value check if valid and enable next
-	      
-		if ($('.active-div input, .active-div textarea').val() == '') {
-           	//alert('Blank');
+	        
+	      	if ($('.active-div input, .active-div textarea').not(':button, :radio').val() == '') {
+           	alert('Input or text with no value - do nothing');
 		}
-	        //else if ($(".active-div input, .active-div textarea").not(':button, :radio').valid()) {
-    		else if ($(".active-div input, .active-div textarea").not(':button').valid()) {
-	        $('.active-div .next').prop('disabled', false);
-		}
-	      	else 
-		{
-    	  	$('.active-div .next').prop('disabled', 'disabled');
+	        else {
+			if ($(".active-div input, .active-div textarea").not(':button, :radio').valid()) {
+			$('.active-div .next').prop('disabled', false);
+			alert('Input or text valid');
+			}
+			else {
+    	  		$('.active-div .next').prop('disabled', 'disabled');
+			alert('Input or text not valid');	
+			}
 		}
 	      
       }
