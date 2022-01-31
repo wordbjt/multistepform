@@ -209,7 +209,9 @@
         }
 	      
 	// If radio input is checked enable next
-    
+    	if($("input[type=radio" + currentIndex + "]").length > 0 ){
+     	alert('Radio input exists');
+
         if ($(".active-div input[type='radio']").is(':checked')) {
 	$('.active-div .next').prop('disabled', false);
         alert('Radio input is checked - enable next button');
@@ -219,6 +221,8 @@
 	$('.active-div .next').prop('disabled', 'disabled');
         alert('Radio input is not checked - disable next button');
         }
+	    
+	}
 	      
       }
     }
