@@ -197,15 +197,15 @@
     		}
 	}
 	      
-  	// If field has value check if valid and enable next
-      
-  	if ($('.active-div input:not([type=radio]).val() == '') {
-        	alert('Empty no value - do nothing');
-  	}
-      	else {
-		$('.active-div .next').prop('disabled', false);
-		alert('Has value - enable next button');
-	}
+  	// If field has value check enable next
+    
+        if ($('.active-div input:not([type=radio], [type=button]), .active-div textarea').val() == '') {
+        alert('Empty no value not radio - do nothing');
+        }
+        else {
+        $('.active-div .next').prop('disabled', false);
+        alert('Has value any input - enable next button');
+        }
 	      
       }
     }
