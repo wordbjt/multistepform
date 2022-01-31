@@ -199,7 +199,7 @@
 	      
   	// If field has value check if valid and enable next
       
-  	if ($('.active-div input, .active-div textarea').val() == '') {
+  	if ($('.active-div input:not([type=radio]).val() == '') {
         	alert('Empty no value - do nothing');
   	}
       	else {
