@@ -202,8 +202,9 @@
 		if ($('.active-div input, .active-div textarea').val() == '') {
            	//alert('Blank');
 		}
-	        else if ($(".active-div input, .active-div textarea").not(':button, :radio').valid()) {
-    		$('.active-div .next').prop('disabled', false);
+	        //else if ($(".active-div input, .active-div textarea").not(':button, :radio').valid()) {
+    		else if ($(".active-div input, .active-div textarea").not(':button').valid()) {
+	        $('.active-div .next').prop('disabled', false);
 		}
 	      	else 
 		{
