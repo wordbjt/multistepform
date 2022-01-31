@@ -199,13 +199,13 @@
 	      
   	// If field has value check enable next
     
-        if ($('.active-div input:not([type=radio], [type=button]), .active-div textarea').val() == '') || (!$(".active-div input[type='radio']").is(':checked')) {
+        if ($('.active-div input:not([type=radio], [type=button]), .active-div textarea').val() == '') {
         alert('Empty no value - do nothing');
         }
-	//else if ($(".active-div input[type='radio']").is(':checked')) {
-	//$('.active-div .next').prop('disabled', false);
-	//alert('Radio button is checked - enable next button');	
-	//}
+	else if ($(".active-div input[type='radio']").is(':checked')) {
+	$('.active-div .next').prop('disabled', false);
+        alert('Radio button is checked - enable next button');	
+	}
         else {
         $('.active-div .next').prop('disabled', false);
         alert('Has value any input - enable next button');
