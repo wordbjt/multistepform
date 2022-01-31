@@ -210,7 +210,7 @@
 	      
 	// If radio input is checked enable next
 
-    	if ($('input[type=radio]').length > 0 ) {
+    	if ($('.active-div input[type=radio]').length > 0 ) {
      	alert('Radio input exists');
 	} else {
 	alert('Radio input does not exist');	
