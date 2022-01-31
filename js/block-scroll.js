@@ -203,7 +203,8 @@
            	alert('Input or text with no value - do nothing');
 		}
 	        else {
-			if ($(".active-div input, .active-div textarea").not(':button, :radio').valid()) {
+			//if ($(".active-div input, .active-div textarea").not(':button, :radio').valid()) {
+			if ($(".active-div input:not([type=radio], [type=button]), .active-div textarea").valid()) {
 			$('.active-div .next').prop('disabled', false);
 			alert('Input or text valid');
 			}
