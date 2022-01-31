@@ -200,16 +200,16 @@
 	      
 	// If field has value check if valid and enable next
 	      
-	if($('.active-div input, .active-div textarea').val() == ''){
+		if ($('.active-div input, .active-div textarea').val() == '') {
            	alert('Blank');
-		} 
+		}
 	        else if ($(".active-div input, .active-div textarea").not(':button').valid()) {
     		$('.active-div .next').prop('disabled', false);
-		
-		} else {
+		}
+	      	else 
+		{
     	  	$('.active-div .next').prop('disabled', 'disabled');
 		}
-   	}
 	      
       }
     }
