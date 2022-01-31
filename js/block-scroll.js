@@ -202,9 +202,9 @@
         if ($('.active-div input:not([type=radio], [type=button]), .active-div textarea').val() == '') {
         alert('Empty no value - do nothing');
         }
-	else if ($(".active-div input[type='radio']").is(':checked')) {
-	$('.active-div .next').prop('disabled', false);
-        alert('Radio button is checked - enable next button');	
+	else if (!$(".active-div input[type='radio']").is(':checked')) {
+	$('.active-div .next').prop('disabled', 'disabled');
+        alert('Radio button is not checked - disable next button');	
 	}
         else {
         $('.active-div .next').prop('disabled', false);
