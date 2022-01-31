@@ -779,13 +779,13 @@ input.action-button:disabled {
     </div>
 
     <div class="radiobtn">
-    	<input type="radio" name="fundraise" id="radio-fundraise-yes" class="radio-button" value="Yes"/>
-    	<label for="radio-fundraise-yes">Yes</label>
+    	<input type="radio" name="fundraise_pack" id="radio-fundraise-pack-yes" class="radio-button" value="Yes"/>
+    	<label for="radio-fundraise-pack-yes">Yes</label>
     </div>
 
     <div class="radiobtn">
-    	<input type="radio" name="fundraise" id="radio-fundraise-no" class="radio-button" value="No"/>						
-	<label for="radio-fundraise-no">No</label>
+    	<input type="radio" name="fundraise_pack" id="radio-fundraise-pack-no" class="radio-button" value="No"/>						
+	<label for="radio-fundraise-pack-no">No</label>
     </div>
 				       
     <div class="action-wrapper required-field">				
@@ -818,7 +818,7 @@ input.action-button:disabled {
 
     <input type="text" name="event_title" placeholder="Activity or event title" />
 
-    <div class="action-wrapper">
+    <div class="action-wrapper required-field">
     	<input type="button" name="previous" class="previous action-button" value="Previous" />
     	<input type="button" name="next" class="next action-button" value="Next" />
     </div>
@@ -848,7 +848,7 @@ input.action-button:disabled {
     <div class="heading">
     	<h3 class="fs-subtitle">Step 15</h3>												  
     	<h2 class="fs-title">Start Date *</h2>
-	<p>(When you are starting your Fundraising Campaign?)</p>
+	<p>(When you are starting your Fundraising Campaign)</p>
     </div>
 
     <div class="date-wrapper">
@@ -875,7 +875,7 @@ input.action-button:disabled {
     <div class="heading">
     	<h3 class="fs-subtitle">Step 16</h3>												  
     	<h2 class="fs-title">Finish Date *</h2>
-	<p>(When you are starting your Fundraising Campaign?)</p>
+	<p>(When you are finishing your Fundraising Campaign)</p>
     </div>
 
     <div class="date-wrapper">
@@ -1002,7 +1002,17 @@ rules: {
           },
     	  contactpreference: {
       		required: true
+    	  },
+	  fundraise: {
+      		required: true
+    	  },
+	  fundraise_pack: {
+      		required: true
+    	  },
+	  event_title: {
+      		required: true
     	  }
+
       }
 });
 
