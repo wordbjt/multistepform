@@ -212,19 +212,24 @@
 
     	if ($('.active-div input[type=radio]').length > 0 ) {
      	alert('Radio input exists');
-	} else {
-	alert('Radio input does not exist');	
-	}
+		
+		// If radio input is checked enable next
 	      
-        if ($(".active-div input[type='radio']").is(':checked')) {
-	$('.active-div .next').prop('disabled', false);
-        alert('Radio input is checked - enable next button');
+        	if ($(".active-div input[type='radio']").is(':checked')) {
+		$('.active-div .next').prop('disabled', false);
+        	alert('Radio input is checked - enable next button');
+		}
+        	else if (!$(".active-div input[type='radio']").is(':checked')) {
+		$('.active-div .next').prop('disabled', 'disabled');
+        	alert('Radio input is not checked - disable next button');
+        	}
+		
+	//} else {
+	//alert('Radio input does not exist');
+		
 	}
-	// else {
-        else if (!$(".active-div input[type='radio']").is(':checked')) {
-	$('.active-div .next').prop('disabled', 'disabled');
-        alert('Radio input is not checked - disable next button');
-        }
+	
+
 	    
 	
 	      
