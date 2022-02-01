@@ -956,7 +956,78 @@ input.action-button:disabled {
     </div>
 
   </fieldset>
-  </div>	
+  </div>
+	
+  <!-- Fundraising Destination -->		
+  <div class="col-2 conditional-section">                                                                         
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 20</h3>
+    	<h2 class="fs-title">Where would you like the money you fundraise to go? * *</h2>
+    </div>
+
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-1" class="radio-button" value="Where Most Needed"/>
+    	<label for="radio-fundraise-destination-1">Where Most Needed</label>
+    </div>
+	  
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-2" class="radio-button" value="Mums and Babies"/>
+    	<label for="radio-fundraise-destination-2">Mums and Babies</label>
+    </div>
+	  
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-3" class="radio-button" value="Water and Sanitation"/>
+    	<label for="radio-fundraise-destination-3">Water and Sanitation</label>
+    </div>
+	  
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-4" class="radio-button" value="Education and Training"/>
+    	<label for="radio-fundraise-destination-4">Education and Training</label>
+    </div>
+	  
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-5" class="radio-button" value="Health"/>
+    	<label for="radio-fundraise-destination-5">Health</label>
+    </div>
+	  
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-5" class="radio-button" value="Infrastructure"/>
+    	<label for="radio-fundraise-destination-5">Infrastructure</label>
+    </div>
+	  
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-5" class="radio-button" value="Disaster Relief"/>
+    	<label for="radio-fundraise-destination-5">Disaster Relief</label>
+    </div>
+	  
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-6" class="radio-button" value="Highly Vulnerable Children"/>
+    	<label for="radio-fundraise-destination-6">Highly Vulnerable Children</label>
+    </div>
+
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-7" class="radio-button" value="Income Generation"/>
+    	<label for="radio-fundraise-destination-7">Income Generation</label>
+    </div>
+
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-8" class="radio-button" value="Indigenous Project"/>
+    	<label for="radio-fundraise-destination-8">Indigenous Project</label>
+    </div>
+
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-9" class="radio-button" value="Other"/>
+    	<label for="radio-fundraise-destination-9">Other</label>
+    </div>
+		       
+    <div class="action-wrapper required-field">				
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
 
   <div class="conditional-section">                                                                         
   <fieldset>
@@ -1095,6 +1166,16 @@ rules: {
       		required: true
     	  },
           time: {
+      		required: true
+    	  },
+	  participants: {
+      		required: true,
+		digits: true
+    	  },
+	  fundraising_activity: {
+      		required: true
+    	  },
+	  fundraise_destination: {
       		required: true
     	  }
 
