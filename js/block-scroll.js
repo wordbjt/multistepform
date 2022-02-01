@@ -118,9 +118,11 @@
     		//return false;
 			if(e.originalEvent.wheelDelta > 119) {
 				//goUp();
+				allowScrollUp();
 			}
 			else if (e.originalEvent.wheelDelta < -119) {
 				//goDown();
+				allowScrollDown();
 			}
 		});
 	    
