@@ -104,27 +104,46 @@
               alert('You pressed a "enter" key in input');
     	}
       });
-		$("window, window not:('#guidelines')").bind('mousewheel', function(e){
-			if(e.originalEvent.wheelDelta > 119) {
-				goUp();
-			}
-			else if (e.originalEvent.wheelDelta < -119) {
-				goDown();
-			}
-		});
 	    
-	        // MOUSEWHEEL ON GUIDELINES FIELDSET
-	    	$("#guidelines").bind('mousewheel', function(e) {
-    		//return false;
-			if(e.originalEvent.wheelDelta > 119) {
-				//goUp();
-				allowScrollUp();
-			}
-			else if (e.originalEvent.wheelDelta < -119) {
-				//goDown();
-				allowScrollDown();
-			}
-		});
+    // TEST ALLOW SCROLL
+    if ($("#guidelines.allow-scroll.active-div")[0]){
+    // Do something if class exists
+    $("#guidelines").bind('mousewheel', function(e) {
+    //return false;
+        if(e.originalEvent.wheelDelta > 119) {
+          //goUp();
+            allowScrollUp();
+        }
+        else if (e.originalEvent.wheelDelta < -119) {
+          //goDown();
+          allowScrollDown();
+        }
+    });
+    
+    } else {
+    // Do something if class does not exist
+    $(window).bind('mousewheel', function(e){
+    	if(e.originalEvent.wheelDelta > 119) {
+    	  goUp();
+    	}
+    	else if (e.originalEvent.wheelDelta < -119) {
+    	  goDown();
+    	}
+    });
+}
+	    
+	    
+	    
+	    
+		//$(window).bind('mousewheel', function(e){
+		//	if(e.originalEvent.wheelDelta > 119) {
+		//		goUp();
+		//	}
+		//	else if (e.originalEvent.wheelDelta < -119) {
+		//		goDown();
+		//	}
+		//});
+	    
 	    
 		$(window).bind('DOMMouseScroll', function(e){
 			if(e.originalEvent.detail < 0) {
