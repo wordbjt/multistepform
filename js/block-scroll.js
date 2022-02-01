@@ -115,7 +115,13 @@
 	    
 	        // DISABLE MOUSEWHEEL ON GUIDELINES FIELDSET
 	    	$("#guidelines").bind('mousewheel', function(e) {
-    		return false;
+    		//return false;
+			if(e.originalEvent.wheelDelta > 1000) {
+				goUp();
+			}
+			else if (e.originalEvent.wheelDelta < -1000) {
+				goDown();
+			}
 		});
 	    
 		$(window).bind('DOMMouseScroll', function(e){
