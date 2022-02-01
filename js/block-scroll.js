@@ -104,7 +104,8 @@
               alert('You pressed a "enter" key in input');
     	}
       });
-		$(window).bind('mousewheel', function(e){
+		//$(window).bind('mousewheel', function(e){
+	          $("window, .conditional-section:not('#guidelines')").bind('mousewheel', function(e){
 			if(e.originalEvent.wheelDelta > 119) {
 				goUp();
 			}
