@@ -1674,14 +1674,14 @@ $(document).ready(function() {
   } else {
     $('#submit-form-11').fadeOut('slow');
     $('#continue-form-11').fadeIn('slow');
-    $('.conditional-section').show();
+    $('.conditional-section:not("#declaration")').show();
   }                   
 });
 			
    $('#conditional input[type="radio"]').click(function() {
     if($(this).attr('id') == 'checkbox-facetoface') {			
     $('#continue-form-11').fadeIn('slow');
-    $('.conditional-section').show();			
+    $('.conditional-section:not("#declaration")').show();			
   } else {
     $('#continue-form-11').fadeOut('slow');
     $('.conditional-section').hide();		
