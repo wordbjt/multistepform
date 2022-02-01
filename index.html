@@ -1690,6 +1690,7 @@ $(document).ready(function() {
 	
 // Guidelines to Declaraction
    $('#guidelines input[type="radio"]').click(function() {
+    alert('Accept button clicked!');
     if($(this).attr('id') == 'radio-guidelines-accept') {
     $('.active-div .next').prop('disabled', false);
     $('#declaration').show();
