@@ -112,6 +112,12 @@
 				goDown();
 			}
 		});
+	    
+	        // DISABLE MOUSEWHEEL ON GUIDELINES FIELDSET
+	    	$("#guidelines").bind('mousewheel', function(e) {
+    		return false;
+		});
+	    
 		$(window).bind('DOMMouseScroll', function(e){
 			if(e.originalEvent.detail < 0) {
 				goUp();
