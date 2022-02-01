@@ -1690,9 +1690,11 @@ $(document).ready(function() {
 	
 // Guidelines to Declaraction
    $('.conditional-section.guidelines input[type="radio"]').click(function() {
-    if($(this).attr('id') == 'radio-guidelines-accept') {			
+    if($(this).attr('id') == 'radio-guidelines-accept') {
+    $('.active-div .next').prop('disabled', false);
     $('.conditional-section.declaration').show();			
   } else {
+    $('.active-div .next').prop('disabled', 'disabled');
     $('.conditional-section.declaration').hide();		
   }
 });
@@ -1700,6 +1702,7 @@ $(document).ready(function() {
 });
 
 </script>
+	
 				     
 <script>
 $(document).ready(function(){
