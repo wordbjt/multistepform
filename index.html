@@ -68,6 +68,7 @@ p.content {
 
 #legal-description {
 	text-align: left;
+	font-size: 13px;
 	}
 					    
 /*form styles*/
@@ -534,12 +535,12 @@ input.action-button:disabled {
 }
 	
 	
-	
 /* ALLOW SCROLL */
 	
 .allow-scroll fieldset {
 	overflow-y: scroll;
-	max-height: 100vh;
+	/*max-height: 100vh;*/
+	height: calc(100vh - 200px); 
 }
 		 
 </style>
@@ -1557,8 +1558,8 @@ input.action-button:disabled {
 </div>
 
     <div class="radiobtn">
-    	<input type="radio" name="insurance" id="radio-insurance-yes" class="radio-button" value="Yes"/>
-    	<label for="radio-insurance-yes">Yes</label>
+    	<input type="radio" name="guidelines" id="radio-guidelines-accept" class="radio-button" value="Accept"/>
+    	<label for="radio-guidelines-accept">I accept</label>
     </div>
 				       
     <div class="action-wrapper required-field">				
@@ -1719,6 +1720,9 @@ rules: {
       		required: true
     	  },
 	  insurance: {
+      		required: true
+    	  },
+	  guidelines: {
       		required: true
     	  }
 
