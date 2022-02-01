@@ -1077,7 +1077,7 @@ input.action-button:disabled {
   </div>
 	
   <!-- Supporter Fundraising Guidelines -->	
-  <div class="conditional-section guidelines allow-scroll">
+  <div id="guidelines" class="conditional-section allow-scroll">
   <fieldset>
     <div class="heading">
     	<h3 class="fs-subtitle">Step 22</h3>
@@ -1580,7 +1580,7 @@ input.action-button:disabled {
   </div>
 
 <!-- Supporter Fundraising Declaration -->
-<div class="conditional-section declaration allow-scroll" style="display: none;">
+<div id="declaration" class="conditional-section allow-scroll" style="display: none;">
 <fieldset>
   <div class="heading">
     <h3 class="fs-subtitle">Step 23</h3>
@@ -1689,13 +1689,13 @@ $(document).ready(function() {
 });
 	
 // Guidelines to Declaraction
-   $('#radio-guidelines-accept input[type="radio"]').click(function() {
+   $('#guidelines input[type="radio"]').click(function() {
     if($(this).attr('id') == 'radio-guidelines-accept') {
     $('.active-div .next').prop('disabled', false);
-    $('.declaration').show();
+    $('#declaration').show();
   } else {
     $('.active-div .next').prop('disabled', 'disabled');
-    $('.conditional-section.declaration').hide();		
+    $('#declaration').hide();		
   }
 });
 
