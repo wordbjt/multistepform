@@ -66,7 +66,8 @@ p.content {
 	color: rgba(71, 71, 72, 0.7);					    
 }
 
-#legal-description-intro {
+#legal-description-intro,
+#fundraising-declaration {
 	text-align: left;
 	font-size: 14px;
 	}
@@ -1076,7 +1077,7 @@ input.action-button:disabled {
   </div>
 	
   <!-- Supporter Fundraising Guidelines -->	
-  <div class="conditional-section allow-scroll">
+  <div class="conditional-section guidelines allow-scroll">
   <fieldset>
     <div class="heading">
     	<h3 class="fs-subtitle">Step 22</h3>
@@ -1567,7 +1568,7 @@ input.action-button:disabled {
 
     <div class="radiobtn">
     	<input type="radio" name="guidelines" id="radio-guidelines-accept" class="radio-button" value="Accept"/>
-    	<label for="radio-guidelines-accept">I accept</label>
+    	<label for="radio-guidelines-accept">Yes, I accept</label>
     </div>
 				       
     <div class="action-wrapper required-field">				
@@ -1576,8 +1577,70 @@ input.action-button:disabled {
     </div>
 
   </fieldset>
-  </div>	
+  </div>
+	
+<!-- Supporter Fundraising Declaration -->	
+<div class="conditional-section declaration allow-scroll">
+<fieldset>
+  <div class="heading">
+    <h3 class="fs-subtitle">Step 23</h3>
+    <h2 class="fs-title">Supporter Fundraising Declaration *</h2>
+  </div>
+  
+<div class="field-content-wrapper">
+  <p id="fundraising-declaration" class="">
+      <span>I have read Compassion Australia’s Fundraising Guidelines and agree to abide by them at all times.</span><br />
+      <br />
+      <span>I/We agree not to use Compassion Australia’s logo without the appropriate authority.</span><br />
+      <br />
+      <span>
+          I/We agree that the fundraising event/activity will be conducted in the name of the Fundraiser and is the sole responsibility of the Fundraiser. Compassion Australia will not take on a coordination role in the event/activity.
+      </span>
+      <br />
+      <br />
+      <span>The event/activity will not be Compassion Australia’s event/activity. It will be an event/activity to raise funds for donations to Compassion Australia.</span><br />
+      <br />
+      <span>I/We agree not to accept inappropriate company sponsorship or donations or in-kind support.</span><br />
+      <br />
+      <span>I/We agree not to be involved in any form of illegal activity, violence, aggression, undue risk-taking or in an activity that is seen to degrade, demean or exploit children in any way.</span><br />
+      <br />
+      <span>I/We indemnify Compassion Australia from any liability incurred as a result of a claim, incident or activity conducted by me/us.</span><br />
+      <br />
+      <span>I/We agree to notify Compassion Australia of any organisation’s sponsorship.</span><br />
+      <br />
+      <span>I/We understand that to resolve disputes between the parties, complaints from the public and grievances from employees must be submitted in writing to Compassion Australia.</span><br />
+      <br />
+      <span>I declare that all details on this form are correct to the best of my knowledge. </span><br />
+      <br />
+      <span>
+          By accepting this authority to fundraise, I agree that I am willing to comply with Compassion’s Fundraising Guidelines. I understand that Compassion Australia reserves the right to terminate this agreement at any time, and will do
+          so in writing.
+      </span>
+      <br />
+      <br />
+      <span>
+          I am aware that this agreement and other relevant documentation may need to be provided to the Department of Gaming and Racing, meaning that Compassion and can be audited at any time to ensure the conditions of this agreement are
+          met.
+      </span>
+      <br />
+      <br />
+  </p>
 
+</div>
+
+  <div class="radiobtn">
+    <input type="radio" name="declaration" id="radio-declaration-accept" class="radio-button" value="Accept"/>
+    <label for="radio-declaration-accept">Yes, I accept</label>
+  </div>
+             
+  <div class="action-wrapper required-field">
+        <input type="submit" name="submit" class="submit action-button" value="Submit" />
+  </div>
+
+</fieldset>
+</div>
+	
+<!--
   <div class="conditional-section">                                                                         
   <fieldset>
     <div class="heading">
@@ -1589,7 +1652,8 @@ input.action-button:disabled {
     <input type="submit" name="submit" class="submit action-button" value="Submit" />
   </fieldset>
   </div>
-										  
+-->
+	
 </form>
 
                                                                                   
@@ -1732,6 +1796,9 @@ rules: {
     	  },
 	  guidelines: {
       		required: true
+    	  },
+	  declaration: {
+      		required: true
     	  }
 
       },
@@ -1744,7 +1811,7 @@ rules: {
             label.insertAfter(element.next('label'));       
         }
         else {
-            label.insertAfter(element);
+            //label.insertAfter(element);
         }
     }
 		
