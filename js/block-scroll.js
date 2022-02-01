@@ -113,14 +113,14 @@
 			}
 		});
 	    
-	        // DISABLE MOUSEWHEEL ON GUIDELINES FIELDSET
+	        // MOUSEWHEEL ON GUIDELINES FIELDSET
 	    	$("#guidelines").bind('mousewheel', function(e) {
     		//return false;
-			if(e.originalEvent.wheelDelta > 1000) {
-				goUp();
+			if(e.originalEvent.wheelDelta > 119) {
+				//goUp();
 			}
-			else if (e.originalEvent.wheelDelta < -1000) {
-				goDown();
+			else if (e.originalEvent.wheelDelta < -119) {
+				//goDown();
 			}
 		});
 	    
