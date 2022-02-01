@@ -1028,6 +1028,33 @@ input.action-button:disabled {
 
   </fieldset>
   </div>
+	
+  <!-- Public Liability Insurance -->	
+  <div class="col-2 conditional-section">                                                                         
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 21</h3>
+    	<h2 class="fs-title">Do you have public liability insurance? *</h2>
+	<p>If yes, please email a copy of your policy to <a href="mailto:fundraising@compassion.com.au">fundraising@compassion.com.au</a></p>
+    </div>
+
+    <div class="radiobtn">
+    	<input type="radio" name="insurance" id="radio-insurance-yes" class="radio-button" value="Yes"/>
+    	<label for="radio-insurance-yes">Yes</label>
+    </div>
+
+    <div class="radiobtn">
+    	<input type="radio" name="insurance" id="radio-insurance-no" class="radio-button" value="No"/>						
+	<label for="radio-insurance-no">No</label>
+    </div>
+				       
+    <div class="action-wrapper required-field">				
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>	
 
   <div class="conditional-section">                                                                         
   <fieldset>
@@ -1176,6 +1203,9 @@ rules: {
       		required: true
     	  },
 	  fundraise_destination: {
+      		required: true
+    	  },
+	  insurance: {
       		required: true
     	  }
 
