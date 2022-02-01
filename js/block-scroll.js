@@ -246,6 +246,27 @@
 	      
       }
     }
+	  
+    // ALLLOW SCROLL
+	  
+    function allowScrollUp ()
+    {
+      if(activeDiv > 0 && !activelyScrolling)
+      {
+        // Do nothing
+      }
+    }
+	  
+    function allowScrollDown ()
+    {
+      if(activeDiv < totalDivs - 1 && !activelyScrolling)
+      {
+        // Do nothing
+      }
+    }
+	  
+	        
+
 
     function gotoDiv(number)
     {
