@@ -1693,10 +1693,11 @@ $(document).ready(function() {
     alert('Accept button clicked!');
     if($(this).attr('id') == 'radio-guidelines-accept') {
     $('.active-div .next').prop('disabled', false);
-    $('#declaration').show();
+    //$('#declaration').show();
+    $("#declaration").css("display", "block");
   } else {
     $('.active-div .next').prop('disabled', 'disabled');
-    $('#declaration').hide();		
+    $("#declaration").css("display", "none");
   }
 });
 
