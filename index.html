@@ -1687,9 +1687,18 @@ $(document).ready(function() {
     $('.conditional-section').hide();		
   }
 });
-			
-});			
-				     
+	
+// Guidelines to Declaraction
+   $('#conditional-legal input[type="radio"]').click(function() {
+    if($(this).attr('id') == 'radio-guidelines-accept') {			
+    $('.conditional-section.declaration').show();			
+  } else {
+    $('.conditional-section.declaration').hide();		
+  }
+});
+
+});
+
 </script>
 				     
 <script>
