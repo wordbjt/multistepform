@@ -897,7 +897,8 @@ input.action-button:disabled {
     <div class="date-wrapper">
 	    
 	<div class="column">
-    	<input type="text" id="startDay" name="day" placeholder="Day" />
+	<span>Day</span>
+    	<input type="text" id="startDay" name="day" placeholder="DD" />
 	</div>
 	    
 	<div class="column-xs">
@@ -905,7 +906,8 @@ input.action-button:disabled {
 	</div>
 	    
     	<div class="column">
-	<input type="text" id="startMonth" name="month" placeholder="Month" />
+	<span>Month</span>
+	<input type="text" id="startMonth" name="month" placeholder="MM" />
 	</div>
 	    
 	<div class="column-xs">
@@ -913,7 +915,8 @@ input.action-button:disabled {
 	</div>
 
     	<div class="column">
-	<input type="text" id="startYear" name="year" placeholder="Year" />
+	<span>Year</span>
+	<input type="text" id="startYear" name="year" placeholder="YYYY" />
 	</div>
 
     </div>
@@ -1743,15 +1746,17 @@ rules: {
     	  },
 	  day: {
       		required: true,
-		digits: true
+		digits: true,
+		maxlength: 2
     	  },
 	  month: {
       		required: true,
-		digits: true
+		digits: true,
+		maxlength: 2  
     	  },
 	  year: {
       		required: true,
-		digits: true,
+		digits: true
     	  },
 	  finish_date: {
       		required: true
