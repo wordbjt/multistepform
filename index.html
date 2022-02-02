@@ -361,7 +361,12 @@ display: inline-block;
 	
 .date-wrapper .column {
   float: left;
-  width: 33.33%;	
+  //width: 33.33%;
+  width: 30%;
+	}
+.date-wrapper .column-xs {
+  float: left;
+  width: 5%;
 	}	
 	
 /* Clear floats after the columns */
@@ -891,9 +896,16 @@ input.action-button:disabled {
     		<div class="date-spacer"><div>/</div></div>
 	</div>
 	    
+	<div class="column-xs">
+		<div class="date-spacer"><div>/</div></div>
+	</div>
+	    
     	<div class="column">
 	<input type="text" id="startMonth" name="month" placeholder="Month" />
-    		<div class="date-spacer"><div>/</div></div>
+	</div>
+	    
+	<div class="column-xs">
+		<div class="date-spacer"><div>/</div></div>
 	</div>
 
     	<div class="column">
