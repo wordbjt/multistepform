@@ -1640,88 +1640,14 @@ input.action-button:disabled {
 </fieldset>
 </div>
 	
-<!--
-  <div class="conditional-section">                                                                         
-  <fieldset>
-    <div class="heading">
-  	<h3 class="fs-subtitle">Step ????</h3>				  
-    	<h2 class="fs-title">alkdsjklasjdlkajsdklajsd</h2>
-    </div>
-    <textarea name="address" placeholder="Address"></textarea>
-    <input type="button" name="previous" class="previous action-button" value="Previous" />
-    <input type="submit" name="submit" class="submit action-button" value="Submit" />
-  </fieldset>
-  </div>
--->
-	
 </form>
 
-                                                                                  
 <script>
 $(function() {
       var blockScroller = $("#msform").blockScroll();
 });
 </script>
-				     
-<script>
-				     
-$(document).ready(function() {
-   $('#conditional input[type="radio"]').click(function() {
-    if($(this).attr('id') == 'checkbox-online') {		
-    $('#submit-form-11').fadeIn('slow');
-    $('#continue-form-11').fadeOut('slow');
-    $('.conditional-section').hide();
-  } else {
-    $('#submit-form-11').fadeOut('slow');
-    $('#continue-form-11').fadeIn('slow');
-    $('.conditional-section:not("#declaration")').show();
-  }                   
-});
-			
-   $('#conditional input[type="radio"]').click(function() {
-    if($(this).attr('id') == 'checkbox-facetoface') {			
-    $('#continue-form-11').fadeIn('slow');
-    $('.conditional-section:not("#declaration")').show();			
-  } else {
-    $('#continue-form-11').fadeOut('slow');
-    $('.conditional-section').hide();		
-  }
-});
-	
-// Guidelines to Declaraction
-   $('#guidelines input[type="radio"]').click(function() {
-    alert('Accept button clicked!');
-    if($(this).attr('id') == 'radio-guidelines-accept') {
-    $('.active-div .next').prop('disabled', false);
-    //$('#declaration').show();
-    $("#declaration").css("display", "block");
-  } else {
-    $('.active-div .next').prop('disabled', 'disabled');
-    $("#declaration").css("display", "none");
-  }
-});
 
-});
-
-</script>
-	
-				     
-<script>
-$(document).ready(function(){
-  $("#startDay, #startMonth, #startYear").on("input", function() {
-    var startDayValue = $("#startDay").val(); // this gives textbox value   
-    var startMonthValue = $("#startMonth").val(); // this gives textbox value  
-    var startYearValue = $("#startYear").val(); // this gives textbox value
-
-    // put it all together
-    var startDateValue = startDayValue+'-'+startMonthValue+'-'+startYearValue;
-
-    $("input[name=start_date]").val(startDateValue); // this will set hidden field value
-    //alert(startDateValue);
-  });
-});
-</script>
-			      
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
@@ -1840,7 +1766,6 @@ rules: {
 //    });
 
 
-
 //setup before functions
 var typingTimer;                // timer identifier
 var doneTypingInterval = 500;  // time in ms, 0.5 second for example
@@ -1869,6 +1794,68 @@ function doneTyping () {
 
 });
 </script>
+
+<!-- ADDITIONAL -->
+<script>
+	
+// Conditional for Question 11	
+	
+$(document).ready(function() {
+   $('#conditional input[type="radio"]').click(function() {
+    if($(this).attr('id') == 'checkbox-online') {		
+    $('#submit-form-11').fadeIn('slow');
+    $('#continue-form-11').fadeOut('slow');
+    $('.conditional-section').hide();
+  } else {
+    $('#submit-form-11').fadeOut('slow');
+    $('#continue-form-11').fadeIn('slow');
+    $('.conditional-section:not("#declaration")').show();
+  }                   
+});
+			
+   $('#conditional input[type="radio"]').click(function() {
+    if($(this).attr('id') == 'checkbox-facetoface') {			
+    $('#continue-form-11').fadeIn('slow');
+    $('.conditional-section:not("#declaration")').show();			
+  } else {
+    $('#continue-form-11').fadeOut('slow');
+    $('.conditional-section').hide();		
+  }
+});
+	
+// Guidelines to Declaraction
+   $('#guidelines input[type="radio"]').click(function() {
+    alert('Accept button clicked!');
+    if($(this).attr('id') == 'radio-guidelines-accept') {
+    $('.active-div .next').prop('disabled', false);
+    //$('#declaration').show();
+    $("#declaration").css("display", "block");
+  } else {
+    $('.active-div .next').prop('disabled', 'disabled');
+    $("#declaration").css("display", "none");
+  }
+});
+
+});
+
+</script>
+	
+<!-- DATE -->				     
+<script>
+$(document).ready(function(){
+  $("#startDay, #startMonth, #startYear").on("input", function() {
+    var startDayValue = $("#startDay").val(); // this gives textbox value   
+    var startMonthValue = $("#startMonth").val(); // this gives textbox value  
+    var startYearValue = $("#startYear").val(); // this gives textbox value
+
+    // put it all together
+    var startDateValue = startDayValue+'-'+startMonthValue+'-'+startYearValue;
+
+    $("input[name=start_date]").val(startDateValue); // this will set hidden field value
+    //alert(startDateValue);
+  });
+});
+</script>	
 	
 <!-- <script>
 $(document).ready(function() {
