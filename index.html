@@ -1957,6 +1957,17 @@ $('.allow-scroll fieldset').on('scroll', function() {
 });
 });	
 </script>
+
+<script>
+$(document).ready(function() {					 
+    $('input[type=time]').on('blur', function() {
+        if ($(".active-div input[type=time]").valid()) {
+            $('.active-div .next').prop('disabled', false);  
+        } else {
+            $('.active-div .next').prop('disabled', 'disabled');
+        }
+    });
+</script>
 	
 <!-- <script>
 $(document).ready(function() {
@@ -1967,7 +1978,7 @@ $(document).ready(function() {
 //        } else {
 //            $('.active-div .next').prop('disabled', 'disabled');
 //        }
-//    });
+//    });	
 						       
   $('.active-div .radiobtn').click(function() {
   //$('input').on('blur', function() {
