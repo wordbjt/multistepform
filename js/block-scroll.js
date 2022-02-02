@@ -105,40 +105,7 @@
     	}
       });
 	    
-    // TEST ALLOW SCROLL
-    if ($(".glines.conditional-section.allow-scroll.active-div")[0]){
-    // Do something if class exists
-	   
-    $("#guidelines").bind('mousewheel', function(e) {
-	alert('GLINES EXISTS');
-    //return false;
-        if(e.originalEvent.wheelDelta > 119) {
-          //goUp();
-            allowScrollUp();
-        }
-        else if (e.originalEvent.wheelDelta < -119) {
-          //goDown();
-          allowScrollDown();
-        }
-    });
-    
-    } else {
-    // Do something if class does not exist
-    $(window).bind('mousewheel', function(e){
-	alert('IGNORED IF STATEMENT');
-    	if(e.originalEvent.wheelDelta > 119) {
-    	  goUp();
-    	}
-    	else if (e.originalEvent.wheelDelta < -119) {
-    	  goDown();
-    	}
-    });
-}
-	    
-	    
-	    
-	    
-		//$(window).bind('mousewheel', function(e){
+	    	//$(window).bind('mousewheel', function(e){
 		//	if(e.originalEvent.wheelDelta > 119) {
 		//		goUp();
 		//	}
@@ -147,6 +114,28 @@
 		//	}
 		//});
 	    
+		$(window).bind('mousewheel', function(e){
+			
+		if ($(theDivs[activeDiv]).hasClass("allow-scroll")) {
+				
+			if(e.originalEvent.wheelDelta > 119) {
+				//goUp();
+				alert('Guideline Scroll Up');
+			}
+			else if (e.originalEvent.wheelDelta < -119) {
+				//goDown();
+				alert('Guideline Scroll Down');
+			}
+		} esle {
+			if(e.originalEvent.wheelDelta > 119) {
+				goUp();
+			}
+			else if (e.originalEvent.wheelDelta < -119) {
+				goDown();
+			}
+		}
+				
+		});
 	    
 		$(window).bind('DOMMouseScroll', function(e){
 			if(e.originalEvent.detail < 0) {
