@@ -123,6 +123,7 @@
     } else {
     // Do something if class does not exist
     $(window).bind('mousewheel', function(e){
+	alert('IGNORED IF STATEMENT');
     	if(e.originalEvent.wheelDelta > 119) {
     	  goUp();
     	}
