@@ -126,7 +126,7 @@
 				//goDown();
 				alert('Guideline Scroll Down');
 			}
-		} esle {
+		} else {
 			if(e.originalEvent.wheelDelta > 119) {
 				goUp();
 			}
