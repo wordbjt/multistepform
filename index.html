@@ -22,7 +22,7 @@
 <title>Multi Step Form</title>
   
 <style>
-                                            
+	
 /* BLOCK SCROLL */
                                             
 #msform>div
@@ -1854,6 +1854,19 @@ $(document).ready(function(){
     $("input[name=start_date]").val(startDateValue); // this will set hidden field value
     //alert(startDateValue);
   });
+	
+  $("#finishDay, #finishMonth, #finishYear").on("input", function() {
+    var finishDayValue = $("#finishDay").val(); // this gives textbox value   
+    var finishMonthValue = $("#finishMonth").val(); // this gives textbox value  
+    var finishYearValue = $("#finishYear").val(); // this gives textbox value
+
+    // put it all together
+    var finishDateValue = finishDayValue+'-'+finishMonthValue+'-'+finishYearValue;
+
+    $("input[name=finisht_date]").val(finishDateValue); // this will set hidden field value
+    //alert(finishDateValue);
+  });
+	
 });
 </script>	
 	
