@@ -365,7 +365,7 @@ display: inline-block
 padding: 0 5px;
 display: inline-block;
 font-size: 30px;
-margin-top: 25px;
+margin-top: 45px;
 }
 	
 .date-wrapper .column {
@@ -948,12 +948,29 @@ input.action-button:disabled {
 	<p>(When you are finishing your Fundraising Campaign)</p>
     </div>
 
-    <div class="date-wrapper">
-    	<input type="text" id="finishDay" name="day" placeholder="Day" />
-    		<div class="date-spacer"><div>/</div></div>
-    	<input type="text" id="finishMonth" name="month" placeholder="Month" />
-    		<div class="date-spacer"><div>/</div></div>
-    	<input type="text" id="finishYear" name="year" placeholder="Year" />
+    <div class="date-wrapper">	  
+	<div class="column">
+	<span>Day</span>
+    	<input type="text" id="finishDay" name="day" placeholder="DD" />
+	</div>
+	    
+	<div class="column-xs">
+		<div class="date-spacer"><div>/</div></div>
+	</div>
+	    
+    	<div class="column">
+	<span>Month</span>
+	<input type="text" id="finishMonth" name="month" placeholder="MM" />
+	</div>
+	    
+	<div class="column-xs">
+		<div class="date-spacer"><div>/</div></div>
+	</div>
+
+    	<div class="column">
+	<span>Year</span>
+	<input type="text" id="finishYear" name="year" placeholder="YYYY" />
+	</div>
     </div>
 
     <!-- Hidden field to combine 3 fields above -->
