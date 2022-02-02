@@ -108,6 +108,7 @@
     // TEST ALLOW SCROLL
     if ($(".glines.conditional-section.allow-scroll.active-div")[0]){
     // Do something if class exists
+	    alert('GLINES EXISTS');
     $("#guidelines").bind('mousewheel', function(e) {
     //return false;
         if(e.originalEvent.wheelDelta > 119) {
