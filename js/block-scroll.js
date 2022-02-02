@@ -120,11 +120,11 @@
 				
 			if(e.originalEvent.wheelDelta > 119) {
 				//goUp();
-				alert('Guideline Scroll Up');
+				//alert('Guideline Scroll Up');
 			}
 			else if (e.originalEvent.wheelDelta < -119) {
 				//goDown();
-				alert('Guideline Scroll Down');
+				//alert('Guideline Scroll Down');
 			}
 		} else {
 			if(e.originalEvent.wheelDelta > 119) {
