@@ -1749,7 +1749,7 @@ rules: {
     errorPlacement: function (label, element) {
         // default
         if (element.is(':radio')) {
-            label.insertAfter(element.next('label'));       
+            label.insertAfter(element.next('input'));       
         }
         else {
             //label.insertAfter(element);
