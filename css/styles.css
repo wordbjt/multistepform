@@ -77,8 +77,8 @@ p.content {
 	display: none;
 }
 
-#msform>div:not(:first-of-type) {
-	display: none;
+/*#msform>div:not(:first-of-type) {
+	display: none;*/
 }
 
 /*inputs*/
