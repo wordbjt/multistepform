@@ -113,10 +113,9 @@
 		//		goDown();
 		//	}
 		//});
+
 	    
 // ALLOW SCROLL UPDATED TEST
-$(window).bind('mousewheel', function(e){
-
 if ($(theDivs[activeDiv]).hasClass("allow-scroll")) {
 
 $('.allow-scroll.active-div fieldset').on('scroll', function() {
@@ -124,8 +123,9 @@ $('.allow-scroll.active-div fieldset').on('scroll', function() {
 
   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
   //alert('Bottom!');
-  console.log("Bottom!");	  
+  console.log("Bottom!");	
     
+    $(window).bind('mousewheel', function(e){
 	       if(e.originalEvent.wheelDelta > 119) {
 	       //goUp();
 	       //alert('Guideline Scroll Up');
@@ -134,39 +134,43 @@ $('.allow-scroll.active-div fieldset').on('scroll', function() {
 	       goDown();
 	       //alert('Guideline Scroll Down');
 	       }
-	
+	  });
+    
   } else if (scrollTop <= 0) {
   //alert('Top!');
   console.log("Top!");
-	
+	 $(window).bind('mousewheel', function(e){
 	       if(e.originalEvent.wheelDelta > 119) {
   	     goUp();
 	       }
 	       else if (e.originalEvent.wheelDelta < -119) {
   	     // goDown();
 	       }
+   });
 	
   } else {
-	
+	  $(window).bind('mousewheel', function(e){
 	       if(e.originalEvent.wheelDelta > 119) {
   	     goUp();
 	       }
 	       else if (e.originalEvent.wheelDelta < -119) {
   	     goDown();
 	       }
+    });
   }
 
 }); 
 
 } else {
+  $(window).bind('mousewheel', function(e){
   if(e.originalEvent.wheelDelta > 119) {
   goUp();
   }
   else if (e.originalEvent.wheelDelta < -119) {
   goDown();
   }
+  });
 }
-});
 	    
 	    
 		$(window).bind('DOMMouseScroll', function(e){
