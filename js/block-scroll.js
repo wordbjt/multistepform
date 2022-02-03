@@ -129,10 +129,10 @@ else if (e.originalEvent.wheelDelta < -119) {
 }
 } else {
 if(e.originalEvent.wheelDelta > 119) {
-goUp();
+// TEST goUp();
 }
 else if (e.originalEvent.wheelDelta < -119) {
-goDown();
+// TEST goDown();
 }
 }
 
@@ -157,7 +157,7 @@ $('.allow-scroll.active-div fieldset').on('scroll', function() {
         goDown();
 	//return false;
         //alert('Guideline Scroll Down');
-      }  
+      }
     });
     
   } else if (scrollTop <= 0) {
@@ -179,17 +179,6 @@ $('.allow-scroll.active-div fieldset').on('scroll', function() {
 
   } else {
     // NOTHING
-    $(window).unbind('mousewheel', function(e){
-              
-      if(e.originalEvent.wheelDelta > 119) {
-        //goUp();
-        //alert('Not Up!');
-      }
-      else if (e.originalEvent.wheelDelta < -119) {
-        //goDown();
-        //alert('Not Down!');
-      }
-    });
 	  
   }
   
