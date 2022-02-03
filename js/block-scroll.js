@@ -155,6 +155,7 @@ $('.allow-scroll fieldset').on('scroll', function() {
       }
       else if (e.originalEvent.wheelDelta < -119) {
         goDown();
+	return false;
         //alert('Guideline Scroll Down');
       }  
     });
@@ -167,12 +168,13 @@ $('.allow-scroll fieldset').on('scroll', function() {
               
       if(e.originalEvent.wheelDelta > 119) {
         goUp();
+	return false;
         //alert('Guideline Scroll Up');
       }
       else if (e.originalEvent.wheelDelta < -119) {
         //goDown();
         //alert('Guideline Scroll Down');
-      }  
+      }
     });
 
   } else {
