@@ -179,7 +179,18 @@ $('.allow-scroll.active-div fieldset').on('scroll', function() {
 
   } else {
     // NOTHING
-    //$('#message').text('');
+    $(window).unbind('mousewheel', function(e){
+              
+      if(e.originalEvent.wheelDelta > 119) {
+        //goUp();
+        //alert('Not Up!');
+      }
+      else if (e.originalEvent.wheelDelta < -119) {
+        //goDown();
+        //alert('Not Down!');
+      }
+    });
+	  
   }
   
 });
