@@ -114,63 +114,33 @@
 		//	}
 		//});
 
-	    
-// ALLOW SCROLL UPDATED TEST
-if ($(theDivs[activeDiv]).hasClass("allow-scroll")) {
 
-$('.active-div fieldset').on('scroll', function() {
-  var scrollTop = $(this).scrollTop();
+// ALLOW SCROLL - GUIDELINES AND DECLARATION
+$(window).bind('mousewheel', function(e){
 
-  if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
-  //alert('Bottom!');
-  console.log("Bottom!");	
+    if ($(theDivs[activeDiv]).hasClass("allow-scroll")) {
+
+      if (e.originalEvent.wheelDelta > 119) {
+      //goUp();
+      //alert('Guideline Scroll Up');
+      }
     
-    $(window).bind('mousewheel', function(e){
-	       if(e.originalEvent.wheelDelta > 119) {
-	       //goUp();
-	       //alert('Guideline Scroll Up');
-	       }
-	       else if (e.originalEvent.wheelDelta < -119) {
-	       goDown();
-	       //alert('Guideline Scroll Down');
-	       }
-	  });
+      else if (e.originalEvent.wheelDelta < -119) {
+      //goDown();
+      //alert('Guideline Scroll Down');
+      }
+      
+    } else {
     
-  } else if (scrollTop <= 0) {
-  //alert('Top!');
-  console.log("Top!");
-	 $(window).bind('mousewheel', function(e){
-	       if(e.originalEvent.wheelDelta > 119) {
-  	     goUp();
-	       }
-	       else if (e.originalEvent.wheelDelta < -119) {
-  	     // goDown();
-	       }
-   });
-	
-  } else {
-	  $(window).bind('mousewheel', function(e){
-	       if(e.originalEvent.wheelDelta > 119) {
-  	     goUp();
-	       }
-	       else if (e.originalEvent.wheelDelta < -119) {
-  	     goDown();
-	       }
-    });
-  }
+      if (e.originalEvent.wheelDelta > 119) {
+      goUp();
+      }
+      else if (e.originalEvent.wheelDelta < -119) {
+      goDown();
+      }
+    }
 
-}); 
-
-} else {
-  $(window).bind('mousewheel', function(e){
-  if(e.originalEvent.wheelDelta > 119) {
-  goUp();
-  }
-  else if (e.originalEvent.wheelDelta < -119) {
-  goDown();
-  }
-  });
-}
+});
 	    
 	    
 		$(window).bind('DOMMouseScroll', function(e){
