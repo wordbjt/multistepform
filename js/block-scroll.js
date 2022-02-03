@@ -101,7 +101,7 @@
     	if(keycode == '13') {
 	     goDown();
              return false;	
-              alert('You pressed a "enter" key in input');
+             //alert('You pressed a "enter" key in input');
     	}
       });
 	    
@@ -155,7 +155,7 @@ $('.allow-scroll.active-div fieldset').on('scroll', function() {
       }
       else if (e.originalEvent.wheelDelta < -119) {
         goDown();
-	return false;
+	//return false;
         //alert('Guideline Scroll Down');
       }  
     });
@@ -168,7 +168,7 @@ $('.allow-scroll.active-div fieldset').on('scroll', function() {
               
       if(e.originalEvent.wheelDelta > 119) {
         goUp();
-	return false;
+	//return false;
         //alert('Guideline Scroll Up');
       }
       else if (e.originalEvent.wheelDelta < -119) {
