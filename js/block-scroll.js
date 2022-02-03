@@ -118,7 +118,7 @@
 // ALLOW SCROLL UPDATED TEST
 if ($(theDivs[activeDiv]).hasClass("allow-scroll")) {
 
-$('.allow-scroll.active-div fieldset').on('scroll', function() {
+$('.active-div fieldset').on('scroll', function() {
   var scrollTop = $(this).scrollTop();
 
   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
