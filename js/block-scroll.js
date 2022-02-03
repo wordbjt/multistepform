@@ -140,7 +140,7 @@ goDown();
 	    
 // If div is at top allow scroll up, bottom scroll down 
 
-$('.allow-scroll fieldset').on('scroll', function() {
+$('.allow-scroll.active-div fieldset').on('scroll', function() {
   var scrollTop = $(this).scrollTop();
   
   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
