@@ -114,28 +114,53 @@
 		//	}
 		//});
 	    
-		$(window).bind('mousewheel', function(e){
-			
-		if ($(theDivs[activeDiv]).hasClass("allow-scroll")) {
-				
-			if(e.originalEvent.wheelDelta > 119) {
-				//goUp();
-				//alert('Guideline Scroll Up');
-			}
-			else if (e.originalEvent.wheelDelta < -119) {
-				//goDown();
-				//alert('Guideline Scroll Down');
-			}
-		} else {
-			if(e.originalEvent.wheelDelta > 119) {
-				goUp();
-			}
-			else if (e.originalEvent.wheelDelta < -119) {
-				goDown();
-			}
-		}
-				
-		});
+	    
+	    
+// If div is at top allow scroll up, bottom scroll down 
+
+
+$('.allow-scroll fieldset').on('scroll', function() {
+  var scrollTop = $(this).scrollTop();
+  
+  if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
+    alert('Bottom!');
+    
+    // MOUSEWHEEL AT BOTTOM
+    $(window).bind('mousewheel', function(e){
+              
+      if(e.originalEvent.wheelDelta > 119) {
+        //goUp();
+        //alert('Guideline Scroll Up');
+      }
+      else if (e.originalEvent.wheelDelta < -119) {
+        goDown();
+        //alert('Guideline Scroll Down');
+      }  
+    });
+    
+  } else if (scrollTop <= 0) {
+    alert('Top!');
+    
+    // MOUSEWHEEL AT TOP
+    $(window).bind('mousewheel', function(e){
+              
+      if(e.originalEvent.wheelDelta > 119) {
+        goUp();
+        //alert('Guideline Scroll Up');
+      }
+      else if (e.originalEvent.wheelDelta < -119) {
+        //goDown();
+        //alert('Guideline Scroll Down');
+      }  
+    });
+
+  } else {
+    // NOTHING
+    //$('#message').text('');
+  }
+  
+});
+	    
 	    
 		$(window).bind('DOMMouseScroll', function(e){
 			if(e.originalEvent.detail < 0) {
