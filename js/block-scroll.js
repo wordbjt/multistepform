@@ -123,7 +123,8 @@ $('.allow-scroll.active-div fieldset').on('scroll', function() {
   var scrollTop = $(this).scrollTop();
 
   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
-  alert('Bottom!');
+  //alert('Bottom!');
+  console.log("Bottom!");	  
     
 	       if(e.originalEvent.wheelDelta > 119) {
 	       //goUp();
@@ -135,7 +136,8 @@ $('.allow-scroll.active-div fieldset').on('scroll', function() {
 	       }
 	
   } else if (scrollTop <= 0) {
-  alert('Top!');
+  //alert('Top!');
+  console.log("Top!");
 	
 	       if(e.originalEvent.wheelDelta > 119) {
   	     goUp();
