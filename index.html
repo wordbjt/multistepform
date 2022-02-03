@@ -14,7 +14,7 @@
 <link rel="mask-icon" type="image/x-icon" href="blank.svg" color="#111">
 								      
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-									      
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/block-scroll.js"></script>
 	
 <!--<link rel="stylesheet" href="styles.css">-->
@@ -595,7 +595,8 @@ input.action-button:disabled {
 <!-- multistep form -->
 <form id="msform">
                  
-  <!-- fieldsets -->
+  <!-- FIELDSETS -->
+	
   <div>
   <fieldset>
     <div class="heading">
@@ -609,7 +610,8 @@ input.action-button:disabled {
     </div>
   </fieldset>	
   </div>
-                                                                            
+
+  <!-- NAME -->
   <div>
   <fieldset>
     <div class="heading">
@@ -626,7 +628,8 @@ input.action-button:disabled {
 
   </fieldset>
   </div>
-												  
+
+  <!-- ORG/COMPANY -->
   <div> 												  
   <fieldset>
     <div class="heading">
@@ -643,7 +646,8 @@ input.action-button:disabled {
 
   </fieldset>
   </div>
-											  
+
+  <!-- ADDRESS -->
   <div>
   <fieldset>
     <div class="heading">
@@ -652,7 +656,7 @@ input.action-button:disabled {
     </div>
 
     <textarea name="address" placeholder="Address"></textarea>
-    <p class="input-note"><strong>Shift</strong> + <strong>Enter ↵</strong> to make a line break</p>
+    <p class="input-note"><strong>Shift ⇧</strong> + <strong>Enter ↵</strong> to make a line break</p>
 
     <div class="action-wrapper required-field">				
     	<input type="button" name="previous" class="previous action-button" value="Previous" />
@@ -661,7 +665,8 @@ input.action-button:disabled {
 
   </fieldset>
   </div>
-												      
+
+  <!-- SUBURB -->
   <div>
   <fieldset>
     <div class="heading">
@@ -678,7 +683,8 @@ input.action-button:disabled {
 
   </fieldset>
   </div>
-	
+
+  <!-- STATE -->
   <div> 												  
   <fieldset>
     <div class="heading">
@@ -695,7 +701,8 @@ input.action-button:disabled {
 
   </fieldset>
   </div>
-												      
+
+  <!-- POSTCODE -->
   <div>											  
   <fieldset>
     <div class="heading">
@@ -712,6 +719,7 @@ input.action-button:disabled {
   </fieldset>
   </div>
 
+  <!-- PHONE -->
   <div>
   <fieldset>
     <div class="heading">
@@ -729,6 +737,7 @@ input.action-button:disabled {
   </fieldset>
   </div>
 
+  <!-- EMAIL -->
   <div>
   <fieldset>
     <div class="heading">
@@ -746,6 +755,7 @@ input.action-button:disabled {
   </fieldset>
   </div>
 
+  <!-- SUPPORTER ID# -->
   <div>											  
   <fieldset>
     <div class="heading">
@@ -764,6 +774,7 @@ input.action-button:disabled {
   </fieldset>
   </div>
 
+  <!-- CONTACT PREFERENCE -->
   <div class="col-2 radio-field">
   <fieldset>
     <div class="heading">
@@ -789,6 +800,7 @@ input.action-button:disabled {
   </fieldset>
   </div>
 
+  <!-- FUNDRAISING TYPE -->
   <div class="col-2 radio-field" id="conditional">									  
   <fieldset>
     <div class="heading">
@@ -819,8 +831,8 @@ input.action-button:disabled {
 
   </fieldset>
   </div>
-												  
-										  
+
+  <!-- FUNDRAISING PACK -->
   <div class="col-2 conditional-section">                                                                         
   <fieldset>
     <div class="heading">
@@ -847,6 +859,7 @@ input.action-button:disabled {
   </fieldset>
   </div>
 
+  <!-- EVENT DETAILS -->
   <div class="conditional-section">                                                                         
   <fieldset>
     <div class="heading">
@@ -860,6 +873,7 @@ input.action-button:disabled {
   </fieldset>
   </div>
 
+  <!-- EVENT/ACTIVITY TITLE -->
   <div class="conditional-section">
   <fieldset>
     <div class="heading">
@@ -877,6 +891,7 @@ input.action-button:disabled {
   </fieldset>
   </div>
 
+  <!-- VENUE -->
   <div class="conditional-section">
   <fieldset>
     <div class="heading">
@@ -894,6 +909,7 @@ input.action-button:disabled {
   </fieldset>
   </div>
 
+  <!-- START DATE -->
   <div class="conditional-section">
   <fieldset>
     <div class="heading">
@@ -939,7 +955,8 @@ input.action-button:disabled {
 
   </fieldset>
   </div>
-	
+
+  <!-- FINISH DATE -->
   <div class="conditional-section">
   <fieldset>
     <div class="heading">
@@ -984,7 +1001,7 @@ input.action-button:disabled {
   </fieldset>
   </div>
 
-  <!-- Time -->
+  <!-- TIME -->
   <div class="conditional-section">
   <fieldset>
     <div class="heading">
@@ -1004,7 +1021,7 @@ input.action-button:disabled {
   </fieldset>
   </div>
 	
-  <!-- Participants -->
+  <!-- PARTICIPANTS -->
   <div class="conditional-section">
   <fieldset>
     <div class="heading">
@@ -1023,8 +1040,8 @@ input.action-button:disabled {
 
   </fieldset>
   </div>
-	
-  <!-- Fundraising Activity -->	
+
+  <!-- FUNDRAISING ACTIVITY -->
   <div class="conditional-section">
   <fieldset>
     <div class="heading">
@@ -1034,7 +1051,7 @@ input.action-button:disabled {
     </div>
 	  
     <input type="text" name="fundraising_activity" placeholder="Type your answer here..." />
-    <p class="input-note"><strong>Shift</strong> + <strong>Enter ↵</strong> to make a line break</p>
+    <p class="input-note"><strong>Shift ⇧</strong> + <strong>Enter ↵</strong> to make a line break</p>
 	  
     <div class="action-wrapper required-field">				
     	<input type="button" name="previous" class="previous action-button" value="Previous" />
@@ -1043,8 +1060,8 @@ input.action-button:disabled {
 
   </fieldset>
   </div>
-	
-  <!-- Fundraising Destination -->		
+
+  <!-- FUNDRAISING DONATION -->		
   <div class="col-2 conditional-section">                                                                         
   <fieldset>
     <div class="heading">
@@ -1114,8 +1131,8 @@ input.action-button:disabled {
 
   </fieldset>
   </div>
-	
-  <!-- Public Liability Insurance -->	
+
+  <!-- PUBLIC LIABILITY INSURANCE -->
   <div class="col-2 conditional-section">                                                                         
   <fieldset>
     <div class="heading">
@@ -1141,8 +1158,8 @@ input.action-button:disabled {
 
   </fieldset>
   </div>
-	
-  <!-- Supporter Fundraising Guidelines -->	
+
+  <!-- SUPPORTER FUNDRAISING GUIDELINES -->
   <div id="guidelines" class="glines conditional-section allow-scroll">
   <fieldset>
     <div class="heading">
@@ -1645,7 +1662,7 @@ input.action-button:disabled {
   </fieldset>
   </div>
 
-<!-- Supporter Fundraising Declaration -->
+<!-- SUPPORTER FUNDRAISING DECLARATION -->
 <div id="declaration" class="conditional-section allow-scroll" style="display: none;">
 <fieldset>
   <div class="heading">
@@ -1705,17 +1722,24 @@ input.action-button:disabled {
 
 </fieldset>
 </div>
-	
-</form>
 
+</form>
+	
+<div class="" id="success-message" style="display: none;">
+	<div class="success-content">
+		<h3>Thank you! We'll be in touch shortly.</h3>
+	</div>
+</div>
+
+<!-- SCROLL -->
 <script>
 $(function() {
       var blockScroller = $("#msform").blockScroll();
 });
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+<!-- VALIDATE -->	
 <script>
 $(document).ready(function() {
 	$("#msform").validate({
