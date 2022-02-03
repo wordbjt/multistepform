@@ -1,13 +1,17 @@
+
+
 /* BLOCK SCROLL */
 
 #msform>div
 {
   position: relative;
+  /*margin: auto;*/
 }
 
 #block-up-arrow, #block-down-arrow {
   cursor: pointer;
 }
+
 
 /*custom font*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
@@ -17,6 +21,11 @@
 
 html {
 	height: 100%;
+	/*Image only BG fallback*/
+
+	/*background = gradient + image pattern combo*/
+	/*background:
+		linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));*/
 }
 
 body {
@@ -63,27 +72,38 @@ p.content {
 
 
 #msform fieldset {
+	/*background: white;*/
 	border: 0 none;
+	/*border-radius: 3px;*/
+	/*box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);*/
 	padding: 20px 30px;
 	box-sizing: border-box;
+	/*width: 80%;*/
 	width: 100%;
+	/*margin: 0 10%;*/
 	margin: 0 auto;
+
 	/*stacking fieldsets above each other*/
 	position: relative;
 }
-
 /*Hide all except first fieldset*/
 #msform fieldset:not(:first-of-type) {
 	display: none;
 }
 
-/*#msform>div:not(:first-of-type) {
-	display: none;*/
-}
-
 /*inputs*/
 #msform input:not(.action-button):not(.radio-button),
 #msform textarea {
+	/*padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 100%;
+	box-sizing: border-box;
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 13px;*/
+
     display: block;
     width: 100%;
     font-family: inherit;
@@ -155,10 +175,13 @@ box-shadow: rgb(71 71 72 / 100%) 0px 2px;
 }
 .radiobtn label {
   display: block;
+  /*background: #fee8c3;*/
   background-color: rgba(71, 71, 72, 0.1);
+  /*color: #444;*/
   color: rgb(71, 71, 72);
   border-radius: 5px;
   padding: 10px 20px;
+  /*border: 2px solid #fdd591;*/
   border: 2px solid rgba(71, 71, 72, 0.6);
   margin-bottom: 5px;
   cursor: pointer;
@@ -174,6 +197,7 @@ box-shadow: rgb(71 71 72 / 100%) 0px 2px;
   width: 20px;
   height: 20px;
   border-radius: 3px;
+  /*background: #fdcb77;*/
   background-color: rgba(71, 71, 72, 0.2);
 }
 .radiobtn label:before {
@@ -189,6 +213,7 @@ box-shadow: rgb(71 71 72 / 100%) 0px 2px;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNS4zIDEzLjIiPiAgPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE0LjcuOGwtLjQtLjRhMS43IDEuNyAwIDAgMC0yLjMuMUw1LjIgOC4yIDMgNi40YTEuNyAxLjcgMCAwIDAtMi4zLjFMLjQgN2ExLjcgMS43IDAgMCAwIC4xIDIuM2wzLjggMy41YTEuNyAxLjcgMCAwIDAgMi40LS4xTDE1IDMuMWExLjcgMS43IDAgMCAwLS4yLTIuM3oiIGRhdGEtbmFtZT0iUGZhZCA0Ii8+PC9zdmc+);
 }
 .radiobtn input[type=radio] {
+  /*display: none;*/
   visibility: hidden;
   position: absolute;
   width: 100%;
@@ -197,14 +222,17 @@ box-shadow: rgb(71 71 72 / 100%) 0px 2px;
           appearance: none;
 }
 .radiobtn input[type=radio]:checked + label {
+  /*background: #fdcb77;*/
   backgroud: rgba(71, 71, 72, 0.2);
   -webkit-animation-name: blink;
           animation-name: blink;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   border-color: rgba(71, 71, 72, 0.8);
+  /*border-color: #fcae2c;*/
 }
 .radiobtn input[type=radio]:checked + label:after {
+  /*background: #fcae2c;*/
   background: rgba(71, 71, 72, 0.8);
 }
 .radiobtn input[type=radio]:checked + label:before {
@@ -298,12 +326,14 @@ font-size: 12px;
 }
 
 #msform .date-wrapper input {
+/*width: 25%;*/
 width: 100%;
 display: inline-block
 }
 
 #msform .date-wrapper input:not(.action-button):not(.radio-button),
 #msform .date-wrapper textarea {
+/*width: 25%;*/
 width: 100%;
 display: inline-block
 }
@@ -317,6 +347,7 @@ margin-top: 45px;
 
 .date-wrapper .column {
   float: left;
+  /*width: 33.33%;*/
   width: 28.33%;
 	}
 .date-wrapper .column-xs {
@@ -331,11 +362,12 @@ margin-top: 45px;
   clear: both;
 }
 
-/* ACTION WRAPPER */
+
 
 .action-wrapper {
 margin-top: 25px;
 }
+
 
 
 /*buttons*/
@@ -365,6 +397,16 @@ margin-top: 25px;
 }
 
 #msform .action-button {
+	/*width: 100px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;*/
+
     position: relative;
     font-family: inherit;
     font-weight: 700;
@@ -383,6 +425,7 @@ margin-top: 25px;
     border-radius: 4px;
 }
 #msform .action-button:hover, #msform .action-button:focus {
+	/*box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;*/
 	background-color: rgba(23, 152, 205, 0.8) !important;
 }
 
@@ -403,6 +446,7 @@ margin-top: 25px;
 	font-size: 22px;
 	font-weight: 600;
 	text-transform: none;
+	/*color: #2C3E50;*/
 	color: rgb(71, 71, 72);
 	margin-bottom: 10px;
 }
@@ -413,6 +457,7 @@ margin-top: 25px;
 	font-weight: 700;
 	text-transform: none;
 	color: #2C3E50;
+	/*color: rgb(71, 71, 72);*/
 	margin-bottom: 10px;
 }
 .fs-subtitle {
@@ -506,5 +551,6 @@ input.action-button:disabled {
 
 .allow-scroll fieldset {
 	overflow-y: scroll;
+	/*max-height: 100vh;*/
 	height: calc(100vh - 200px);
 }
