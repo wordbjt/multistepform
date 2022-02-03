@@ -154,7 +154,7 @@ $('.allow-scroll.active-div fieldset').on('scroll', function() {
 	       }
   }
 
-} 
+}); 
 
 } else {
   if(e.originalEvent.wheelDelta > 119) {
