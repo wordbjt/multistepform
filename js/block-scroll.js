@@ -113,8 +113,20 @@
 		//		goDown();
 		//	}
 		//});
-
-
+	    
+$(theDivs[activeDiv]).hasClass("scroll-down") {
+//$('.allow-scroll.active-div fieldset').on('scroll', function() {
+  var scrollTop = $(this).scrollTop();
+  if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
+    $('.allow-scroll.active-div').addClass("scroll-down")  
+    console.log('Bottom!');
+  } else if (scrollTop <= 0) {
+    $('.allow-scroll.active-div').addClass("scroll-up") 	  
+    console.log('Top!');
+  } else {
+    // Nothing
+  }
+});
 	    
 // ALLOW SCROLL - GUIDELINES AND DECLARATION
 $(window).bind('mousewheel', function(e){
