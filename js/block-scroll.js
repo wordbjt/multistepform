@@ -114,7 +114,7 @@
 		//	}
 		//});
 	    
-$(theDivs[activeDiv]).on('scroll', function() {
+$(theDivs[activeDiv] fieldset).on('scroll', function() {
 //$('.active-div fieldset').on('scroll', function() {
   var scrollTop = $(this).scrollTop();
   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
