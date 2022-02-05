@@ -164,12 +164,12 @@ $('.active-div fieldset').on('scroll', function() {
   $(window).bind('mousewheel', function(e){
   
     if (e.originalEvent.wheelDelta > 119) {
-    //goUp();
-    allowScrollUp
+    goUp();
+    //allowScrollUp
     }
     else if (e.originalEvent.wheelDelta < -119) {
-    //goDown();
-    allowScrollDown
+    goDown();
+    //allowScrollDown
     }
 
     });
