@@ -117,10 +117,14 @@
 $('#guidelines fieldset').on('scroll', function() {
   var scrollTop = $(this).scrollTop();
   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
-    $('.allow-scroll.active-div').addClass("scroll-down")  
+    //$('.allow-scroll.active-div').addClass("scroll-down"); 
+    $(theDivs[activeDiv]).addClass("scroll-down");
+    $(theDivs[activeDiv]).removeClass("scroll-up");
     console.log('Bottom!');
   } else if (scrollTop <= 0) {
-    $('.allow-scroll.active-div').addClass("scroll-up") 	  
+    //$('.allow-scroll.active-div').addClass("scroll-up");
+    $(theDivs[activeDiv]).addClass("scroll-up");
+    $(theDivs[activeDiv]).removeClass("scroll-down");	  
     console.log('Top!');
   } else {
     // Nothing
