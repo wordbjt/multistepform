@@ -115,7 +115,7 @@
 		//});
 	    
 $(theDivs[activeDiv]).on('scroll', function() {
-//$('.allow-scroll.active-div fieldset').on('scroll', function() {
+//$('.active-div fieldset').on('scroll', function() {
   var scrollTop = $(this).scrollTop();
   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
     $('.allow-scroll.active-div').addClass("scroll-down")  
