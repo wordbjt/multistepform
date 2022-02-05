@@ -1406,22 +1406,24 @@ $(document).ready(function(){
 </script>
 	
 <!-- Guidelines & Declaraction - Detect top and bottom -->
-<!--<script>
+<script>
 $(document).ready(function(){	
-$('.allow-scroll fieldset').on('scroll', function() {
+$('.allow-scroll.active-div fieldset').on('scroll', function() {
   var scrollTop = $(this).scrollTop();
   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
     //$('#message').text('end reached');
-    alert('Bottom!');
+    $('.allow-scroll.active-div').addClass("scroll-down")  
+    console.log('Bottom!');
   } else if (scrollTop <= 0) {
     //$('#message').text('Top reached');
-    alert('Top!');
+    $('.allow-scroll.active-div').addClass("scroll-up") 	  
+    console.log('Top!');
   } else {
     //$('#message').text('');
   }
 });
 });	
-</script>-->
+</script>
 
 <script>
 $(document).ready(function() {					 
