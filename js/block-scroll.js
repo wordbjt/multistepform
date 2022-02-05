@@ -117,19 +117,17 @@
 
 	    
 // ALLOW SCROLL - GUIDELINES AND DECLARATION - TEST
+// MOUSEWHEEL
+	    
+$(window).bind('mousewheel', function(e){
 
-$('.active-div fieldset').on('scroll', function() {
-//$('.allow-scroll.active-div fieldset').on('scroll', function() {
+$('.allow-scroll.active-div fieldset').on('scroll', function() {
   var scrollTop = $(this).scrollTop();
 
-  // IF BOTTOM
-  if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
-  console.log("Bottom!");
+// IF BOTTOM
+if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
+console.log("Bottom!");
   
-  // MOUSEWHEEL
-  $(window).bind('mousewheel', function(e){
-
-
     if (e.originalEvent.wheelDelta > 119) {
     //goUp();
     //alert('Guideline Scroll Up');
@@ -139,15 +137,11 @@ $('.active-div fieldset').on('scroll', function() {
     //alert('Guideline Scroll Down');
     }
     
-    });
     }
     
 // IF TOP
   else if (scrollTop <= 0) {
   console.log("Top!");
-
-  // MOUSEWHEEL
-  $(window).bind('mousewheel', function(e){
       
       if (e.originalEvent.wheelDelta > 119) {
       goUp();
@@ -155,30 +149,25 @@ $('.active-div fieldset').on('scroll', function() {
       else if (e.originalEvent.wheelDelta < -119) {
       //goDown();
       }
-      });
-
+  } 
 // IF NEITHER      
-  } else {
-
-  // MOUSEWHEEL
-  $(window).bind('mousewheel', function(e){
+else {
   
     if (e.originalEvent.wheelDelta > 119) {
-    goUp();
-    //allowScrollUp
+    //goUp();
+    allowScrollUp
     }
     else if (e.originalEvent.wheelDelta < -119) {
-    goDown();
-    //allowScrollDown
+    //goDown();
+    allowScrollDown
     }
 
-    });
   }
 
 });
 
+});
 
-	    
 	    
 		$(window).bind('DOMMouseScroll', function(e){
 			if(e.originalEvent.detail < 0) {
