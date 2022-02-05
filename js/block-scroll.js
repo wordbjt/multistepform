@@ -113,13 +113,14 @@
 		//		goDown();
 		//	}
 		//});
-	    
-$((theDivs[activeDiv]) fieldset).on('scroll', function() {
+    
+$("#guidelines fieldset").on('scroll', function() {
   var scrollTop = $(this).scrollTop();
   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
     //$('.allow-scroll.active-div').addClass("scroll-down"); 
     $(theDivs[activeDiv]).addClass("scroll-down");
     $(theDivs[activeDiv]).removeClass("scroll-up");
+    //$(theDivs[activeDiv-1]).removeClass("active-div");
     console.log('Bottom!');
   } else if (scrollTop <= 0) {
     //$('.allow-scroll.active-div').addClass("scroll-up");
