@@ -114,7 +114,7 @@
 		//	}
 		//});
 	    
-$(theDivs[activeDiv]).hasClass("scroll-down") {
+$(theDivs[activeDiv]).on('scroll', function() {
 //$('.allow-scroll.active-div fieldset').on('scroll', function() {
   var scrollTop = $(this).scrollTop();
   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
