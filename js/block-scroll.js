@@ -117,13 +117,14 @@
 
 	    
 // ALLOW SCROLL - GUIDELINES AND DECLARATION - TEST
-	    
-$('.allow-scroll.active-div fieldset').on('scroll', function() {
+
+$('.active-div fieldset').on('scroll', function() {
+//$('.allow-scroll.active-div fieldset').on('scroll', function() {
   var scrollTop = $(this).scrollTop();
 
-// IF BOTTOM
-if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
-console.log("Bottom!");
+  // IF BOTTOM
+  if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
+  console.log("Bottom!");
   
   // MOUSEWHEEL
   $(window).bind('mousewheel', function(e){
