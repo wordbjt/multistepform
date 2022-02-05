@@ -114,7 +114,7 @@
 		//	}
 		//});
 	    
-$('#guidelines fieldset').on('scroll', function() {
+$(theDivs[activeDiv]).hasClass("allow-scroll").on('scroll', function() {
   var scrollTop = $(this).scrollTop();
   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
     //$('.allow-scroll.active-div').addClass("scroll-down"); 
