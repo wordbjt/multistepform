@@ -116,7 +116,8 @@
 
 
 	    
-// ALLOW SCROLL - GUIDELINES AND DECLARATION - NEW TEST	    
+// ALLOW SCROLL - GUIDELINES AND DECLARATION - TEST
+	    
 $('.allow-scroll.active-div fieldset').on('scroll', function() {
   var scrollTop = $(this).scrollTop();
 
@@ -138,6 +139,7 @@ console.log("Bottom!");
     }
     
     });
+    }
     
 // IF TOP
   else if (scrollTop <= 0) {
@@ -173,7 +175,8 @@ console.log("Bottom!");
   }
 
 });
-});
+
+
 	    
 	    
 		$(window).bind('DOMMouseScroll', function(e){
