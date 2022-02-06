@@ -114,15 +114,15 @@
 		//	}
 		//});
     
-$("#guidelines fieldset").on('scroll', function() {
+$('#guidelines fieldset').on('scroll', function() {
   var scrollTop = $(this).scrollTop();
   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
     $("#guidelines").addClass("scroll-down");
-    $(#guidelines").removeClass("scroll-up");
+    $("#guidelines").removeClass("scroll-up");
     console.log('Bottom!');
   } else if (scrollTop <= 0) {
-    $(#guidelines").addClass("scroll-up");
-    $(#guidelines").removeClass("scroll-down");	  
+    $("#guidelines").addClass("scroll-up");
+    $("#guidelines").removeClass("scroll-down");	  
     console.log('Top!');
   } else {
     // Nothing
