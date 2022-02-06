@@ -1361,12 +1361,13 @@ $(document).ready(function() {
     //alert('Accept button clicked!');
     console.log("Accept button clicked!");
     if($(this).attr('id') == 'radio-guidelines-accept') {
-    $('.active-div .next').prop('disabled', false);
+    //$('.active-div .next').prop('disabled', false);
+    $('#guidelines .next').prop('disabled', false);	    
     console.log("Accepted!");	    
     //$('#declaration').show();
     $("#declaration").css("display", "block");
   } else {
-    $('.active-div .next').prop('disabled', 'disabled');
+    $('#declaration .next').prop('disabled', 'disabled');
     $("#declaration").css("display", "none");
   }
 });
