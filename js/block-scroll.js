@@ -124,13 +124,14 @@ $('#guidelines fieldset').on('scroll', function() {
     $("#guidelines").addClass("scroll-up");
     $("#guidelines").removeClass("scroll-down");	  
     console.log('Top!');
-  } else {
+  } 
+	//else {
     // Nothing
-    console.log('Nothing!');
-  }
+    // console.log('Nothing!');
+  //}
 });
 	    
-// ALLOW SCROLL - GUIDELINES AND DECLARATION
+// ALLOW SCROLL - GUIDELINES
 $(window).bind('mousewheel', function(e){
 
     //if ($(theDivs[activeDiv]).hasClass("scroll-down")) {
