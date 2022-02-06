@@ -144,7 +144,7 @@ $(window).bind('mousewheel', function(e){
         goDown();
         }
       
-    } else if ("#guidelines").hasClass("scroll-up")) {
+    } else if ($("#guidelines").hasClass("scroll-up")) {
 
         if (e.originalEvent.wheelDelta > 119) {
         goUp();
@@ -153,7 +153,7 @@ $(window).bind('mousewheel', function(e){
         //goDown();
         }
         
-    } else if ("#declaration").hasClass("scroll-up")) {
+    } else if ($("#declaration").hasClass("scroll-up")) {
 
         if (e.originalEvent.wheelDelta > 119) {
         goUp();
