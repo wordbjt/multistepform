@@ -149,7 +149,7 @@ $(window).bind('mousewheel', function(e){
       
    // } else if ($(theDivs[activeDiv]).hasClass("scroll-up")) {
 	      
-      } else if ("#guidelines").hasClass("scroll-up")) {
+      } else if ($("#guidelines").hasClass("scroll-up")) {
 	      
         if (e.originalEvent.wheelDelta > 119) {
         goUp();
