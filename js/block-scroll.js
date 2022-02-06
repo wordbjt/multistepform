@@ -133,8 +133,10 @@ $('#guidelines fieldset').on('scroll', function() {
 // ALLOW SCROLL - GUIDELINES AND DECLARATION
 $(window).bind('mousewheel', function(e){
 
-    if ($(theDivs[activeDiv]).hasClass("scroll-down")) {
-
+    //if ($(theDivs[activeDiv]).hasClass("scroll-down")) {
+	
+      if ($("#guidelines").hasClass("scroll-down")) {
+	      
         if (e.originalEvent.wheelDelta > 119) {
         //goUp();
         //alert('Guideline Scroll Up');
@@ -145,8 +147,10 @@ $(window).bind('mousewheel', function(e){
         //alert('Guideline Scroll Down');
         }
       
-    } else if ($(theDivs[activeDiv]).hasClass("scroll-up")) {
-
+   // } else if ($(theDivs[activeDiv]).hasClass("scroll-up")) {
+	      
+      } else if ("#guidelines").hasClass("scroll-up")) {
+	      
         if (e.originalEvent.wheelDelta > 119) {
         goUp();
         }
