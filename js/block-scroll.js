@@ -131,34 +131,39 @@ $('#guidelines fieldset').on('scroll', function() {
   //}
 });
 	    
-// ALLOW SCROLL - GUIDELINES
+// ALLOW SCROLL - GUIDELINES AND DECLARATION
 $(window).bind('mousewheel', function(e){
 
-    //if ($(theDivs[activeDiv]).hasClass("scroll-down")) {
-	
-      if ($("#guidelines").hasClass("scroll-down")) {
-	      
+    if ($("#guidelines").hasClass("scroll-down")) {
+
         if (e.originalEvent.wheelDelta > 119) {
         //goUp();
-        //alert('Guideline Scroll Up');
         }
     
         else if (e.originalEvent.wheelDelta < -119) {
         goDown();
-        //alert('Guideline Scroll Down');
         }
       
-   // } else if ($(theDivs[activeDiv]).hasClass("scroll-up")) {
-	      
-      } else if ($("#guidelines").hasClass("scroll-up")) {
-	      
+    } else if ("#guidelines").hasClass("scroll-up")) {
+
         if (e.originalEvent.wheelDelta > 119) {
         goUp();
         }
         else if (e.originalEvent.wheelDelta < -119) {
         //goDown();
         }
-    } else {
+        
+    } else if ("#declaration").hasClass("scroll-up")) {
+
+        if (e.originalEvent.wheelDelta > 119) {
+        goUp();
+        }
+        else if (e.originalEvent.wheelDelta < -119) {
+        //goDown();
+        }
+        
+    } else if ($("div:not(#guidelines, #declaration)")) {
+
         if (e.originalEvent.wheelDelta > 119) {
         goUp();
         }
