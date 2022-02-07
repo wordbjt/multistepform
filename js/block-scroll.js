@@ -134,44 +134,32 @@ $('#guidelines fieldset').on('scroll', function() {
 // ALLOW SCROLL - GUIDELINES AND DECLARATION
 $(window).bind('mousewheel', function(e){
 
-    if ($("#guidelines").hasClass("scroll-down")) {
-
-        if (e.originalEvent.wheelDelta > 119) {
-        //goUp();
-        }
-    
-        else if (e.originalEvent.wheelDelta < -119) {
-        goDown();
-        }
-      
-    } else if ($("#guidelines").hasClass("scroll-up")) {
-
-        if (e.originalEvent.wheelDelta > 119) {
+   if (e.originalEvent.wheelDelta > 119) {
+        if ($("#guidelines").hasClass("scroll-up")) {
         goUp();
+        } else {
+        // Nothing
         }
-        else if (e.originalEvent.wheelDelta < -119) {
-        //goDown();
+
+   } else if (e.originalEvent.wheelDelta < -119) {
+        if ($("#guidelines").hasClass("scroll-down")) {
+        goDown();
+        } else {
+        // Nothing
         }
         
-    } else if ($("#declaration").hasClass("scroll-up")) {
-
-        if (e.originalEvent.wheelDelta > 119) {
+   } else if (e.originalEvent.wheelDelta > 119) {
+        if ($("div:not(#guidelines)")) {
         goUp();
-        }
-        else if (e.originalEvent.wheelDelta < -119) {
-        //goDown();
         }
         
-    } else if ($("div:not(#guidelines, #declaration)")) {
-
-        if (e.originalEvent.wheelDelta > 119) {
-        goUp();
-        }
-        else if (e.originalEvent.wheelDelta < -119) {
+   } else if (e.originalEvent.wheelDelta < -119) {
+        if ($("div:not(#guidelines)")) {
         goDown();
         }
-    }
-});
+   }
+});	    
+
 
 	    
 		$(window).bind('DOMMouseScroll', function(e){
