@@ -149,12 +149,12 @@ $(window).bind('mousewheel', function(e){
         }
         
    } else if (e.originalEvent.wheelDelta > 119) {
-        if ($("div:not(#guidelines)")) {
+        if ($(".active-div:not(#guidelines)")) {
         goUp();
         }
         
    } else if (e.originalEvent.wheelDelta < -119) {
-        if ($("div:not(#guidelines)")) {
+        if ($(".active-div:not(#guidelines)")) {
         goDown();
         }
    }
