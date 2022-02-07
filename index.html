@@ -1360,8 +1360,7 @@ $(document).ready(function() {
    $('#guidelines input[type="radio"]').click(function() {
     //alert('Accept button clicked!');
     console.log("Accept button clicked!");
-    //if($(this).attr('id') == 'radio-guidelines-accept') {
-    if(($(this).attr('id') == 'radio-guidelines-accept').valid()) {
+    if($(this).attr('id') == 'radio-guidelines-accept') {
     //$('.active-div .next').prop('disabled', false);
     $('#guidelines .next').prop('disabled', false);	    
     console.log("Accepted!");	    
