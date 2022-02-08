@@ -133,26 +133,18 @@ $('#guidelines fieldset').on('scroll', function() {
 	    
 
 // ALLOW SCROLL - GUIDELINES AND DECLARATION
+
 $(window).bind('mousewheel', function(e){
-
-   if ((e.originalEvent.wheelDelta > 119) && ($("#guidelines").hasClass("scroll-up"))) {
-        goUp();
-        //Has Scroll Up
-	console.log('Guidelines has Scroll Up');
-   } else if ((e.originalEvent.wheelDelta > 119) && (!$("#guidelines").hasClass("scroll-up"))) {
-        // Does not have class scroll-up
-	console.log('Guidelines does not have Scroll Up ');
-   } else if ((e.originalEvent.wheelDelta < -119) && ($("#guidelines").hasClass("scroll-down"))) {
-        // Has Scroll Down
-	console.log('Guidelines has Scroll Down ');
-   } else if ((e.originalEvent.wheelDelta < -119) && (!$("#guidelines").hasClass("scroll-down"))) {
-        // Does not have Scroll Down
-	console.log('Guidelines does not have Scroll Down ');
-   }
+	
+if ((e.originalEvent.wheelDelta > 119) && ($('#msform>div').not('#' + guidelines).attr('id'))) {
+  goUp();
+  console.log('Not guidelines - Scroll Up');
+}
+else if ((e.originalEvent.wheelDelta < -119) && ($('#msform>div').not('#' + guidelines).attr('id'))) {
+  goDown();
+  console.log('Not guidelines - Scroll Down');
+}
 });
-
-	    
-
 	    
 		$(window).bind('DOMMouseScroll', function(e){
 			if(e.originalEvent.detail < 0) {
