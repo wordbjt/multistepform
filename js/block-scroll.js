@@ -130,6 +130,26 @@ $('#guidelines fieldset').on('scroll', function() {
     // console.log('Nothing!');
   //}
 });
+
+	    
+$.fn.isInViewport = function () {
+    let elementTop = $(this).offset().top;
+    let elementBottom = elementTop + $(this).outerHeight();
+
+    let viewportTop = $(window).scrollTop();
+    let viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+
+$(window).scroll(function () {
+    if ($('#guidelines').isInViewport()) {
+        $(this).addClass("in-view");
+        console.log('success.')
+    } else {
+        console.log('No success.')
+    }
+});
 	    
 
 // ALLOW SCROLL - GUIDELINES AND DECLARATION
@@ -144,6 +164,22 @@ else if ((e.originalEvent.wheelDelta < -119) && ($('#msform>div').not('#guidelin
   goDown();
   console.log('Not guidelines - Scroll Down');
 }
+else if ((e.originalEvent.wheelDelta > 119) && ($('#guidelines').hasClass('in-view'))) {
+  goUp();
+  console.log('Guidelines - Scroll Up');
+}
+else if ((e.originalEvent.wheelDelta > 119) && (!$('#guidelines').hasClass('in-view'))) {
+  //goUp();
+  console.log('Guidelines - No Scroll Up');
+}
+else if ((e.originalEvent.wheelDelta > -119) && ($('#guidelines').hasClass('in-view'))) {
+  goDown();
+  console.log('Guidelines - Scroll Down');
+}	
+else if ((e.originalEvent.wheelDelta < -119) && (!$('#guidelines').hasClass('scroll-up'))) {
+  //goDown();
+  console.log('Guidelines - No Scroll Down');
+}	
 });
 	    
 		$(window).bind('DOMMouseScroll', function(e){
