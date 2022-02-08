@@ -137,36 +137,40 @@ $(window).bind('mousewheel', function(e){
    if (e.originalEvent.wheelDelta > 119) {
         if ($("#guidelines").hasClass("scroll-up")) {
         goUp();
-	console.log('Guidelines - Scroll Up');
-        } else {
-        // Nothing
-	console.log('Guidelines - Scroll Up - Nothing ');
+	console.log('Guidelines has Scroll Up');
+        } else if (!$("#guidelines").hasClass("scroll-up")) {
+        // Does not have class scroll-up
+	console.log('Guidelines does not have Scroll Up ');
         }
 
    } else if (e.originalEvent.wheelDelta < -119) {
         if ($("#guidelines").hasClass("scroll-down")) {
         goDown();
-	console.log('Guidelines - Scroll Down');
-        } else {
-        // Nothing
-	console.log('Guidelines - Scroll Down Nothing');
+	console.log('Guidelines has Scroll Down');
+        } else if (!$("#guidelines").hasClass("scroll-down")) {
+        // Does not have class scroll down
+	console.log('Guidelines does not have Scroll Down');
         }
 	   
         
    } else if (e.originalEvent.wheelDelta > 119) {
-        if ($(".active-div:not(#guidelines)")) {
+        //if ($(".active-div:not(#guidelines)")) {
+	if ($('.active-div').not('#' + 'guidelines').attr('id'));
         goUp();
 	console.log('Active - Not Guidelines - Up');	
         }
         
    } else if (e.originalEvent.wheelDelta < -119) {
-        if ($(".active-div:not(#guidelines)")) {
+        //if ($(".active-div:not(#guidelines)")) {
+	if ($('.active-div').not('#' + 'guidelines').attr('id'));
         goDown();
 	console.log('Active - Not Guidelines - Down');
         }
    }
 });	    
 
+//var notPickID = $('.myclass').not('#' + pickID).attr('id');
+	    
 
 	    
 		$(window).bind('DOMMouseScroll', function(e){
