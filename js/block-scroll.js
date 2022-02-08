@@ -142,14 +142,19 @@ $.fn.isInViewport = function () {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 
+
+	    
 $(window).scroll(function () {
     if ($('#guidelines').isInViewport()) {
-        $(this).addClass("in-view");
-        console.log('success.')
+        //  Use .blogcard instead of this
+        $('#guidelines').addClass('in-view');
+        console.log('Guidelines in-view')
     } else {
-        console.log('No success.')
+        //  Remove class
+        $('#guidelines').removeClass('in-view');
+        console.log('Guidelines not in-view')
     }
-});
+});	    
 	    
 
 // ALLOW SCROLL - GUIDELINES AND DECLARATION
