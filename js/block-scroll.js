@@ -137,25 +137,32 @@ $(window).bind('mousewheel', function(e){
    if (e.originalEvent.wheelDelta > 119) {
         if ($("#guidelines").hasClass("scroll-up")) {
         goUp();
+	console.log('Guidelines - Scroll Up');
         } else {
         // Nothing
+	console.log('Guidelines - Scroll Up - Nothing ');
         }
 
    } else if (e.originalEvent.wheelDelta < -119) {
         if ($("#guidelines").hasClass("scroll-down")) {
         goDown();
+	console.log('Guidelines - Scroll Down');
         } else {
         // Nothing
+	console.log('Guidelines - Scroll Down Nothing');
         }
+	   
         
    } else if (e.originalEvent.wheelDelta > 119) {
         if ($(".active-div:not(#guidelines)")) {
         goUp();
+	console.log('Active - Not Guidelines - Up');	
         }
         
    } else if (e.originalEvent.wheelDelta < -119) {
         if ($(".active-div:not(#guidelines)")) {
         goDown();
+	console.log('Active - Not Guidelines - Down');
         }
    }
 });	    
