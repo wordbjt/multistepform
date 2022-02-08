@@ -140,7 +140,7 @@ if ((e.originalEvent.wheelDelta > 119) && ($('#msform>div').not('#guidelines')))
   goUp();
   console.log('Not guidelines - Scroll Up');
 }
-else if ((e.originalEvent.wheelDelta < -119) && ($('#msform>div').not('guidelines'))) {
+else if ((e.originalEvent.wheelDelta < -119) && ($('#msform>div').not('#guidelines'))) {
   goDown();
   console.log('Not guidelines - Scroll Down');
 }
