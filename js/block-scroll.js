@@ -155,14 +155,14 @@ $(window).bind('mousewheel', function(e){
         
    } else if (e.originalEvent.wheelDelta > 119) {
         //if ($(".active-div:not(#guidelines)")) {
-	if ($('.active-div').not('#' + 'guidelines').attr('id'));
+	if ($('.active-div').not('#' + 'guidelines').attr('id')) {
         goUp();
 	console.log('Active - Not Guidelines - Up');	
         }
         
    } else if (e.originalEvent.wheelDelta < -119) {
         //if ($(".active-div:not(#guidelines)")) {
-	if ($('.active-div').not('#' + 'guidelines').attr('id'));
+	if ($('.active-div').not('#' + 'guidelines').attr('id')){
         goDown();
 	console.log('Active - Not Guidelines - Down');
         }
