@@ -169,19 +169,19 @@ else if ((e.originalEvent.wheelDelta < -119) && ($('#msform>div').not('#guidelin
   goDown();
   console.log('Not guidelines - Scroll Down');
 }
-else if ((e.originalEvent.wheelDelta > 119) && ($('#guidelines').hasClass('in-view'))) {
+else if ((e.originalEvent.wheelDelta > 119) && ($('#guidelines').hasClass('in-view')) && ($('#guidelines').hasClass('scroll-up'))) {
   goUp();
   console.log('Guidelines - Scroll Up');
 }
-else if ((e.originalEvent.wheelDelta > 119) && (!$('#guidelines').hasClass('in-view'))) {
+else if ((e.originalEvent.wheelDelta > 119) && (!$('#guidelines').hasClass('in-view')) && (!$('#guidelines').hasClass('scroll-up'))) {
   //goUp();
   console.log('Guidelines - No Scroll Up');
 }
-else if ((e.originalEvent.wheelDelta > -119) && ($('#guidelines').hasClass('in-view'))) {
+else if ((e.originalEvent.wheelDelta > -119) && ($('#guidelines').hasClass('in-view')) && ($('#guidelines').hasClass('scroll-down'))) {
   goDown();
   console.log('Guidelines - Scroll Down');
 }	
-else if ((e.originalEvent.wheelDelta < -119) && (!$('#guidelines').hasClass('scroll-up'))) {
+else if ((e.originalEvent.wheelDelta < -119) && (!$('#guidelines').hasClass('in-view')) && (!$('#guidelines').hasClass('scroll-down'))) {
   //goDown();
   console.log('Guidelines - No Scroll Down');
 }	
