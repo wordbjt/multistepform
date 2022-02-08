@@ -131,45 +131,26 @@ $('#guidelines fieldset').on('scroll', function() {
   //}
 });
 	    
+
 // ALLOW SCROLL - GUIDELINES AND DECLARATION
 $(window).bind('mousewheel', function(e){
 
-   if (e.originalEvent.wheelDelta > 119) {
-        if ($("#guidelines").hasClass("scroll-up")) {
+   if ((e.originalEvent.wheelDelta > 119) && ($("#guidelines").hasClass("scroll-up"))) {
         goUp();
+        //Has Scroll Up
 	console.log('Guidelines has Scroll Up');
-        } else if (!$("#guidelines").hasClass("scroll-up")) {
+   } else if ((e.originalEvent.wheelDelta > 119) && (!$("#guidelines").hasClass("scroll-up"))) {
         // Does not have class scroll-up
 	console.log('Guidelines does not have Scroll Up ');
-        }
-
-   } else if (e.originalEvent.wheelDelta < -119) {
-        if ($("#guidelines").hasClass("scroll-down")) {
-        goDown();
-	console.log('Guidelines has Scroll Down');
-        } else if (!$("#guidelines").hasClass("scroll-down")) {
-        // Does not have class scroll down
-	console.log('Guidelines does not have Scroll Down');
-        }
-	   
-        
-   } else if (e.originalEvent.wheelDelta > 119) {
-        //if ($(".active-div:not(#guidelines)")) {
-	if ($('.active-div').not('#' + 'guidelines').attr('id')) {
-        goUp();
-	console.log('Active - Not Guidelines - Up');	
-        }
-        
-   } else if (e.originalEvent.wheelDelta < -119) {
-        //if ($(".active-div:not(#guidelines)")) {
-	if ($('.active-div').not('#' + 'guidelines').attr('id')){
-        goDown();
-	console.log('Active - Not Guidelines - Down');
-        }
+   } else if ((e.originalEvent.wheelDelta < -119) && ($("#guidelines").hasClass("scroll-down"))) {
+        // Has Scroll Down
+	console.log('Guidelines has Scroll Down ');
+   } else if ((e.originalEvent.wheelDelta < -119) && (!$("#guidelines").hasClass("scroll-down"))) {
+        // Does not have Scroll Down
+	console.log('Guidelines does not have Scroll Down ');
    }
-});	    
+});
 
-//var notPickID = $('.myclass').not('#' + pickID).attr('id');
 	    
 
 	    
