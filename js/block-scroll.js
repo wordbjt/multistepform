@@ -145,13 +145,16 @@ $.fn.isInViewport = function () {
 
 	    
 $(window).scroll(function () {
-    if ($('#guidelines').isInViewport()) {
-        //  Use .blogcard instead of this
-        $('#guidelines').addClass('in-view');
+    //if ($('#guidelines').isInViewport()) {
+      if ($(theDivs[activeDiv]).isInViewport()) {	
+        // Add class
+        //$('#guidelines').addClass('in-view');
+	$(theDivs[activeDiv]).addClass('active-div');    
         console.log('Guidelines in-view')
     } else {
         //  Remove class
-        $('#guidelines').removeClass('in-view');
+        //$('#guidelines').removeClass('in-view');
+	$(theDivs[activeDiv]).removeClass('active-div');
         console.log('Guidelines not in-view')
     }
 });	    
@@ -169,11 +172,11 @@ else if ((e.originalEvent.wheelDelta < -119) && ($('#msform>div').not('#guidelin
   goDown();
   console.log('Not guidelines - Scroll Down');
 }
-else if ((e.originalEvent.wheelDelta > 119) && ($('#guidelines').hasClass('in-view')) && ($('#guidelines').hasClass('scroll-up'))) {
+else if ((e.originalEvent.wheelDelta > 119) && ($('#guidelines').hasClass('active-div')) && ($('#guidelines').hasClass('scroll-up'))) {
   goUp();
   console.log('Guidelines - Scroll Up');
 }
-else if ((e.originalEvent.wheelDelta > 119) && (!$('#guidelines').hasClass('in-view')) && (!$('#guidelines').hasClass('scroll-up'))) {
+else if ((e.originalEvent.wheelDelta > 119) && (!$('#guidelines').hasClass('active-div')) && (!$('#guidelines').hasClass('scroll-up'))) {
   //goUp();
   console.log('Guidelines - No Scroll Up');
 }
@@ -181,7 +184,7 @@ else if ((e.originalEvent.wheelDelta > -119) && ($('#guidelines').hasClass('in-v
   goDown();
   console.log('Guidelines - Scroll Down');
 }	
-else if ((e.originalEvent.wheelDelta < -119) && (!$('#guidelines').hasClass('in-view')) && (!$('#guidelines').hasClass('scroll-down'))) {
+else if ((e.originalEvent.wheelDelta < -119) && (!$('#guidelines').hasClass('active-div')) && (!$('#guidelines').hasClass('scroll-down'))) {
   //goDown();
   console.log('Guidelines - No Scroll Down');
 }	
@@ -202,8 +205,8 @@ else if ((e.originalEvent.wheelDelta < -119) && (!$('#guidelines').hasClass('in-
       if(activeDiv > 0 && !activelyScrolling)
       {
         gotoDiv(activeDiv-1);
-	$(theDivs[activeDiv]).addClass("active-div");
-	$(theDivs[activeDiv+1]).removeClass("active-div");
+	//$(theDivs[activeDiv]).addClass("active-div");
+	//$(theDivs[activeDiv+1]).removeClass("active-div");
 	      
 	// Radio Button
 	if ($('.active-div').hasClass("radio-field")) {
@@ -228,8 +231,8 @@ else if ((e.originalEvent.wheelDelta < -119) && (!$('#guidelines').hasClass('in-
       if(activeDiv < totalDivs - 1 && !activelyScrolling)
       {
         gotoDiv(activeDiv+1);
-	$(theDivs[activeDiv]).addClass("active-div");
-	$(theDivs[activeDiv-1]).removeClass("active-div");
+	//$(theDivs[activeDiv]).addClass("active-div");
+	//$(theDivs[activeDiv-1]).removeClass("active-div");
 	
 	// If has required-field disable next button
 						       
