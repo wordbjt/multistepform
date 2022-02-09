@@ -145,16 +145,13 @@ $.fn.isInViewport = function () {
 
 	    
 $(window).scroll(function () {
-    //if ($('#guidelines').isInViewport()) {
-      if ($(theDivs[activeDiv]).isInViewport()) {	
+    if ($('#guidelines').isInViewport()) {
         // Add class
         //$('#guidelines').addClass('in-view');
-	$(theDivs[activeDiv]).addClass('active-div');    
         console.log('Guidelines in-view')
     } else {
         //  Remove class
-        //$('#guidelines').removeClass('active-div');
-	$(theDivs[activeDiv]).removeClass('active-div');
+        $('#guidelines').removeClass('in-view');
         console.log('Guidelines not in-view')
     }
 });	    
@@ -172,19 +169,19 @@ else if ((e.originalEvent.wheelDelta < -119) && ($('#msform>div').not('#guidelin
   goDown();
   console.log('Not guidelines - Scroll Down');
 }
-else if ((e.originalEvent.wheelDelta > 119) && ($('#guidelines').hasClass('active-div')) && ($('#guidelines').hasClass('scroll-up'))) {
+else if ((e.originalEvent.wheelDelta > 119) && ($('#guidelines').hasClass('in-view')) && ($('#guidelines').hasClass('scroll-up'))) {
   goUp();
   console.log('Guidelines - Scroll Up');
 }
-else if ((e.originalEvent.wheelDelta > 119) && (!$('#guidelines').hasClass('active-div')) && (!$('#guidelines').hasClass('scroll-up'))) {
+else if ((e.originalEvent.wheelDelta > 119) && (!$('#guidelines').hasClass('in-view')) && (!$('#guidelines').hasClass('scroll-up'))) {
   //goUp();
   console.log('Guidelines - No Scroll Up');
 }
-else if ((e.originalEvent.wheelDelta > -119) && ($('#guidelines').hasClass('active-div')) && ($('#guidelines').hasClass('scroll-down'))) {
+else if ((e.originalEvent.wheelDelta > -119) && ($('#guidelines').hasClass('in-view')) && ($('#guidelines').hasClass('scroll-down'))) {
   goDown();
   console.log('Guidelines - Scroll Down');
 }	
-else if ((e.originalEvent.wheelDelta < -119) && (!$('#guidelines').hasClass('active-div')) && (!$('#guidelines').hasClass('scroll-down'))) {
+else if ((e.originalEvent.wheelDelta < -119) && (!$('#guidelines').hasClass('in-view')) && (!$('#guidelines').hasClass('scroll-down'))) {
   //goDown();
   console.log('Guidelines - No Scroll Down');
 }	
