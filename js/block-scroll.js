@@ -180,7 +180,7 @@ else if ((e.originalEvent.wheelDelta > 119) && (!$('#guidelines').hasClass('acti
   //goUp();
   console.log('Guidelines - No Scroll Up');
 }
-else if ((e.originalEvent.wheelDelta > -119) && ($('#guidelines').hasClass('in-view')) && ($('#guidelines').hasClass('scroll-down'))) {
+else if ((e.originalEvent.wheelDelta > -119) && ($('#guidelines').hasClass('active-div')) && ($('#guidelines').hasClass('scroll-down'))) {
   goDown();
   console.log('Guidelines - Scroll Down');
 }	
