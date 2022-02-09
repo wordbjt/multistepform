@@ -153,7 +153,7 @@ $(window).scroll(function () {
         console.log('Guidelines in-view')
     } else {
         //  Remove class
-        //$('#guidelines').removeClass('in-view');
+        //$('#guidelines').removeClass('active-div');
 	$(theDivs[activeDiv]).removeClass('active-div');
         console.log('Guidelines not in-view')
     }
