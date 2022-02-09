@@ -164,19 +164,6 @@ $(window).scroll(function () {
   
     $(window).bind('mousewheel', function(e){
     
-      if ((e.originalEvent.wheelDelta > 119) && (!$('#guidelines').hasClass('scroll-up'))) {
-      //goUp();
-      console.log('Guidelines - No Scroll Up');
-      }
-      else if ((e.originalEvent.wheelDelta < -119) && (!$('#guidelines').hasClass('scroll-down'))) {
-      //goDown();
-      console.log('Guidelines - No Scroll Down');
-      }	
-    });
-	} else {
-  
-    $(window).bind('mousewheel', function(e){
-    
       if ((e.originalEvent.wheelDelta > 119) && ($('#msform>div').not('#guidelines'))) {
       goUp();
       console.log('Not guidelines - Scroll Up');
@@ -185,9 +172,8 @@ $(window).scroll(function () {
       goDown();
       console.log('Not guidelines - Scroll Down');
       }
-      });
+    });
   }
-
 });	
 	    
 		$(window).bind('DOMMouseScroll', function(e){
