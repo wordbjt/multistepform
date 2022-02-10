@@ -160,7 +160,7 @@ $(window).scroll(function () {
       }	
     });
 
-  } else if (!$('#guidelines').isInViewport() {
+  } else if (!$('#guidelines').isInViewport()) {
   
     $(window).bind('mousewheel', function(e){
     
