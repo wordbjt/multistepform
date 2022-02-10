@@ -170,8 +170,8 @@ $(window).scroll(function () {
      //return false;
      }
    });
- } else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up'))) {
-      console.log('Guidelines no Scroll Up');
+ } else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up')) && (!$('#guidelines').hasClass('scroll-down'))) {
+      console.log('Guidelines no Scroll Up or Scroll Down');
 
      $(window).bind('mousewheel', function(e){
 
@@ -180,15 +180,9 @@ $(window).scroll(function () {
        //console.log('Guidelines no Scroll Up');
        //return false;
        }
-     });
- } else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-down'))) {
-      console.log('Guidelines no Scroll Down');
-	 
-     $(window).bind('mousewheel', function(e){
-
-       if (e.originalEvent.wheelDelta < -119)  {
+       else if (e.originalEvent.wheelDelta < -119)  {
        //goDown();
-       console.log('Guidelines no Scroll Down');
+       //console.log('Guidelines no Scroll Down');
        //return false;
        }
      });
