@@ -143,7 +143,7 @@ $.fn.isInViewport = function () {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 	    
-window.addEventListener('wheel', func, {passive:false})
+window.addEventListener('mousewheel', func, {passive:false});
 	    
 
 $(window).scroll(function () {
