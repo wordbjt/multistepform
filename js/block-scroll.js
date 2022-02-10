@@ -193,7 +193,7 @@ $(window).scroll(function () {
        }
      });
  } else if ((!$('#guidelines').isInViewport()) && ($('#msform>div').not('#guidelines'))) {
-     console.log('Not guidelines);
+     console.log('Not guidelines');
 	 
    $(window).bind('mousewheel', function(e){
 
