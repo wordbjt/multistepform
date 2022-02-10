@@ -148,57 +148,63 @@ window.addEventListener('mousewheel', func, {passive:false});
 
 $(window).scroll(function () {
 
-  if ($('#guidelines').isInViewport()) {
+ if (($('#guidelines').isInViewport()) && ($('#guidelines').hasClass('scroll-up'))) {
 
-    $(window).bind('mousewheel', function(e){
+   $(window).bind('mousewheel', function(e){
 
-      if ((e.originalEvent.wheelDelta > 119) && ($('#guidelines').hasClass('scroll-up'))) {
-      goUp();
-      //console.log('Guidelines - Scroll Up');
-      return false;
-      }
-      else if ((e.originalEvent.wheelDelta > -119) && ($('#guidelines').hasClass('scroll-down'))) {
-      goDown();
-      //console.log('Guidelines - Scroll Down');
-      return false;
-      }
-    });
-    } else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up'))) {
+     if (e.originalEvent.wheelDelta > 119) {
+     goUp();
+     //console.log('Guidelines - Scroll Up');
+     //return false;
+     }
+   });
+   
+ } else if (($('#guidelines').isInViewport()) && ($('#guidelines').hasClass('scroll-down'))) {
 
-      $(window).bind('mousewheel', function(e){
+   $(window).bind('mousewheel', function(e){
+     
+     if (e.originalEvent.wheelDelta > -119) {
+     goDown();
+     //console.log('Guidelines - Scroll Down');
+     //return false;
+     }
+   });
+   } else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up'))) {
 
-        if (e.originalEvent.wheelDelta > 119) {
-        //goUp();
-        //console.log('Guidelines no Scroll Up');
-        return false;
-        }
-      });
-    } else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-down'))) {
+     $(window).bind('mousewheel', function(e){
 
-      $(window).bind('mousewheel', function(e){
+       if (e.originalEvent.wheelDelta > 119) {
+       //goUp();
+       //console.log('Guidelines no Scroll Up');
+       //return false;
+       }
+     });
+   } else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-down'))) {
 
-        if (e.originalEvent.wheelDelta < -119)  {
-        //goDown();
-        //console.log('Guidelines no Scroll Down');
-        return false;
-        }
-      });
-  } else if (!$('#guidelines').isInViewport()) {
+     $(window).bind('mousewheel', function(e){
 
-    $(window).bind('mousewheel', function(e){
+       if (e.originalEvent.wheelDelta < -119)  {
+       //goDown();
+       //console.log('Guidelines no Scroll Down');
+       //return false;
+       }
+     });
+ } else if ((!$('#guidelines').isInViewport()) && ($('#msform>div').not('#guidelines'))) {
 
-      if ((e.originalEvent.wheelDelta > 119) && ($('#msform>div').not('#guidelines'))) {
-      goUp();
-      //console.log('Not guidelines - Scroll Up');
-      return false;
-      }
-      else if ((e.originalEvent.wheelDelta < -119) && ($('#msform>div').not('#guidelines'))) {
-      goDown();
-      //console.log('Not guidelines - Scroll Down');
-      return false;
-      }
-    });
-  }
+   $(window).bind('mousewheel', function(e){
+
+     if (e.originalEvent.wheelDelta > 119) {
+     goUp();
+     //console.log('Not guidelines - Scroll Up');
+     //return false;
+     }
+     else if ((e.originalEvent.wheelDelta < -119) && ($('#msform>div').not('#guidelines'))) {
+     goDown();
+     //console.log('Not guidelines - Scroll Down');
+     //return false;
+     }
+   });
+ }
 });	
 	    
 		//$(window).bind('DOMMouseScroll', function(e){
