@@ -148,7 +148,8 @@ $.fn.isInViewport = function () {
 $(window).scroll(function () {
 
  if (($('#guidelines').isInViewport()) && ($('#guidelines').hasClass('scroll-up'))) {
-
+     console.log('Guidelines - Scroll Up');
+	 
    $(window).bind('mousewheel', function(e){
 
      if (e.originalEvent.wheelDelta > 119) {
@@ -159,7 +160,8 @@ $(window).scroll(function () {
    });
    
  } else if (($('#guidelines').isInViewport()) && ($('#guidelines').hasClass('scroll-down'))) {
-
+     console.log('Guidelines - Scroll Down');
+	 
    $(window).bind('mousewheel', function(e){
      
      if (e.originalEvent.wheelDelta > -119) {
@@ -169,6 +171,7 @@ $(window).scroll(function () {
      }
    });
  } else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up'))) {
+      console.log('Guidelines no Scroll Up');
 
      $(window).bind('mousewheel', function(e){
 
@@ -179,17 +182,19 @@ $(window).scroll(function () {
        }
      });
  } else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-down'))) {
-
+      console.log('Guidelines no Scroll Down');
+	 
      $(window).bind('mousewheel', function(e){
 
        if (e.originalEvent.wheelDelta < -119)  {
        //goDown();
-       //console.log('Guidelines no Scroll Down');
+       console.log('Guidelines no Scroll Down');
        //return false;
        }
      });
  } else if ((!$('#guidelines').isInViewport()) && ($('#msform>div').not('#guidelines'))) {
-
+     console.log('Not guidelines);
+	 
    $(window).bind('mousewheel', function(e){
 
      if (e.originalEvent.wheelDelta > 119) {
