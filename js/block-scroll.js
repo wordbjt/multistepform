@@ -158,15 +158,20 @@ $(window).scroll(function () {
       //console.log('Guidelines - Scroll Down');
       }	
     });
-    } else if ($('#guidelines').isInViewport()) {
+    } else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up'))) {
     
       $(window).bind('mousewheel', function(e){
       
-        if ((e.originalEvent.wheelDelta > 119) && (!$('#guidelines').hasClass('scroll-up'))) {
+        if (e.originalEvent.wheelDelta > 119) {
         //goUp();
         //console.log('Guidelines no Scroll Up');
         }
-        else if ((e.originalEvent.wheelDelta < -119) && (!$('#guidelines').hasClass('scroll-down'))) {
+      });
+    } else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-down'))) {
+    
+      $(window).bind('mousewheel', function(e){
+      
+        if (e.originalEvent.wheelDelta < -119)  {
         //goDown();
         //console.log('Guidelines no Scroll Down');        
         }
