@@ -160,15 +160,15 @@ $(window).scroll(function () {
       }	
     });
 
-  } else if (!$('#guidelines').isInViewport()) {
+  } else if (!$('#guidelines').isInViewport() && ($('#msform>div').not('#guidelines'))) {
   
     $(window).bind('mousewheel', function(e){
     
-      if ((e.originalEvent.wheelDelta > 119) && ($('#msform>div').not('#guidelines'))) {
+      if (e.originalEvent.wheelDelta > 119) {
       goUp();
       console.log('Not guidelines - Scroll Up');
       }
-      else if ((e.originalEvent.wheelDelta < -119) && ($('#msform>div').not('#guidelines'))) {
+      else if (e.originalEvent.wheelDelta < -119) {
       goDown();
       console.log('Not guidelines - Scroll Down');
       }
