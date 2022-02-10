@@ -153,10 +153,12 @@ $(window).scroll(function () {
       if ((e.originalEvent.wheelDelta > 119) && ($('#guidelines').hasClass('scroll-up'))) {
       goUp();
       console.log('Guidelines - Scroll Up');
+      return false;	      
       }
       else if ((e.originalEvent.wheelDelta > -119) && ($('#guidelines').hasClass('scroll-down'))) {
       goDown();
       console.log('Guidelines - Scroll Down');
+      return false;
       }	
     });
 
@@ -167,10 +169,12 @@ $(window).scroll(function () {
       if (e.originalEvent.wheelDelta > 119) {
       goUp();
       console.log('Not guidelines - Scroll Up');
+      return false;
       }
       else if (e.originalEvent.wheelDelta < -119) {
       goDown();
       console.log('Not guidelines - Scroll Down');
+      return false;         
       }
     });
   }
