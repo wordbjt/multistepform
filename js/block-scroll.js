@@ -143,7 +143,6 @@ $.fn.isInViewport = function () {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
 	    
-window.addEventListener('mousewheel', func, {passive:false});
 	    
 
 $(window).scroll(function () {
@@ -169,7 +168,7 @@ $(window).scroll(function () {
      //return false;
      }
    });
-   } else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up'))) {
+ } else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up'))) {
 
      $(window).bind('mousewheel', function(e){
 
@@ -179,7 +178,7 @@ $(window).scroll(function () {
        //return false;
        }
      });
-   } else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-down'))) {
+ } else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-down'))) {
 
      $(window).bind('mousewheel', function(e){
 
