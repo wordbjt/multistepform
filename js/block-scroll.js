@@ -170,22 +170,22 @@ $(window).scroll(function () {
      //return false;
      }
    });
- } else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up')) && (!$('#guidelines').hasClass('scroll-down'))) {
-      console.log('Guidelines no Scroll Up or Scroll Down');
+ //} else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up')) && (!$('#guidelines').hasClass('scroll-down'))) {
+      //console.log('Guidelines no Scroll Up or Scroll Down');
 
-     $(window).bind('mousewheel', function(e){
+     //$(window).bind('mousewheel', function(e){
 
-       if (e.originalEvent.wheelDelta > 119) {
+       //if (e.originalEvent.wheelDelta > 119) {
        //goUp();
        //console.log('Guidelines no Scroll Up');
        //return false;
-       }
-       else if (e.originalEvent.wheelDelta < -119)  {
+       //}
+       //else if (e.originalEvent.wheelDelta < -119)  {
        //goDown();
        //console.log('Guidelines no Scroll Down');
        //return false;
-       }
-     });
+       //}
+     //});
  } else if ((!$('#guidelines').isInViewport()) && ($('#msform>div').not('#guidelines'))) {
      console.log('Not guidelines');
 	 
@@ -219,9 +219,15 @@ $(window).scroll(function () {
     {
       if(activeDiv > 0 && !activelyScrolling)
       {
+	if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up')) && (!$('#guidelines').hasClass('scroll-down'))) {
+	// Do Nothing	
+	console.log('Guidelines no Scroll Up or Scroll Down');
+	} else {
+		
         gotoDiv(activeDiv-1);
 	$(theDivs[activeDiv]).addClass("active-div");
 	$(theDivs[activeDiv+1]).removeClass("active-div");
+	}
 	      
 	// Radio Button
 	if ($('.active-div').hasClass("radio-field")) {
@@ -247,7 +253,7 @@ $(window).scroll(function () {
       {
 	if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up')) && (!$('#guidelines').hasClass('scroll-down'))) {
 	// Do Nothing	
-	
+	console.log('Guidelines no Scroll Up or Scroll Down');
 	} else {
 	      
         gotoDiv(activeDiv+1);
