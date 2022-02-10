@@ -158,7 +158,7 @@ $(window).scroll(function () {
       //console.log('Guidelines - Scroll Down');
       }	
     });
-    } else if ($('#guidelines').isInViewport() {
+    } else if ($('#guidelines').isInViewport()) {
     
       $(window).bind('mousewheel', function(e){
       
@@ -171,7 +171,7 @@ $(window).scroll(function () {
         //console.log('Guidelines no Scroll Down');        
         }
       });
-  } else if (!$('#guidelines').isInViewport() {
+  } else if (!$('#guidelines').isInViewport()) {
   
     $(window).bind('mousewheel', function(e){
     
