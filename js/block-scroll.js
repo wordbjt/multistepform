@@ -245,10 +245,17 @@ $(window).scroll(function () {
     {
       if(activeDiv < totalDivs - 1 && !activelyScrolling)
       {
+	if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up')) && (!$('#guidelines').hasClass('scroll-down'))) {
+	// Do Nothing	
+	
+	} else {
+	      
         gotoDiv(activeDiv+1);
 	$(theDivs[activeDiv]).addClass("active-div");
 	$(theDivs[activeDiv-1]).removeClass("active-div");
 	
+	}
+	      
 	// If has required-field disable next button
 						       
         //if ($('.required-field.active-div input, .required-field.active-div textarea').not(':button').valid()) {
