@@ -223,6 +223,7 @@ $(window).scroll(function () {
 	// Do Nothing	
 	console.log('Guidelines no Scroll Up or Scroll Down');
 	} else {
+	$("#guidelines").removeClass("scroll-down");
 		
         gotoDiv(activeDiv-1);
 	$(theDivs[activeDiv]).addClass("active-div");
@@ -255,6 +256,8 @@ $(window).scroll(function () {
 	// Do Nothing	
 	console.log('Guidelines no Scroll Up or Scroll Down');
 	} else {
+		
+	$("#guidelines").removeClass("scroll-up");	
 	      
         gotoDiv(activeDiv+1);
 	$(theDivs[activeDiv]).addClass("active-div");
