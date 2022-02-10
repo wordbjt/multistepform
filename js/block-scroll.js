@@ -142,7 +142,7 @@ $.fn.isInViewport = function () {
 
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
-	    
+
 $(window).scroll(function () {
 
   if ($('#guidelines').isInViewport()) {
@@ -151,42 +151,48 @@ $(window).scroll(function () {
 
       if ((e.originalEvent.wheelDelta > 119) && ($('#guidelines').hasClass('scroll-up'))) {
       goUp();
-      //console.log('Guidelines - Scroll Up');	      
+      //console.log('Guidelines - Scroll Up');
+      return false;
       }
       else if ((e.originalEvent.wheelDelta > -119) && ($('#guidelines').hasClass('scroll-down'))) {
       goDown();
       //console.log('Guidelines - Scroll Down');
-      }	
+      return false;
+      }
     });
     } else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up'))) {
-    
+
       $(window).bind('mousewheel', function(e){
-      
+
         if (e.originalEvent.wheelDelta > 119) {
         //goUp();
         //console.log('Guidelines no Scroll Up');
+        return false;
         }
       });
     } else if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-down'))) {
-    
+
       $(window).bind('mousewheel', function(e){
-      
+
         if (e.originalEvent.wheelDelta < -119)  {
         //goDown();
-        //console.log('Guidelines no Scroll Down');        
+        //console.log('Guidelines no Scroll Down');
+        return false;
         }
       });
   } else if (!$('#guidelines').isInViewport()) {
-  
+
     $(window).bind('mousewheel', function(e){
-    
+
       if ((e.originalEvent.wheelDelta > 119) && ($('#msform>div').not('#guidelines'))) {
       goUp();
       //console.log('Not guidelines - Scroll Up');
+      return false;
       }
       else if ((e.originalEvent.wheelDelta < -119) && ($('#msform>div').not('#guidelines'))) {
       goDown();
-      //console.log('Not guidelines - Scroll Down');        
+      //console.log('Not guidelines - Scroll Down');
+      return false;
       }
     });
   }
