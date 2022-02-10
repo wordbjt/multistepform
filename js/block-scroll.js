@@ -176,14 +176,14 @@ $(window).scroll(function () {
   }
 });	
 	    
-		$(window).bind('DOMMouseScroll', function(e){
-			if(e.originalEvent.detail < 0) {
-				goUp();
-			}
-			else if (e.originalEvent.detail > 0) {
-				goDown();
-			}
-		});
+		//$(window).bind('DOMMouseScroll', function(e){
+		//	if(e.originalEvent.detail < 0) {
+		//		goUp();
+		//	}
+		//	else if (e.originalEvent.detail > 0) {
+		//		goDown();
+		//	}
+		//});
     }
 
     function goUp()
@@ -198,7 +198,7 @@ $(window).scroll(function () {
 	if ($('.active-div').hasClass("radio-field")) {
 		//if (!$(".active-div input[type='radio']:checked").valid()) {
 		if ($(".active-div input[type='radio']").is(':checked')) {
-      			$('.active-div .next').prop('disabled', false); 
+      			$('.active-div .next').prop('disabled', false);
       			alert('One of the radio buttons is checked!');
         		//return false;
     		}
