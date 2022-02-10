@@ -131,7 +131,6 @@ $('#guidelines fieldset').on('scroll', function() {
   //}
 });
 
-
 // ALLOW SCROLL - GUIDELINES AND DECLARATION
 	    
 $.fn.isInViewport = function () {
@@ -159,8 +158,20 @@ $(window).scroll(function () {
       //console.log('Guidelines - Scroll Down');
       }	
     });
-
-  } else if (!$('#guidelines').isInViewport()) {
+    } else if ($('#guidelines').isInViewport() {
+    
+      $(window).bind('mousewheel', function(e){
+      
+        if ((e.originalEvent.wheelDelta > 119) && (!$('#guidelines').hasClass('scroll-up'))) {
+        //goUp();
+        //console.log('Guidelines no Scroll Up');
+        }
+        else if ((e.originalEvent.wheelDelta < -119) && (!$('#guidelines').hasClass('scroll-down'))) {
+        //goDown();
+        //console.log('Guidelines no Scroll Down');        
+        }
+      });
+  } else if (!$('#guidelines').isInViewport() {
   
     $(window).bind('mousewheel', function(e){
     
