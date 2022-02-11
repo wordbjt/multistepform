@@ -160,19 +160,19 @@ $(window).scroll(function () {
        if (e.originalEvent.wheelDelta > 119) {
          if ($('#guidelines').hasClass('scroll-up')) {
          goUp();
-         console.log('Guidelines - Scroll Up');
+         //console.log('Guidelines - Scroll Up');
          //return false;
          } else if (!$('#guidelines').hasClass('scroll-up')) {
-         console.log('Guidelines - No Scroll Up');
+         //console.log('Guidelines - No Scroll Up');
          //return false;
          }
      } else if (e.originalEvent.wheelDelta > -119) {
          if ($('#guidelines').hasClass('scroll-down')) {
          goDown();
-         console.log('Guidelines - Scroll Down');
+         //console.log('Guidelines - Scroll Down');
          //return false;
          } else if (!$('#guidelines').hasClass('scroll-down')) {
-         console.log('Guidelines - No Scroll Down');
+         //console.log('Guidelines - No Scroll Down');
          //return false;
          }
      }
@@ -186,13 +186,13 @@ $(window).scroll(function () {
      if (e.originalEvent.wheelDelta > 119) {
         if ($('#msform>div').not('#guidelines')) {
         goUp();
-        console.log('Not guidelines - Scroll Up');
+        //console.log('Not guidelines - Scroll Up');
         //return false;
       } 
     } else if (e.originalEvent.wheelDelta < -119) {
         if ($('#msform>div').not('#guidelines')) {
         goDown();
-        console.log('Not guidelines - Scroll Down');
+        //console.log('Not guidelines - Scroll Down');
         //return false;
         }
     }
