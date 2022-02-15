@@ -153,7 +153,7 @@ $.fn.isInViewport = function () {
 $(window).scroll(function () {
 
  if ($('#guidelines').isInViewport()) {
-     console.log('Guidelines in view');
+     //console.log('Guidelines in view');
 
    $(window).bind('mousewheel', function(e){
      
@@ -181,7 +181,7 @@ $(window).scroll(function () {
 } else if (!$('#guidelines').isInViewport()) {
      $("#guidelines").removeClass("scroll-down");
      $("#guidelines").removeClass("scroll-up");
-     console.log('Guidelines not in view');
+     //console.log('Guidelines not in view');
 	
    $(window).bind('mousewheel', function(e){
 
@@ -203,6 +203,7 @@ $(window).scroll(function () {
 
 }); 
 
+	    
 	    
 		//$(window).bind('DOMMouseScroll', function(e){
 		//	if(e.originalEvent.detail < 0) {
