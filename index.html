@@ -1364,6 +1364,11 @@ $(document).ready(function() {
     $('#submit-form-11').fadeIn('slow');
     $('#continue-form-11').fadeOut('slow');
     $('.conditional-section').hide();
+	    
+    $("input[name='fundraise_pack']").attr("required", false);
+    $("input[name='event_title']").attr("required", false);
+    $("input[name='venue']").attr("required", false);
+	    
   } else {
     $("input[name='fundraise_pack']").attr("required", true);
     $("input[name='event_title']").attr("required", true);
