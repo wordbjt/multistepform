@@ -356,7 +356,6 @@ $(window).scroll(function () {
 	//alert('Radio input does not exist');
 	}
 	
-
 	    
 	
 	      
