@@ -312,17 +312,17 @@ $(window).scroll(function () {
         	if ($("#guidelines input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', false);
         	//alert('Radio input is checked - enable next button');
-		console.log('Guidelines input is checked - enable next button');	
+		//console.log('Guidelines input is checked - enable next button');	
 		}
         	else if (!$("#guidelines input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', 'disabled');
         	//alert('Radio input is not checked - disable next button');
-		console.log('Guidelines input is not checked - disable next button');
+		//console.log('Guidelines input is not checked - disable next button');
         	}
 		
 	} else {
 	//alert('Radio input does not exist');
-	console.log('Guidelines input does not exist');
+	//console.log('Guidelines input does not exist');
 	}    
 	      
   	// If input text or text area has value enable next
