@@ -320,12 +320,7 @@ $(window).scroll(function () {
         	//alert('Radio input is not checked - disable next button');
 		//console.log('Guidelines input is not checked - disable next button');
         	}
-		
-	} else if {
-		
-		// If radio input is checked enable next
-	      
-        	if ($(".scroll-down input[type='radio']").is(':checked')) {
+        	else if ($(".scroll-down input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', false);
         	//alert('Radio input is checked - enable next button');
 		//console.log('Guidelines input is checked - enable next button');	
