@@ -1297,6 +1297,17 @@ rules: {
       },
 		
     // change name of error class that is assigned to input fields and placement
+	
+errorPlacement:
+function( error, element ){
+if(element.is( ":radio" )){
+// error append here
+error.appendTo('div.action-wrapper');
+}
+else {
+error.insertAfter(element);
+}
+}
 		
     //errorClass: 'error_validate',
     //errorPlacement: function (label, element) {
