@@ -136,8 +136,8 @@ $('#guidelines fieldset').on('scroll', function() {
     // Nothing
     // console.log('Nothing!');
   //}
-});
-
+});	    
+	    
 // ALLOW SCROLL - GUIDELINES AND DECLARATION
 	    
 $.fn.isInViewport = function () {
@@ -179,8 +179,10 @@ $(window).scroll(function () {
    });
    
 } else if (!$('#guidelines').isInViewport()) {
+     $("#guidelines").removeClass("scroll-down");
+     $("#guidelines").removeClass("scroll-up");
      console.log('Guidelines not in view');
-
+	
    $(window).bind('mousewheel', function(e){
 
      if (e.originalEvent.wheelDelta > 119) {
