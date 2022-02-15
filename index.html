@@ -1207,6 +1207,49 @@ console.log('valid form submission');
 		
 	  ignore: [],
 
+// If online
+if ($('#conditional input[type="radio"]').attr('id') == 'checkbox-online') {	
+rules: {
+          name: {
+              required: true,
+              minlength: 3
+          },
+          address: {
+              required: true,
+              minlength: 3
+          },
+          suburb: {
+              required: true,
+              minlength: 3
+          },
+          state: {
+              required: true,
+              minlength: 2
+          },
+          postcode: {
+              required: true,
+              minlength: 4
+          },
+          phone: {
+              required: true,
+              minlength: 4
+          },
+          email: {
+              required: true,
+              email: true
+          },
+    	    contactpreference: {
+      		required: true
+    	    },
+	        fundraise: {
+      		required: true
+    	    }
+      },
+
+
+// If face to face - full form
+} else {
+
 rules: {
           name: {
               required: true,
@@ -1262,7 +1305,7 @@ rules: {
 	  month: {
       		required: true,
 		digits: true,
-		maxlength: 2  
+		maxlength: 2
     	  },
 	  year: {
       		required: true,
@@ -1295,6 +1338,7 @@ rules: {
     	  }
 
       },
+}
 		
     // change name of error class that is assigned to input fields and placement
 		
