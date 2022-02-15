@@ -126,11 +126,11 @@ $('#guidelines fieldset').on('scroll', function() {
   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
     $("#guidelines").addClass("scroll-down");
     $("#guidelines").removeClass("scroll-up");
-    console.log('Bottom!');
+    //console.log('Bottom!');
   } else if (scrollTop <= 0) {
     $("#guidelines").addClass("scroll-up");
     $("#guidelines").removeClass("scroll-down");	  
-    console.log('Top!');
+    //console.log('Top!');
   } 
 	//else {
     // Nothing
