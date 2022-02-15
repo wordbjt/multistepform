@@ -1365,6 +1365,10 @@ $(document).ready(function() {
     $('#continue-form-11').fadeOut('slow');
     $('.conditional-section').hide();
   } else {
+    $("input[name='fundraise_pack']").attr("required", true);
+    $("input[name='event_title']").attr("required", true);
+    $("input[name='venue']").attr("required", true);
+	  
     $('#submit-form-11').fadeOut('slow');
     $('#continue-form-11').fadeIn('slow');
     $('.conditional-section:not("#declaration")').show();
