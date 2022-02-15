@@ -199,7 +199,6 @@ $(window).scroll(function () {
         }
     }
    });
-}
 	
 } else if (!$('#guidelines').isInViewport()) {
      $("#guidelines").removeClass("scroll-down");
