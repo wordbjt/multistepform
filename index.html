@@ -1208,7 +1208,8 @@ console.log('valid form submission');
 	  ignore: [],
 
 // If online
-if ($('#conditional input[type="radio"]').attr('id') == 'checkbox-online') {	
+if (($('#conditional input[type="radio"]').attr('id') == 'checkbox-online')) {
+
 rules: {
           name: {
               required: true,
