@@ -218,7 +218,7 @@ $(window).scroll(function () {
       {
 	if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up')) && (!$('#guidelines').hasClass('scroll-down'))) {
 	// Do Nothing	
-	console.log('Guidelines no Scroll Up or Scroll Down');
+	//console.log('Guidelines no Scroll Up or Scroll Down');
 	} else {
 		
         gotoDiv(activeDiv-1);
@@ -250,7 +250,7 @@ $(window).scroll(function () {
       {
 	if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up')) && (!$('#guidelines').hasClass('scroll-down'))) {
 	// Do Nothing	
-	console.log('Guidelines no Scroll Up or Scroll Down');
+	//console.log('Guidelines no Scroll Up or Scroll Down');
 	} else {
 				
         gotoDiv(activeDiv+1);
