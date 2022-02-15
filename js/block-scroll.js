@@ -1,5 +1,3 @@
-document.addEventListener('mousewheel', handler, {passive: true});
-
 (function( $ ) {
 
   $.fn.blockScroll = function(options) {
