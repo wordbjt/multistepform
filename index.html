@@ -1191,7 +1191,7 @@ $(document).ready(function() {
             type: 'post',
             dataType: 'jsonp',
             jsonp: '$callback',
-            data: $('#msform *').serialize()    
+            data: $('#msform *').serialize(),
             success: function(data) {
                 $('#msform').hide();
                 $("#success-message").html(data);
