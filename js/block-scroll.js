@@ -200,6 +200,20 @@ $(window).scroll(function () {
     }
    });
 }
+	
+} else if (!$('#guidelines').isInViewport()) {
+     $("#guidelines").removeClass("scroll-down");
+     $("#guidelines").removeClass("scroll-up");
+     //console.log('Guidelines not in view');
+	
+        if ($('#msform>div').not('#guidelines')) {
+        goUp();
+        //console.log('Not guidelines - Scroll Up');
+    	} else if ($('#msform>div').not('#guidelines')) {
+        goDown();
+        //console.log('Not guidelines - Scroll Down');
+        }
+}	
 
 }); 
 
