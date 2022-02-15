@@ -119,6 +119,7 @@
 			//}
 		//});
 	    
+document.addEventListener('mousewheel', handler, {passive: true});
 	    
     
 $('#guidelines fieldset').on('scroll', function() {
