@@ -305,7 +305,7 @@ $(window).scroll(function () {
 	// Guidelines - If radio input is checked enable next
     	if ($('#guidelines input[type=radio]').length > 0 ) {
      	//alert('Radio input exists');
-	console.log('Guidelines input exists');
+	//console.log('Guidelines input exists');
 		
 		// If radio input is checked enable next
 	      
@@ -322,7 +322,7 @@ $(window).scroll(function () {
 		
 	} else {
 	//alert('Radio input does not exist');
-	console.log('Guidelines does not input exists');
+	console.log('Guidelines input does not exist');
 	}    
 	      
   	// If input text or text area has value enable next
