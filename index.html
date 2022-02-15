@@ -1182,7 +1182,26 @@ $(function() {
 <script>
 $(document).ready(function() {
 	$("#msform").validate({
-	
+		
+    submitHandler: function(form) {
+	var prod ="";    
+	    
+        $.ajax({
+            url: prod,
+            type: 'post',
+            dataType: 'jsonp',
+            jsonp: '$callback',
+            data: $('#msform *').serialize()    
+            success: function(data) {
+                $('#msform').hide();
+                $("#success-message").html(data);
+            }
+        });
+        return false;
+    },
+
+    // other options
+		
 	  ignore: [],
 
 rules: {
