@@ -303,20 +303,24 @@ $(window).scroll(function () {
 	// Guidelines - If radio input is checked enable next
     	if ($('#guidelines input[type=radio]').length > 0 ) {
      	//alert('Radio input exists');
+	console.log('Guidelines input exists');
 		
 		// If radio input is checked enable next
 	      
         	if ($("#guidelines input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', false);
         	//alert('Radio input is checked - enable next button');
+		console.log('Guidelines input is checked - enable next button');	
 		}
         	else if (!$("#guidelines input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', 'disabled');
         	//alert('Radio input is not checked - disable next button');
+		console.log('Guidelines input is not checked - disable next button');
         	}
 		
 	} else {
 	//alert('Radio input does not exist');
+	console.log('Guidelines does not input exists');
 	}    
 	      
   	// If input text or text area has value enable next
