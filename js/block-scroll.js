@@ -300,6 +300,25 @@ $(window).scroll(function () {
     		}
 	}
 	      
+	// Guidelines - If radio input is checked enable next
+    	if ($('#guidelines input[type=radio]').length > 0 ) {
+     	//alert('Radio input exists');
+		
+		// If radio input is checked enable next
+	      
+        	if ($("#guidelines input[type='radio']").is(':checked')) {
+		$('#guidelines .next').prop('disabled', false);
+        	//alert('Radio input is checked - enable next button');
+		}
+        	else if (!$("#guidelines input[type='radio']").is(':checked')) {
+		$('#guidelines .next').prop('disabled', 'disabled');
+        	//alert('Radio input is not checked - disable next button');
+        	}
+		
+	} else {
+	//alert('Radio input does not exist');
+	}    
+	      
   	// If input text or text area has value enable next
     
         if ($('.active-div input:not([type=radio], [type=button], [type=submit]), .active-div textarea').val() == '') {
