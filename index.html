@@ -1316,7 +1316,8 @@ errorPlacement:
 function( error, element ){
 if(element.is( ":radio" )){
 // error append here
-error.appendTo('div.action-wrapper');
+//error.appendTo('.active-div div.action-wrapper');
+error.prepend('.active-div div.action-wrapper');	
 }
 else {
 error.insertAfter(element);
