@@ -362,7 +362,7 @@
 	    
 	<div class="column">
 	<span>Day</span>
-    	<input type="text" id="startDay" name="day" placeholder="DD" />
+    	<input type="text" id="startDay" name="start_day" placeholder="DD" />
 	</div>
 	    
 	<div class="column-xs">
@@ -371,7 +371,7 @@
 	    
     	<div class="column">
 	<span>Month</span>
-	<input type="text" id="startMonth" name="month" placeholder="MM" />
+	<input type="text" id="startMonth" name="start_month" placeholder="MM" />
 	</div>
 	    
 	<div class="column-xs">
@@ -380,7 +380,7 @@
 
     	<div class="column">
 	<span>Year</span>
-	<input type="text" id="startYear" name="year" placeholder="YYYY" />
+	<input type="text" id="startYear" name="start_year" placeholder="YYYY" />
 	</div>
 
     </div>
@@ -408,7 +408,7 @@
     <div class="date-wrapper">	  
 	<div class="column">
 	<span>Day</span>
-    	<input type="text" id="finishDay" name="day" placeholder="DD" />
+    	<input type="text" id="finishDay" name="finish_day" placeholder="DD" />
 	</div>
 	    
 	<div class="column-xs">
@@ -417,7 +417,7 @@
 	    
     	<div class="column">
 	<span>Month</span>
-	<input type="text" id="finishMonth" name="month" placeholder="MM" />
+	<input type="text" id="finishMonth" name="finish_month" placeholder="MM" />
 	</div>
 	    
 	<div class="column-xs">
@@ -426,7 +426,7 @@
 
     	<div class="column">
 	<span>Year</span>
-	<input type="text" id="finishYear" name="year" placeholder="YYYY" />
+	<input type="text" id="finishYear" name="finish_year" placeholder="YYYY" />
 	</div>
     </div>
 
@@ -1254,22 +1254,36 @@ rules: {
 	  start_date: {
       		required: true
     	  },
-	  day: {
+	  start_day: {
       		//required: true,
 		digits: true,
 		maxlength: 2
     	  },
-	  month: {
+	  start_month: {
       		//required: true,
 		digits: true,
 		maxlength: 2
     	  },
-	  year: {
+	  start_year: {
       		//required: true,
 		digits: true
     	  },
 	  finish_date: {
       		//required: true
+    	  },
+	  finish_day: {
+      		//required: true,
+		digits: true,
+		maxlength: 2
+    	  },
+	  finish_month: {
+      		//required: true,
+		digits: true,
+		maxlength: 2
+    	  },
+	  finish_year: {
+      		//required: true,
+		digits: true
     	  },
           time: {
       		//required: true
