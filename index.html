@@ -1381,38 +1381,58 @@ function doneTyping () {
 <!-- ADDITIONAL -->
 <script>
 	
-// Conditional for Question 11	
+// Conditional for Question 11 and enable/disable required	
 	
 $(document).ready(function() {
    $('#conditional input[type="radio"]').click(function() {
-    if($(this).attr('id') == 'checkbox-online') {		
+    if($(this).attr('id') == 'checkbox-online') {
     $('#submit-form-11').fadeIn('slow');
     $('#continue-form-11').fadeOut('slow');
     $('.conditional-section').hide();
-	    
+
     $("input[name='fundraise_pack']").attr("required", false);
     $("input[name='event_title']").attr("required", false);
     $("input[name='venue']").attr("required", false);
-	    
+    $("input[name='start_date']").attr("required", false);
+    $("input[name='start_day']").attr("required", false);
+    $("input[name='start_month']").attr("required", false);
+    $("input[name='start_year']").attr("required", false);
+    $("input[name='finish_date']").attr("required", false);
+    $("input[name='finish_day']").attr("required", false);
+    $("input[name='finish_month']").attr("required", false);
+    $("input[name='finish_year']").attr("required", false);
+    $("input[name='time']").attr("required", false);
+    $("input[name='participants']").attr("required", false);
+    $("input[name='fundraising_activity']").attr("required", false);
+    $("input[name='fundraising_destination']").attr("required", false);
+    $("input[name='insurance']").attr("required", false);
+    $("input[name='guidelines']").attr("required", false);
+    $("input[name='declartion']").attr("required", false);
+    
   } else {
     $("input[name='fundraise_pack']").attr("required", true);
     $("input[name='event_title']").attr("required", true);
     $("input[name='venue']").attr("required", true);
-	  
+    $("input[name='start_date']").attr("required", true);
+    $("input[name='start_day']").attr("required", true);
+    $("input[name='start_month']").attr("required", true);
+    $("input[name='start_year']").attr("required", true);
+    $("input[name='finish_date']").attr("required", true);
+    $("input[name='finish_day']").attr("required", true);
+    $("input[name='finish_month']").attr("required", true);
+    $("input[name='finish_year']").attr("required", true);
+    $("input[name='time']").attr("required", true);
+    $("input[name='participants']").attr("required", true);
+    $("input[name='fundraising_activity']").attr("required", true);
+    $("input[name='fundraising_destination']").attr("required", true);
+    $("input[name='insurance']").attr("required", true);
+    $("input[name='guidelines']").attr("required", true);
+    $("input[name='declartion']").attr("required", true);
+                
     $('#submit-form-11').fadeOut('slow');
     $('#continue-form-11').fadeIn('slow');
     $('.conditional-section:not("#declaration")').show();
   }                   
-});
-			
-   $('#conditional input[type="radio"]').click(function() {
-    if($(this).attr('id') == 'checkbox-facetoface') {			
-    $('#continue-form-11').fadeIn('slow');
-    $('.conditional-section:not("#declaration")').show();			
-  } else {
-    $('#continue-form-11').fadeOut('slow');
-    $('.conditional-section').hide();		
-  }
 });
 	
 // Guidelines to Declaraction
