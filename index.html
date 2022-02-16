@@ -1197,7 +1197,8 @@ console.log('valid form submission');
         data: $('#msform *').serialize(),
         success: function(data) {
             $('#msform').hide();
-            $("#success-message").html(data);
+            $("#success-message").show();
+	    console.log('Show success');
         }
     });
     return false;
