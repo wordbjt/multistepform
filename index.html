@@ -1195,13 +1195,20 @@ console.log('valid form submission');
         type: 'post',
         dataType: 'jsonp',
         jsonp: '$callback',
-        data: $('#msform *').serialize(),
-        success: function(data) {
-            $('#msform').hide();
-            $("#success-message").show();
-	    console.log('Show success');
-        }
+        data: $('#msform *').serialize()
+        //success: function(data) {
+        //    $('#msform').hide();
+        //    $("#success-message").show();
+	//    console.log('Show success');
+        //}
     });
+	
+	console.log("Submitted");
+	
+        $('#msform').hide();
+        $("#success-message").show();
+        $('#requestForm').fadeIn(750);
+	
     return false;
 },
 
