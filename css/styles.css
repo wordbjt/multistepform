@@ -368,6 +368,10 @@ margin-top: 45px;
 margin-top: 25px;
 }
 
+.previous {
+display: none;	
+}
+
 
 
 /*buttons*/
