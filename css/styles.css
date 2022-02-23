@@ -10,12 +10,23 @@ display: none !important;
     -webkit-box-sizing: border-box;	
 }
 
+#msform>div {
+  border: 1px solid blue;
+}
+
+#msform fieldset {
+  border: 1px solid green;	
+}
+
+
+
 /* BLOCK SCROLL */
 
 #msform>div
 {
   position: relative;
   /*margin: auto;*/
+  border: 1px solid blue;
 }
 
 #block-up-arrow, #block-down-arrow {
