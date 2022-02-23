@@ -1180,6 +1180,9 @@
 	
 </div>	<!-- CONTAINER CLOSE -->
 
+						       
+</body>
+	
 <!-- SCROLL -->
 <script>
 $(function() {
@@ -1188,17 +1191,17 @@ $(function() {
 </script>
 
 
-<!-- VALIDATE -->	
+<!-- VALIDATE -->
 <script>
 $(document).ready(function() {
 	$("#msform").validate({
-		
-// SUBMIT 
+
+// SUBMIT
 
 submitHandler: function(form) {
 var prod ="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8";
 console.log('valid form submission');
-  
+
     $.ajax({
         url: prod,
         type: 'post',
@@ -1211,17 +1214,17 @@ console.log('valid form submission');
 	//    console.log('Show success');
         //}
     });
-	
+
 	console.log("Submitted");
-	
+
         $('#msform').hide();
         $('#success-message').fadeIn(750);
-	
+
     return false;
 },
 
 // other options
-		
+
 	  ignore: [],
 
 rules: {
@@ -1326,24 +1329,24 @@ rules: {
     	  }
 
       },
-		
+
     // change name of error class that is assigned to input fields and placement
-	
+
 errorPlacement:
 function( error, element ){
 if(element.is( ":radio" )){
 // error append here
 //error.appendTo('.active-div div.action-wrapper');
-error.prepend('.active-div div.action-wrapper');	
+error.prepend('.active-div div.action-wrapper');
 }
 else {
 error.insertAfter(element);
 }
 }
-		
+
     //errorClass: 'error_validate',
     //errorPlacement: function (label, element) {
-		
+
     //     default
     //    if (element.is(':radio')) {
            //label.insertAfter(element.next('label'));
@@ -1354,12 +1357,12 @@ error.insertAfter(element);
       //      label.insertAfter(element);
       //  }
     //}
-		
+
 });
 
 //    $('input, textarea').on('blur', function() {
 //        if ($(".active-div input, .active-div textarea").not(':button').valid()) {
-//            $('.active-div .next').prop('disabled', false);  
+//            $('.active-div .next').prop('disabled', false);
 //        } else {
 //            $('.active-div .next').prop('disabled', 'disabled');
 //        }
@@ -1377,7 +1380,7 @@ $input.on('keyup', function () {
   typingTimer = setTimeout(doneTyping, doneTypingInterval);
 });
 
-//on keydown, clear the countdown 
+//on keydown, clear the countdown
 $input.on('keydown', function () {
   clearTimeout(typingTimer);
 });
@@ -1386,7 +1389,7 @@ $input.on('keydown', function () {
 function doneTyping () {
   //do something
   if ($(".active-div input, .active-div textarea").not(':button').valid()) {
-    $('.active-div .next').prop('disabled', false);  
+    $('.active-div .next').prop('disabled', false);
 } else {
     $('.active-div .next').prop('disabled', 'disabled');
 }
@@ -1395,12 +1398,12 @@ function doneTyping () {
 });
 </script>
 
-	
+
 <!-- ADDITIONAL -->
 <script>
-	
-// Conditional for Question 11 and enable/disable required	
-	
+
+// Conditional for Question 11 and enable/disable required
+
 $(document).ready(function() {
    $('#conditional input[type="radio"]').click(function() {
     if($(this).attr('id') == 'checkbox-online') {
@@ -1426,7 +1429,7 @@ $(document).ready(function() {
     $("input[name='insurance']").attr("required", false);
     $("input[name='guidelines']").attr("required", false);
     $("input[name='declartion']").attr("required", false);
-    
+
   } else {
     $("input[name='fundraise_pack']").attr("required", true);
     $("input[name='event_title']").attr("required", true);
@@ -1446,21 +1449,21 @@ $(document).ready(function() {
     $("input[name='insurance']").attr("required", true);
     $("input[name='guidelines']").attr("required", true);
     $("input[name='declartion']").attr("required", true);
-                
+
     $('#submit-form-11').fadeOut('slow');
     $('#continue-form-11').fadeIn('slow');
     $('.conditional-section:not("#declaration")').show();
-  }                   
+  }
 });
-	
+
 // Guidelines to Declaraction
    $('#guidelines input[type="radio"]').click(function() {
     //alert('Accept button clicked!');
     //console.log("Accept button clicked!");
     if($(this).attr('id') == 'radio-guidelines-accept') {
     //$('.active-div .next').prop('disabled', false);
-    $('#guidelines .next').prop('disabled', false);	    
-    //console.log("Accepted!");	    
+    $('#guidelines .next').prop('disabled', false);
+    //console.log("Accepted!");
     //$('#declaration').show();
     $("#declaration").css("display", "block");
   } else {
@@ -1472,13 +1475,13 @@ $(document).ready(function() {
 });
 
 </script>
-	
-<!-- DATE -->				     
+
+<!-- DATE -->
 <script>
 $(document).ready(function(){
   $("#startDay, #startMonth, #startYear").on("input", function() {
-    var startDayValue = $("#startDay").val(); // this gives textbox value   
-    var startMonthValue = $("#startMonth").val(); // this gives textbox value  
+    var startDayValue = $("#startDay").val(); // this gives textbox value
+    var startMonthValue = $("#startMonth").val(); // this gives textbox value
     var startYearValue = $("#startYear").val(); // this gives textbox value
 
     // put it all together
@@ -1487,10 +1490,10 @@ $(document).ready(function(){
     $("input[name=start_date]").val(startDateValue); // this will set hidden field value
     //alert(startDateValue);
   });
-	
+
   $("#finishDay, #finishMonth, #finishYear").on("input", function() {
-    var finishDayValue = $("#finishDay").val(); // this gives textbox value   
-    var finishMonthValue = $("#finishMonth").val(); // this gives textbox value  
+    var finishDayValue = $("#finishDay").val(); // this gives textbox value
+    var finishMonthValue = $("#finishMonth").val(); // this gives textbox value
     var finishYearValue = $("#finishYear").val(); // this gives textbox value
 
     // put it all together
@@ -1499,67 +1502,66 @@ $(document).ready(function(){
     $("input[name=finish_date]").val(finishDateValue); // this will set hidden field value
     //alert(finishDateValue);
   });
-	
+
 });
 </script>
-	
+
 <!-- Guidelines & Declaraction - Detect top and bottom -->
 <!-- <script>
-$(document).ready(function(){	
+$(document).ready(function(){
 $('.allow-scroll.active-div fieldset').on('scroll', function() {
   var scrollTop = $(this).scrollTop();
   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
-    $('.allow-scroll.active-div').addClass("scroll-down")  
+    $('.allow-scroll.active-div').addClass("scroll-down")
     console.log('Bottom!');
   } else if (scrollTop <= 0) {
-    $('.allow-scroll.active-div').addClass("scroll-up") 	  
+    $('.allow-scroll.active-div').addClass("scroll-up")
     console.log('Top!');
   } else {
     // Nothing
   }
 });
-});	
+});
 </script> -->
 
 <script>
-$(document).ready(function() {					 
+$(document).ready(function() {
     $('input[type=time]').on('blur', function() {
         if ($(".active-div input[type=time]").valid()) {
-            $('.active-div .next').prop('disabled', false);  
+            $('.active-div .next').prop('disabled', false);
         } else {
             $('.active-div .next').prop('disabled', 'disabled');
         }
     });
 });
 </script>
-	
+
 <!-- <script>
 $(document).ready(function() {
-						 
+
 //    $('input, textarea').on('blur', function() {
 //        if ($(".active-div input, .active-div textarea").not(':button').valid()) {
-//            $('.active-div .next').prop('disabled', false);  
+//            $('.active-div .next').prop('disabled', false);
 //        } else {
 //            $('.active-div .next').prop('disabled', 'disabled');
 //        }
-//    });	
-						       
+//    });
+
   $('.active-div .radiobtn').click(function() {
   //$('input').on('blur', function() {
     //if (!$("input[name='contactpreference']:checked").valid()) {
     if (!$(".active-div input[type='radio']:checked").valid()) {
-	$('.active-div .next').prop('disabled', 'disabled'); 
+	$('.active-div .next').prop('disabled', 'disabled');
         alert('Nothing is checked!');
         return false;
     }
     else {
-      $('.active-div .next').prop('disabled', false); 
+      $('.active-div .next').prop('disabled', false);
       alert('One of the radio buttons is checked!');
     }
   });
 });
 </script> -->
-						       
-</body>
+	
 	
 </html>
