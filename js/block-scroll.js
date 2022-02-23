@@ -136,18 +136,20 @@ $(window).on('scroll', onScroll);
 
 // callback
 function onScroll(){
-    if( $(window).scrollTop() + window.innerHeight >= document.body.scrollHeight ) {
-        track_page++;
-        load_contents(track_page);
-    }
+    //if( $(window).scrollTop() + window.innerHeight >= document.body.scrollHeight ) {
+    //    track_page++;
+    //    load_contents(track_page);
+    //}
+    console.log('Scroll Test!');
+	
 }
 	    
 // MOBILE TEST - END
 	    
 	    
     
-//$('#guidelines fieldset').on('scroll', function() {
-$('#guidelines fieldset').on('onScroll', function() {	
+$('#guidelines fieldset').on('scroll', function() {
+//$('#guidelines fieldset').on('onScroll', function() {	
   var scrollTop = $(this).scrollTop();
   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
     $("#guidelines").addClass("scroll-down");
@@ -176,8 +178,8 @@ $.fn.isInViewport = function () {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };	    
 
-//$(window).scroll(function () {
-$(window).on('onScroll', function() {
+$(window).scroll(function () {
+//$(window).on('onScroll', function() {
 	
  if ($('#guidelines').isInViewport()) {
      //console.log('Guidelines in view');
