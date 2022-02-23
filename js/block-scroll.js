@@ -120,13 +120,24 @@
 		//});
 
 	    
-    if(window.matchMedia("(max-width: 767px)").matches){
+    if(window.matchMedia("(max-width: 767px)").matches) {
         // The viewport is less than 768 pixels wide
+	    
+		$(window).bind('mousewheel', function(e){
+			if(e.originalEvent.wheelDelta > 119) {
+				goUp();
+			}
+			else if (e.originalEvent.wheelDelta < -119) {
+				goDown();
+			}
+		}); 
+	    
         console.log("This is a mobile device.");
-    } else{
+    
+    } else {
+	    
         // The viewport is at least 768 pixels wide
-        console.log("This is a tablet or desktop.");
-    }
+	    
 
 	    
 // MOBILE TEST - START
@@ -246,6 +257,8 @@ $(window).scroll(function () {
 }); 
 
 	    
+        console.log("This is a tablet or desktop.");
+    }	    
 	    
 		//$(window).bind('DOMMouseScroll', function(e){
 		//	if(e.originalEvent.detail < 0) {
