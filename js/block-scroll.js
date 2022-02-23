@@ -32,6 +32,26 @@
         $(this).css('opacity','0');
       });
     }
+	  
+	  
+// MOBILE TEST - START
+	    
+$(document.body).on('touchmove', onScroll); // for mobile
+$(window).on('scroll', onScroll);
+
+// callback
+function onScroll(){
+    //if( $(window).scrollTop() + window.innerHeight >= document.body.scrollHeight ) {
+    //    track_page++;
+    //    load_contents(track_page);
+    //}
+    console.log('Scroll Test!');
+	
+}
+	    
+// MOBILE TEST - END	  
+	  
+	  
 
     arrange();
     // Fade in the first div
@@ -149,27 +169,7 @@ $.fn.isInViewport = function () {
     } else {
 	    
         // The viewport is at least 768 pixels wide
-	    
-
-	    
-// MOBILE TEST - START
-	    
-$(document.body).on('touchmove', onScroll); // for mobile
-$(window).on('scroll', onScroll);
-
-// callback
-function onScroll(){
-    //if( $(window).scrollTop() + window.innerHeight >= document.body.scrollHeight ) {
-    //    track_page++;
-    //    load_contents(track_page);
-    //}
-    console.log('Scroll Test!');
-	
-}
-	    
-// MOBILE TEST - END
-	    
-	    
+	        
     
 $('#guidelines fieldset').on('scroll', function() {
 //$('#guidelines fieldset').on('onScroll', function() {	
@@ -415,7 +415,7 @@ $(window).scroll(function () {
       if(activeDiv < totalDivs - 1 && !activelyScrolling)
       {
 	if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up')) && (!$('#guidelines').hasClass('scroll-down'))) {
-	// Do Nothing	
+	// Do Nothing
 	//console.log('Guidelines no Scroll Up or Scroll Down');
 	} else {
 				
