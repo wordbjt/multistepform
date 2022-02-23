@@ -1,6 +1,6 @@
 @media screen and (max-width: 768px) {
 
-	#msform>div {
+	.col-2 {
 	display: none;
 	}
 }
