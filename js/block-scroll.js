@@ -157,10 +157,10 @@ $.fn.isInViewport = function () {
 	    
 		$(window).bind('mousewheel', function(e){
 			if(e.originalEvent.wheelDelta > 119) {
-				goUp();
+				mobilegoUp();
 			}
 			else if (e.originalEvent.wheelDelta < -119) {
-				goDown();
+				mobilegoDown();
 			}
 		}); 
 	    
@@ -554,6 +554,29 @@ $(window).scroll(function () {
       }
     }
 	  
+	  
+// MOBILE GO UP DOWN	  
+	  
+function mobilegoUp()
+{
+  if(activeDiv > 0 && !activelyScrolling)
+  {
+    gotoDiv(activeDiv-1);
+    $(theDivs[activeDiv]).addClass("active-div");
+    $(theDivs[activeDiv+1]).removeClass("active-div");
+  }
+}
+
+function mobilegoDown()
+{
+  if(activeDiv < totalDivs - 1 && !activelyScrolling)
+  {
+    gotoDiv(activeDiv+1);
+    $(theDivs[activeDiv]).addClass("active-div");
+    $(theDivs[activeDiv-1]).removeClass("active-div");
+  }
+}
+
 	        
 
 
