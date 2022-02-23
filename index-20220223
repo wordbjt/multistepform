@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+
+<meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="blank.png">
+	
+<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+	
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">	
+
+<link rel="shortcut icon" type="image/x-icon" href="blank.ico">
+
+<link rel="mask-icon" type="image/x-icon" href="blank.svg" color="#111">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- <script src="js/block-scroll.js"></script> -->
+<script src="js/block-scroll-original.js"></script>
+	
+<link rel="stylesheet" href="css/styles.css">
+
+<title>Multi Step Form</title>
+  
+</head>
+
+<body translate="no">
+<div id="container-wrapper">
+	
+<!-- progressbar -->
+  <!--<ul id="progressbar">
+    <li class="active">Account Setup</li>
+    <li>Social Profiles</li>
+    <li>Personal Details</li>
+  </ul>-->
+		      
+<!-- multistep form -->
+<form id="msform">
+	
+  <!-- FIELDSETS -->
+	
+  <div>
+  <fieldset>
+    <div class="heading">
+    	<h2 class="fs-section-title">Fundraise for Compassion</h2>
+    </div>
+
+    <p>Thanks for using your time and talents to fundraise for Compassion and help give children a hope more powerful than poverty. Please tell us about how you are going to fundraise so we can best support you.</p>
+    <br>
+    <div class="action-wrapper">
+    <input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+  </fieldset>	
+  </div>
+
+  <!-- NAME -->
+  <div>
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 1</h3>
+    	<h2 class="fs-title">Name *</h2>
+    </div>
+
+    <input type="text" name="name" placeholder="Name"/>
+
+    <div class="action-wrapper required-field">
+    <input type="button" name="previous" class="previous action-button" value="Previous" />
+    <input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- ORG/COMPANY -->
+  <div> 												  
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 2</h3>												  
+    	<h2 class="fs-title">Organisation/Company</h2>
+    </div>
+
+    <input type="text" name="company" placeholder="Organisation/Company" />
+
+    <div class="action-wrapper">			
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- ADDRESS -->
+  <div>
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 3</h3>
+    	<h2 class="fs-title">Address *</h2>
+    </div>
+
+    <textarea name="address" placeholder="Address"></textarea>
+    <p class="input-note"><strong>Shift ⇧</strong> + <strong>Enter ↵</strong> to make a line break</p>
+
+    <div class="action-wrapper required-field">				
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- SUBURB -->
+  <div>
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 4</h3>												  
+    	<h2 class="fs-title">Suburb *</h2>
+    </div>
+
+    <input type="text" name="suburb" placeholder="Suburb" />
+
+    <div class="action-wrapper required-field">
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- STATE -->
+  <div> 												  
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 5</h3>												  
+    	<h2 class="fs-title">State *</h2>
+    </div>
+
+    <input type="text" name="state" placeholder="State" />
+
+    <div class="action-wrapper required-field">
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- POSTCODE -->
+  <div>											  
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 6</h3>												  
+    	<h2 class="fs-title">Postcode *</h2>
+    </div>
+    <input type="text" name="postcode" placeholder="Postcode" />
+
+    <div class="action-wrapper required-field">
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- PHONE -->
+  <div>
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 7</h3>												  
+    	<h2 class="fs-title">Phone Number *</h2>
+    </div>
+
+    <input type="tel" name="phone" placeholder="Phone Number" />
+
+    <div class="action-wrapper required-field">
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- EMAIL -->
+  <div>
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 8</h3>
+    	<h2 class="fs-title">Email *</h2>
+   </div>
+
+    <input type="text" name="email" placeholder="Email" />
+
+    <div class="action-wrapper required-field">
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- SUPPORTER ID# -->
+  <div>											  
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 9</h3>												  
+    	<h2 class="fs-title">Compassion Supporter ID#</h2>
+    	<p>(Applicable for exisiting Compassion supporters)</p>
+    </div>
+
+    <input type="text" name="supporder_ID" placeholder="Supporder ID" />
+
+    <div class="action-wrapper">
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- CONTACT PREFERENCE -->
+  <div class="col-2 radio-field">
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 10</h3>
+    	<h2 class="fs-title">How would you prefer to be contacted? *</h2>
+    </div>
+
+    <div class="radiobtn">
+    	<input type="radio" name="contactpreference" id="radio-contact-phone" class="radio-button contact-preference" value="Phone"/>
+    	<label for="radio-contact-phone">Phone</label>
+    </div>
+
+    <div class="radiobtn">
+    	<input type="radio" name="contactpreference" id="radio-contact-email" class="radio-button contact-preference" value="Email"/>						
+	<label for="radio-contact-email">Email</label>
+    </div>
+
+    <div class="action-wrapper required-field">				
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" disabled />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- FUNDRAISING TYPE -->
+  <div class="col-2 radio-field" id="conditional">									  
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 11</h3>				     
+    	<h2 class="fs-title">How will you be fundraising? *</h2>
+    </div>
+
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise" id="checkbox-online" class="radio-button" value="online"/>
+    	<label for="checkbox-online">Online</label>
+    </div>	     
+
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise" id="checkbox-facetoface" class="radio-button" value="face to face"/>						
+	<label for="checkbox-facetoface">Face to face</label>
+    </div>
+
+    <div class="action-wrapper required-field">		 
+    <div id="continue-form-11" class="">
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+    <div id="submit-form-11" class="" style="display: none;">
+    	<input type="submit" name="submit" class="submit action-button" value="Submit" />			     
+    </div>
+    </div>									      
+
+  </fieldset>
+  </div>
+
+  <!-- FUNDRAISING PACK -->
+  <div class="col-2 conditional-section">                                                                         
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 12</h3>
+    	<h2 class="fs-title">Would you like a fundraising pack? *</h2>
+	<p>To help your fundraising endeavours, we’ve created a fundraising pack with everything you’ll need to take the hassle out of planning your activities. Would you like a fundraising pack?</p>
+    </div>
+
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_pack" id="radio-fundraise-pack-yes" class="radio-button" value="Yes"/>
+    	<label for="radio-fundraise-pack-yes">Yes</label>
+    </div>
+
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_pack" id="radio-fundraise-pack-no" class="radio-button" value="No"/>						
+	<label for="radio-fundraise-pack-no">No</label>
+    </div>
+				       
+    <div class="action-wrapper required-field">				
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- EVENT DETAILS -->
+  <div class="conditional-section">                                                                         
+  <fieldset>
+    <div class="heading">
+	<h2 class="fs-section-title">Please tell us about your proposed fundraising event.</h2>
+    </div>
+
+    <div class="action-wrapper">				
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+  </fieldset>
+  </div>
+
+  <!-- EVENT/ACTIVITY TITLE -->
+  <div class="conditional-section">
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 13</h3>												  
+    	<h2 class="fs-title">Title of fundraising activity or event *</h2>
+    </div>
+
+    <input type="text" name="event_title" placeholder="Activity or event title" />
+
+    <div class="action-wrapper required-field">
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- VENUE -->
+  <div class="conditional-section">
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 14</h3>												  
+    	<h2 class="fs-title">Venue *</h2>
+    </div>
+
+    <input type="text" name="venue" placeholder="Venue" />
+
+    <div class="action-wrapper required-field">
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- START DATE -->
+  <div class="conditional-section">
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 15</h3>												  
+    	<h2 class="fs-title">Start Date *</h2>
+	<p>(When you are starting your Fundraising Campaign)</p>
+    </div>
+
+    <div class="date-wrapper">
+	    
+	<div class="column">
+	<span>Day</span>
+    	<input type="text" id="startDay" name="start_day" placeholder="DD" />
+	</div>
+	    
+	<div class="column-xs">
+		<div class="date-spacer"><div>/</div></div>
+	</div>
+	    
+    	<div class="column">
+	<span>Month</span>
+	<input type="text" id="startMonth" name="start_month" placeholder="MM" />
+	</div>
+	    
+	<div class="column-xs">
+		<div class="date-spacer"><div>/</div></div>
+	</div>
+
+    	<div class="column">
+	<span>Year</span>
+	<input type="text" id="startYear" name="start_year" placeholder="YYYY" />
+	</div>
+
+    </div>
+
+    <!-- Hidden field to combine 3 fields above -->
+    <input type="hidden" name="start_date" />
+
+    <div class="action-wrapper required-field">
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- FINISH DATE -->
+  <div class="conditional-section">
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 16</h3>												  
+    	<h2 class="fs-title">Finish Date *</h2>
+	<p>(When you are finishing your Fundraising Campaign)</p>
+    </div>
+
+    <div class="date-wrapper">	  
+	<div class="column">
+	<span>Day</span>
+    	<input type="text" id="finishDay" name="finish_day" placeholder="DD" />
+	</div>
+	    
+	<div class="column-xs">
+		<div class="date-spacer"><div>/</div></div>
+	</div>
+	    
+    	<div class="column">
+	<span>Month</span>
+	<input type="text" id="finishMonth" name="finish_month" placeholder="MM" />
+	</div>
+	    
+	<div class="column-xs">
+		<div class="date-spacer"><div>/</div></div>
+	</div>
+
+    	<div class="column">
+	<span>Year</span>
+	<input type="text" id="finishYear" name="finish_year" placeholder="YYYY" />
+	</div>
+    </div>
+
+    <!-- Hidden field to combine 3 fields above -->
+    <input type="hidden" name="finish_date" />
+
+    <div class="action-wrapper required-field">
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- TIME -->
+  <div class="conditional-section">
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 17</h3>												  
+    	<h2 class="fs-title">Time *</h2>
+    </div>
+
+    <div class="time-wrapper">
+  	<input type="time" id="time" name="time">
+    </div>
+
+    <div class="action-wrapper required-field">
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+	
+  <!-- PARTICIPANTS -->
+  <div class="conditional-section">
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 18</h3>												  
+    	<h2 class="fs-title">Estimated number of participants</h2>
+    </div>
+
+    <div class="field-wrapper">
+  	<input type="text" id="participacts" name="participants">
+    </div>
+
+    <div class="action-wrapper">
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- FUNDRAISING ACTIVITY -->
+  <div class="conditional-section">
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 19</h3>
+    	<h2 class="fs-title">Fundraising activity *</h2>
+	<p>e.g. raffle, sponsorship, collecting donations, percentage of business profits</p>
+    </div>
+	  
+    <input type="text" name="fundraising_activity" placeholder="Type your answer here..." />
+	  
+    <div class="action-wrapper required-field">				
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- FUNDRAISING DONATION -->		
+  <div class="col-2 conditional-section">                                                                         
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 20</h3>
+    	<h2 class="fs-title">Where would you like the money you fundraise to go? * *</h2>
+    </div>
+
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-1" class="radio-button" value="Where Most Needed"/>
+    	<label for="radio-fundraise-destination-1">Where Most Needed</label>
+    </div>
+	  
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-2" class="radio-button" value="Mums and Babies"/>
+    	<label for="radio-fundraise-destination-2">Mums and Babies</label>
+    </div>
+	  
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-3" class="radio-button" value="Water and Sanitation"/>
+    	<label for="radio-fundraise-destination-3">Water and Sanitation</label>
+    </div>
+	  
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-4" class="radio-button" value="Education and Training"/>
+    	<label for="radio-fundraise-destination-4">Education and Training</label>
+    </div>
+	  
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-5" class="radio-button" value="Health"/>
+    	<label for="radio-fundraise-destination-5">Health</label>
+    </div>
+	  
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-6" class="radio-button" value="Infrastructure"/>
+    	<label for="radio-fundraise-destination-6">Infrastructure</label>
+    </div>
+	  
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-7" class="radio-button" value="Disaster Relief"/>
+    	<label for="radio-fundraise-destination-7">Disaster Relief</label>
+    </div>
+	  
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-8" class="radio-button" value="Highly Vulnerable Children"/>
+    	<label for="radio-fundraise-destination-8">Highly Vulnerable Children</label>
+    </div>
+
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-9" class="radio-button" value="Income Generation"/>
+    	<label for="radio-fundraise-destination-9">Income Generation</label>
+    </div>
+
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-10" class="radio-button" value="Indigenous Project"/>
+    	<label for="radio-fundraise-destination-10">Indigenous Project</label>
+    </div>
+
+    <div class="radiobtn">
+    	<input type="radio" name="fundraise_destination" id="radio-fundraise-destination-11" class="radio-button" value="Other"/>
+    	<label for="radio-fundraise-destination-11">Other</label>
+    </div>
+		       
+    <div class="action-wrapper required-field">				
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- PUBLIC LIABILITY INSURANCE -->
+  <div class="col-2 conditional-section">                                                                         
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 21</h3>
+    	<h2 class="fs-title">Do you have public liability insurance? *</h2>
+	<p>If yes, please email a copy of your policy to <a href="mailto:fundraising@compassion.com.au">fundraising@compassion.com.au</a></p>
+    </div>
+
+    <div class="radiobtn">
+    	<input type="radio" name="insurance" id="radio-insurance-yes" class="radio-button" value="Yes"/>
+    	<label for="radio-insurance-yes">Yes</label>
+    </div>
+
+    <div class="radiobtn">
+    	<input type="radio" name="insurance" id="radio-insurance-no" class="radio-button" value="No"/>						
+	<label for="radio-insurance-no">No</label>
+    </div>
+				       
+    <div class="action-wrapper required-field">				
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+  <!-- SUPPORTER FUNDRAISING GUIDELINES -->
+  <div id="guidelines" class="glines conditional-section allow-scroll">
+  <fieldset>
+    <div class="heading">
+    	<h3 class="fs-subtitle">Step 22</h3>
+    	<h2 class="fs-title">Please read and agree to the supporter fundraising guidelines *</h2>
+    </div>
+    
+<div class="field-content-wrapper">
+
+<p id="legal-description-intro" class="">
+    <span>Thank you for your interest in raising funds for Compassion Australia! Supporters like you are the backbone of our ministry and absolutely vital to helping us release children from poverty in Jesus’ name.</span><br />
+    <br />
+    <span>To help make your fundraising activity as easy as possible, we have put together the following guidelines that outline your legal obligations to us and our legal responsibilities to you in return.</span><br />
+    <br />
+    <span>Please take the time to read and understand these guidelines before filling in your </span><strong>Proposal to Fundraise</strong><span> agreement form. It’s essential that you complete and return the </span>
+    <strong>Proposal to Fundraise</strong><span> form before starting your fundraising activity. If you fundraise on behalf of Compassion Australia without written permission from us, you may be operating outside of the law.</span><br />
+    <br />
+    <span>Compassion Australia seeks to comply with the NSW Government Departments Best Practice Guidelines for Charitable Organisations. The following information aligns with these guidelines and applies to supporters who undertake:</span>
+    <br />
+    <br />
+    <span>1. Face-to-face appeals </span><br />
+    <span>2. Event fundraising </span><br />
+    <span>3. Collection box fundraising</span><br />
+    <br />
+    <span>Compassion Australia is legally required to approve and authorise all volunteer fundraising events/activities. A </span><strong>Proposal to Fundraise</strong>
+    <span> agreement form will need to be completed and returned to Compassion Australia for approval. Once your event is approved, Compassion Australia will send you an </span><strong>Authority to Fundraise</strong>
+    <span> letter via email or mail confirming your legal authority to undertake a fundraising activity for Compassion Australia.</span><br />
+    <br />
+    <span>This document can only be issued when:</span><br />
+    <span> - A detailed and signed </span><strong>Proposal to Fundraise</strong><span> form has been received by Compassion Australia</span><br />
+    <span> - The event/activity has been confirmed as fitting with the mission and values of Compassion Australia</span><br />
+    <span> - The event/activity will produce a reasonable financial return against time and expenses</span><br />
+    <span> - The event/activity has been confirmed as not holding high risk </span><br />
+    <br />
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><br />
+    <br />
+    </p>
+	
+    <p id="legal-description" class="">	
+    <strong>FUNDRAISING TERMS AND CONDITIONS</strong><br />
+    <br />
+    <span> • The “Fundraiser” refers to the authorised individual/s holding the event/activity to raise funds for donation to Compassion Australia. They will be the person/organisation named on the written Authority to Fundraise.</span>
+    <br />
+    <span>
+        • The event/activity will be conducted in the name of the Fundraiser and is the sole responsibility of the Fundraiser. Compassion Australia is not able to take a coordination role in the event/activity and cannot assist in
+        soliciting prizes, organising publicity, or providing goods or services to assist the Fundraiser in running the event/activity.
+    </span>
+    <br />
+    <span>
+        • Please remember that your event/activity will not be Compassion Australia’s event/activity. It will be an event/activity to raise funds for donation to Compassion Australia. A suggested way of promoting your event/activity is:
+        “Funds raised from this event/activity will go towards supporting the work of Compassion Australia.”
+    </span>
+    <br />
+    <span>• Any event/activity that is seen to degrade, demean or exploit children in any way, or that does not uphold Compassion Australia’s mission, vision and values cannot be associated with, or endorsed by, Compassion Australia.</span>
+    <br />
+    <span>• Compassion Australia is unable to provide public liability insurance cover to fundraising events/activities.</span><br />
+    <span>• The event/activity must meet the requirements of relevant fundraising laws and regulations.</span><br />
+    <span>
+        • If the Fundraiser wishes to utilise the Compassion Australia name and/or logo on any materials or products, the Fundraiser must obtain prior written permission from Compassion Australia. All printed material, including media
+        releases, must be approved by Compassion Australia prior to being printed or circulated.
+    </span>
+    <br />
+    <span>
+        • If the Fundraiser wishes to refer to or promote the work of Compassion Australia, they must refer to Compassion Australia as “Compassion Australia”. The Fundraiser has no right to the name “Compassion Australia” nor does the
+        Fundraiser have the right to raise funds in that name.
+    </span>
+    <br />
+    <span>• Any material or products requesting logo representation must be submitted to Compassion Australia for approval.</span><br />
+    <span>
+        • Permission for Compassion Australia logo usage will attract conditions, negotiated between Compassion Australia and the Fundraiser, especially if the use of the Compassion Australia logo is for the marketing activities of an
+        organisation. A minimum donation amount may need to be guaranteed in this instance.
+    </span>
+    <br />
+    <span>• Guidelines on how to use the Compassion Australia logo can be supplied upon request.</span><br />
+    <span>• Due to limited resources, Compassion Australia cannot undertake promotions and media relations for the Fundraiser.</span><br />
+    <span>• The general obligations of the Fundraiser are to:</span><br />
+    <span> - Provide Compassion Australia with an estimate of the income and expenses associated with the event/activity </span><br />
+    <span> - Keep accurate financial records, including itemised expenses and the reason for them</span><br />
+    <span> - Return money raised and details of your actual income and expenditure to Compassion Australia within 14 days of the event/activity</span><br />
+    <span>
+        • The Fundraiser must take all reasonable steps to ensure that the benefit obtained from the appeal is fair and reasonable. Where an event/activity is for donations only (that is, not associated with the supply or goods or services)
+        the Fundraiser must take all reasonable steps to ensure that the expenses payable in respect of the event/activity do not exceed 40 per cent of the gross proceeds obtained. The expenses would include any expenses borne by the
+        Fundraiser and those by a trader. In other words, the Fundraiser must donate at least 60 per cent of the gross proceeds.
+    </span>
+    <br />
+    <span>
+        • Compassion Australia cannot pay expenses incurred by the Fundraiser, but the Fundraiser can deduct their necessary expenses from the proceeds of their event/activity, provided they are properly documented. (Total expenses must not
+        exceed 40 per cent of total proceeds.)
+    </span>
+    <br />
+    <span>
+        • Compassion Australia does not issue receipts/receipt books to the Fundraiser to give to donors; however, it is important that the Fundraiser understands Compassion Australia’s official guidelines for issuing receipts, in order to
+        provide correct information to people who support the efforts of the event/activity.
+    </span>
+    <br />
+    <span>• The following are not tax-deductible:</span><br />
+    <span> - Ticket purchases (e.g. raffle)</span><br />
+    <span> - Entry to an event- Donations of goods or services </span><br />
+    <span> - Auction purchases</span><br />
+    <span> - Any donation where the person gets something in return for giving</span><br />
+    <span>• Tax-deductible receipts can only be issued in return for an unencumbered donation; that is, when the donor receives nothing in return.</span><br />
+    <span>
+        • In order for Compassion Australia to supply receipts (tax-deductible and non tax-deductible) to donors, please provide a typed list of donors, including their full name, postal address, donation amount and tax-deductibility to
+        Compassion Australia when returning event/activity proceeds. A template for this is available upon request. Compassion Australia can also provide donation forms for your event/activity upon request for those requiring a receipt.
+    </span>
+    <br />
+    <br />
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><br />
+    <br />
+    <span>FUNDRAISING ACTIVITIES</span><br />
+    <br />
+    <span>Please ascertain which of the following three fundraising activities you will be undertaking, and then read the applicable guidelines outlined in this document.</span><br />
+    <span>1. </span><strong>Face-to-Face Appeals:</strong>
+    <span>
+        An activity carried out by a person, corporation or organisation, whether for remuneration or as a volunteer, for the purpose of raising donations for an organisation. The activity is seeking pledges for donations to an organisation
+        in places or venues open to members of the public.
+    </span>
+    <br />
+    <span>2. </span><strong>Event</strong><span> </span><strong>Fundraising:</strong><span> Any fundraising activity in which a function is held to raise donations for an organisation.</span><br />
+    <span>3. </span><strong>Collection Box Fundraising:</strong><span> Where a collection box device is used as part of an appeal to collect donations on behalf of an organisation.</span><br />
+    <br />
+    <span>
+        Once your fundraising activity is completed, please send the proceeds of the activity, together with any relevant correspondence to Compassion Australia at the address below. (Please do not post cash. Cheques are preferred.)
+    </span>
+    <br />
+    <br />
+    <span>Compassion Australia</span><br />
+    <span>Attn: Fundraising</span><br />
+    <span>PO Box 1</span><br />
+    <span>Hunter Region MC NSW 2310</span><br />
+    <br />
+    <span>Any photos, video footage or stories you might like to share are also welcome.</span><br />
+    <br />
+    <span>For more information, or questions about fundraising for Compassion Australia, please email </span><a href="mailto:fundrasising@compassion.com.au" rel="noopener noreferrer" target="_blank">fundrasising@compassion.com.au</a><br />
+    <br />
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><br />
+    <br />
+    <span>GUIDELINES FOR FUNDRAISING ACTIVITIES</span><br />
+    <br />
+    <span>Face-To-Face Fundraising</span><br />
+    <br />
+    <span>
+        Face-to-face fundraising is an activity carried out by a person, corporation or organisation, whether for remuneration or as a volunteer, for the purpose of raising donations for an organisation. The activity is seeking pledges for
+        donations to an organisation in places or venues open to members of the public.
+    </span>
+    <br />
+    <br />
+    <span>
+        Appeals through face-to-face collections are a common method of obtaining support from the public and a significant source of fundraising income for many charitable organisations. They may be conducted door-to-door, in a street,
+        public place, or a place of entertainment. They may be based on a receipting system or a collection box device (refer to Collection Box Fundraising for more information).
+    </span>
+    <br />
+    <br />
+    <span>
+        Where the appeal is conducted face-to-face, the Fundraiser must obtain authorised consent from Compassion Australia, and wear an identification badge or card that includes the name and contact telephone number of Compassion
+        Australia, the name of the bearer, and its issue and expiry date. The badge must be worn by all volunteers soliciting funds.
+    </span>
+    <br />
+    <br />
+    <span>The relevant requirements of the regulations and authority conditions impacting upon collections are listed below.</span><br />
+    <br />
+    <span>
+        a. A set of written or printed instructions should be issued to all face-to-face collectors. These instructions should include the manner in which participants must comply with the advertising and disclosure requirements of
+        Authority Condition 16 of the NSW Government Departments Best Practice Guidelines for Charitable Organisations (refer to Appendix 1).
+    </span>
+    <br />
+    <span>
+        b. Compassion Australia and the Fundraiser must comply with the requirements of the NSW Government Departments Best Practice Guidelines for Charitable Organisations in respect to the issuing and wearing of an identification badge
+        (refer to Appendix 2).
+    </span>
+    <br />
+    <span>
+        c. Compassion Australia and the Fundraiser must ensure that all participants, including volunteers, wear the identification card or badge. It is important that this badge be worn by volunteers so that members of the public are aware
+        of the identity and status of any person soliciting support.
+    </span>
+    <br />
+    <span>
+        d. Where collection box devices are used, the Fundraiser must comply with the best practices referred to in the NSW Government Departments Best Practice Guidelines for Charitable Organisations Chapter 30: Collection Devices (refer
+        to section Collection Box Fundraising of this document).
+    </span>
+    <br />
+    <span>e. The Fundraiser must not attempt to circumvent the minimum return of 60 per cent on </span><em>donation-only</em>
+    <span> appeals (without any associated supply of goods or services) by providing a sticker, token or other thing in acknowledgment of the person’s donation. These do not constitute supply of goods (refer to Appendix 3).</span><br />
+    <span>f. Where a trader is responsible for controlling a collection, the Fundraiser must ensure effective controls are in place to provide proper accountability.</span><br />
+    <span>
+        g. Consideration should be given to printing a letter, pamphlet or flyer containing relevant information on the purpose of the appeal and the Fundraiser’s activities which could be produced to potential donors for their information.
+    </span>
+    <br />
+    <span>h. Where a donor requires a receipt for a donation, these proceeds must be separately accounted for by completing a general donation form and returning it to Compassion Australia for processing and for issue of a receipt.</span>
+    <br />
+    <br />
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><br />
+    <br />
+    <span>APPENDIX 1</span><br />
+    <br />
+    <span>Advertisements, Notices and Information</span><br />
+    <br />
+    <span>(Part 5 of the Authority Conditions, NSW Government Departments Best Practice Guidelines for Charitable Organisations)</span><br />
+    <br />
+    <span>Authority Condition 16</span><br />
+    <span>Any advertising, notice or information provided as part of a fundraising appeal: a. Must clearly and prominently disclose the name of the authority holder, and </span><br />
+    <span>b. Must be conducted in accordance with decency, dignity and good taste, and </span><br />
+    <span>c. Must be based on fact and must not be false or misleading, and </span><br />
+    <span>d. Must conform strictly to the provisions of any relevant law</span><br />
+    <br />
+    <span>
+        When requested, any person conducting or participating in a fundraising appeal must use his or her best endeavours, at all times, to answer honestly any question relating to the purpose of the appeal or the details of the appeal or
+        to arrange to find answers to questions that he or she is unable to answer.
+    </span>
+    <br />
+    <br />
+    <span>In particular, information is to be given as to how the gross proceeds or articles obtained in the appeal will be distributed. </span><br />
+    <br />
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><br />
+    <br />
+    <span>APPENDIX 2</span><br />
+    <br />
+    <span>Identification Badge</span><br />
+    <br />
+    <span>(Chapter 22, NSW Government Departments Best Practice Guidelines for Charitable Organisations)</span><br />
+    <br />
+    <span>Authority Condition 11 (3) </span><br />
+    <span>Requires that any person participating in a face-to-face appeal must wear an identification badge.</span><br />
+    <br />
+    <span>Badges must be destroyed or recovered from collectors as soon as that person’s involvement in an appeal is finished.</span><br />
+    <br />
+    <span>Best Practice Guidelines:</span><br />
+    <span>a. As a control measure, the badge must be in original printed form and not be a photocopied document. </span><br />
+    <span>b. The badge should have its expiry date stamped in conspicuous print size. </span><br />
+    <span>c. All badges should be accountable items. Care should be exercised over their purchase, issue and custody. </span><br />
+    <span>d. The format of the badge should be expressed in such a way as not to mislead the public or misrepresent the role of the person to whom the authority is issued and the purpose of the appeal. </span><br />
+    <span>e. For larger organisations, identification badges issued to collectors in receipt of a wage, commission or fee could be in laminated form, and include a photograph and signature of the bearer.</span><br />
+    <br />
+    <strong>Authorisations of Appeals</strong><br />
+    <br />
+    <span>(Chapter 23, NSW Government Departments Best Practice Guidelines for Charitable Organisations)</span><br />
+    <br />
+    <span>Best Practice Guidelines:</span><br />
+    <span>a. As an important control measure, the authorisation of an appeal must be in an original printed form and not a photocopied document. </span><br />
+    <span>b. Where the authority holder (Compassion Australia) authorises an organisation, other than a trader, to conduct an appeal on its behalf, the authorisation of an appeal would take the form of a letter. </span><br />
+    <span>c. The authorisation of an appeal should not be issued for a period longer than 12 months. Wherever possible it should be restricted to a much shorter period. </span><br />
+    <span>
+        d. The format of the authorisation of the appeal should not be expressed in such a way as to mislead the public. The information should be shown in a manner that does not misrepresent the role of the person to whom the authority is
+        issued (the Fundraiser), the purpose of the appeal and the terms under which it is conducted.
+    </span>
+    <br />
+    <span>
+        e. Although the condition allows the authority holder (Compassion Australia) to delegate the signing and dating of the authorisation of an appeal to a trader, this should only be done in exceptional circumstances and where the
+        authority holder is completely satisfied as to the trader’s integrity. It would also be necessary for the trader to account fully for any authorisations issued under such delegation.
+    </span>
+    <br />
+    <br />
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><br />
+    <br />
+    <span>APPENDIX 3</span><br />
+    <br />
+    <span>Ratio of Expenses to Receipts</span><br />
+    <br />
+    <strong>(Part 5 of the Authority Conditions, NSW Government Departments Best Practice Guidelines for Charitable Organisations)</strong><br />
+    <br />
+    <span>Authority Condition 8 </span><br />
+    <br />
+    <span>Requires:</span><br />
+    <span>
+        • That any person or organisation conducting a fundraising appeal for donations only (that is, without any associated supply of goods or services) must take all reasonable steps to ensure that the expenses payable do not exceed 40
+        per cent of the gross proceeds obtained (i.e. a minimum profit of 60 per cent)
+    </span>
+    <br />
+    <span>
+        • That in all other cases, (that is, appeals associated with the supply of goods and services) the Fundraiser must take all reasonable steps to ensure that the expenses payable do not exceed a fair and reasonable proportion of the
+        gross proceeds obtained
+    </span>
+    <br />
+    <br />
+    <span>The </span><em>Lotteries and Art Unions Act 1901</em>
+    <span>
+        requires that where fundraising lotteries and games of chance such as raffles, Charity Housie, lucky envelopes, art unions, etc, are conducted it should achieve a minimum return of 40 per cent (12.5 per cent for Charity Housie).
+    </span>
+    <br />
+    <br />
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><br />
+    <br />
+    <span>EVENT FUNDRAISING</span><br />
+    <br />
+    <span>
+        Event means any fundraising activity in which a function is held to raise donations for an organisation. Individuals or groups of people may wish to raise funds for an organisation by holding an event. Before entering into an
+        agreement with any group wishing to conduct an event in the name of Compassion Australia, the Fundraiser should ensure the event is authorised by Compassion Australia. To do this, the Fundraiser should liaise with Compassion
+        Australia.
+    </span>
+    <br />
+    <br />
+    <span>A Fundraiser must:</span><br />
+    <span>• Obtain written permission from Compassion Australia to operate the event and use Compassion Australia’s trade marks in the proposed event</span><br />
+    <span>• Identify whether the volunteers accept the financial risk of the proposed event and obtain the agreement in writing</span><br />
+    <span>• Ascertain in writing how much direct involvement Compassion Australia will have in organising and implementing the proposed event</span><br />
+    <span>• Ensure all volunteers are briefed about Compassion Australia’s policy on acceptable and unacceptable methods or sources of fundraising in Compassion Australia’s name</span><br />
+    <span>• Ensure volunteers comply with relevant Commonwealth, State and Territory legislation and local government regulations</span><br />
+    <br />
+    <span>The Fundraising Institute Australia (FIA) </span><em>Standard of Event Fundraising Practice</em><span> provides practical guidelines on best practice for conducting Events Fundraising Activities throughout Australia. </span><br />
+    <br />
+    <span>FIA Best Practice Guidelines: </span><br />
+    <span>a. A Fundraiser must at all stages in planning an event comply with the NSW Department of Gaming and Racing guidelines. </span><br />
+    <span>b. A Fundraiser should assess the event’s level of efficiency, profitability and maintain control of expense. </span><br />
+    <span>c. A Fundraiser should identify the key steps to implement a successful event which are:</span><br />
+    <span> - Prepare a budget </span><br />
+    <span> - Analyse risks and prioritise risks </span><br />
+    <span> - Comply with all licensing and permit requirements in the State or Territory where the event is held </span><br />
+    <span> - Comply with Compassion Australia’s branding guidelines for any material containing Compassion Australia’s logo</span><br />
+    <span>d. The general obligations of the Fundraiser are to: </span><br />
+    <span> - Provide Compassion Australia with an estimate of the income and expenses associated with the event/activity </span><br />
+    <span> - Keep accurate financial records, including itemised expenses and the reason for them </span><br />
+    <span> - Return money raised and details of your actual income and expenditure to Compassion Australia within 14 days of the event/activity</span><br />
+    <span>
+        e. A Fundraiser must ensure that Compassion Australia has given permission for the use of the Compassion Australia logo and take all reasonable steps to prevent its unauthorised use by third parties, including suppliers or the
+        media.
+    </span>
+    <br />
+    <span>f. A Fundraiser must ensure that any promotional material used to promote an event: </span><br />
+    <span> - Is factually accurate, truthful and not likely to deceive or mislead any person </span><br />
+    <span> - Identifies Compassion Australia </span><br />
+    <span> - Identifies the objective of the event </span><br />
+    <span> - Is approved by Compassion Australia before work commences on promoting the event </span><br />
+    <span>g. Where a Fundraiser discloses a cost of fundraising in promotional materials, that cost must be factually accurate. </span><br />
+    <span>h. A Fundraiser must make Compassion Australia’s current annual report freely available upon a reasonable request by a donor. </span><br />
+    <span>i. Despite anything else in this section, promotional materials may be part of a positive campaign by a Fundraiser to build public awareness, understanding and support for Compassion Australia. </span><br />
+    <span>j. The cost of publicity must be included in the event budget as an expense. </span><br />
+    <span>k. A Fundraiser must prepare a budget before the commencement of an event. </span><br />
+    <span>l. A Fundraiser must ensure that all expenses incurred in the budget are lawful. </span><br />
+    <span>m. When planning an event, a Fundraiser should plan to minimise the need for cash collections at the event. </span><br />
+    <span>n. A Fundraiser must ensure that cash handling is secure at the event. </span><br />
+    <span>o. A Fundraiser should redesignate collectors to collect cash at the event. </span><br />
+    <span>p. If appropriate, cash receiving locations should be available at the event. </span><br />
+    <span>q. All cash received by a Fundraiser should be collected, counted and recorded (including issue of receipts) by two people whenever practical to do so. </span><br />
+    <span>r. Income summaries should be made at the point of counting for reconciliation with banking details at a later date. </span><br />
+    <span>s. Records must be made of donations for specific purposes to ensure donors’ wishes are met. </span><br />
+    <span>
+        t. A Fundraiser must take all reasonable steps to ensure that the benefit obtained from the appeal is fair and reasonable. Where an event/activity is for donations only (that is, not associated with the supply or goods or services)
+        the Fundraiser must take all reasonable steps to ensure that the expenses payable in respect of the event/activity do not exceed 40 per cent of the gross proceeds obtained. The expenses would include any expenses borne by the
+        Fundraiser and those by a trader. In other words, at least 60 per cent of the gross proceeds must be given to the nominated charity (Compassion Australia).
+    </span>
+    <br />
+    <span>u. If a Fundraiser is planning an event, a Fundraiser should identify items to Compassion Australia’s donors and supporters that could be donated rather than purchased. </span><br />
+    <span>
+        v. If a sponsor requires that an event is promoted by using the sponsor’s trade mark, the Fundraiser must ensure that the sponsor has given permission for the use of the trade mark and comply with the sponsor’s requirements for its
+        appropriate use in the event or the promotional materials.
+    </span>
+    <br />
+    <br />
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><br />
+    <br />
+    <span>COLLECTION BOX FUNDRAISING</span><br />
+    <br />
+    <span>Collection Devices</span><br />
+    <br />
+    <span>(Chapter 30, NSW Government Departments Best Practice Guidelines for Charitable Organisations)</span><br />
+    <br />
+    <span>
+        Collection devices are widely used for fundraising purposes. They may either be hand-held or placed in shops or businesses. These devices also include canisters placed on shop counters selling sweets/confectionery and food products.
+    </span>
+    <br />
+    <br />
+    <span>
+        Compassion Australia and traders should closely study the requirements of the relevant authority conditions. These include that the collection device must be securely constructed, properly sealed, consecutively numbered and be
+        clearly labelled with Compassion Australia’s name.
+    </span>
+    <br />
+    <br />
+    <span>
+        Proper supervision, security and control must be exercised over its use and clearance. The Fundraiser must bear in mind that open-bucket collections, coin trains or bridges, etc fail to comply with requirements and lack
+        accountability.
+    </span>
+    <br />
+    <br />
+    <span>NSW Government Departments Best Practice Guidelines for Charitable Organisations:</span><br />
+    <span> a. The Fundraiser should establish appropriate procedures and internal controls to ensure accountability and to minimise opportunities for theft or misappropriation of proceeds obtained from these devices.</span><br />
+    <span>
+        b. Where a donor requires a receipt for a donation, these proceeds must be separately accounted for by completing a general donation form and returning it to the Fundraiser Coordinator for processing and for issue of a receipt.
+    </span>
+    <br />
+    <span>c. Collection devices must be secure and accountable.</span><br />
+    <span>d. Where collection box devices are placed in shops (and similar locations):</span><br />
+    <span> - A printed sheet should be issued to the shopkeeper providing an overview of the appeal and the procedures and controls that apply. </span><br />
+    <span>
+        - When the devices are cleared, either the device should be replaced in its entirety and the proceeds counted back at Compassion Australia’s premises, or the device opened up and the contents counted in the shopkeeper’s presence and
+        recorded in a register (the shopkeeper would countersign the register for the amount collected).
+    </span>
+    <br />
+    <span>
+        - Where the devices are taken back to Compassion Australia’s premises to be opened and counted, the withdrawal of that device and the issue of a new one would need to be recorded in the register and signed for by the shopkeeper.
+        When the device is opened back at the premises of Compassion Australia, this should be done in the presence of at least two persons. The money should be counted, and the amount recorded against that device in the register.
+    </span>
+    <br />
+    <span>e. Where the collection box devices are hand-held: </span><br />
+    <span> - At the end of the day the device should be opened, and the contents counted in the presence of the Fundraiser and recorded in a register. The Fundraiser would countersign the register against the amount collected. </span><br />
+    <span>f. Where a trader is involved in the use of collection devices: </span><br />
+    <span> - The trader must not be involved in the purchase of the collection devices, or the labels or any seals to be attached to the devices. </span><br />
+    <span> - The stock of such items must remain in the custody of Compassion Australia at all times. </span><br />
+    <span> - Details of devices issued to the trader for distribution must be recorded not only in the register maintained by Compassion Australia, but also in a register maintained by the trader. </span><br />
+    <span> - Compassion Australia should require the trader to observe established practices and controls which should be incorporated in the written agreement required under Authority Condition 20: Other Practices (see Appendix 1). </span>
+    <br />
+    <span>g. Compassion Australia and traders should carry out regular surveillance in the field to ensure that participants are complying with the legislation, authority conditions and previously issued instructions. </span><br />
+    <span>h. Where the register is maintained in computerised form, a hard copy must be retained, and provision must also be made for signatures, referred to above. </span><br />
+    <span>i. Where collection box devices are used by a trader, the boxes must only be those issued to the trader by Compassion Australia and must be recorded in a register by the trader.</span><br />
+    <br />
+    <strong>Advertising and Disclosure</strong><span> </span><br />
+    <br />
+    <span>a. Any advertisement, notice or information must comply with certain standards and satisfy basic minimum requirements. </span><br />
+    <span>b. These may be summarised as follows: </span><br />
+    <span> - Must clearly and prominently disclose the name of Compassion Australia </span><br />
+    <span> - Must be conducted in accordance with decency, dignity and good taste </span><br />
+    <span> - Must be based on fact, not be false, deceptive or misleading</span><br />
+    <span> - Must conform strictly to the provisions of any relevant law</span><br />
+    <br />
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span>
+    <span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><span>_</span><br />
+    <br />
+    <span>APPENDIX 1</span><br />
+    <br />
+    <span>
+        Authority Condition 20 If a fundraising appeal is conducted jointly with a trader it must be governed by a writtenagreement between Compassion Australia and the trader, which must include at least the following specifications:
+    </span>
+    <br />
+    <span>a. The amount of the return to be obtained by Compassion Australia from the appeal, or the basis or method by which this will be calculated, and the manner in which payment will be effected </span><br />
+    <span>b. Details of any commission, wage or fee payable to the trader and any other person from the proceeds of the appeal </span><br />
+    <span>c. Details of the type of, and any limitations on, the amount of expenses to be borne by the trader and Compassion Australia as part of the appeal </span><br />
+    <span>d. The basic rights, duties and responsibilities of both parties </span><br />
+    <span>e. Insurance risks to be covered by each party (e.g. public liability, worker’s compensation for employees, personal accident insurance for volunteers, third party property insurance) </span><br />
+    <span>
+        f. Details of any records and documentation to be maintained by the trader (including those required by or under the Charitable Fundraising Act 1991) and the requirement that the trader keep these at the registered office of
+        Compassion Australia, unless provided for otherwise by a condition attached to the authority
+    </span>
+    <br />
+    <span>g. Details of the specific internal controls and safeguards to be employed to ensure proper accountability for all proceeds obtained during the appeal </span><br />
+    <span>h. The process to be followed in resolving disputes between the parties to the contract or agreement, complaints from the public and grievances from employees </span><br />
+    <span>
+        i. The reporting requirements imposed on the trader, an undertaking by the trader to comply with the provisions of the Charitable Fundraising Act 1991 and the regulations under the Act and the conditions of the written agreement
+    </span>
+    <br />
+    <span>j. A mechanism to deal with the effect on the contract of any subsequent addition, variation or deletion of an existing condition of the written agreement </span><br />
+    <span>k. The circumstances in which the contract is or may be terminated</span><br />
+    <br />
+</p>
+
+</div>
+
+    <div class="radiobtn">
+    	<input type="radio" name="guidelines" id="radio-guidelines-accept" class="radio-button" value="Accept"/>
+    	<label for="radio-guidelines-accept">Yes, I accept</label>
+    </div>
+				       
+    <div class="action-wrapper required-field">				
+    	<input type="button" name="previous" class="previous action-button" value="Previous" />
+    	<input type="button" name="next" class="next action-button" value="Next" />
+    </div>
+
+  </fieldset>
+  </div>
+
+<!-- SUPPORTER FUNDRAISING DECLARATION -->
+<div id="declaration" class="conditional-section allow-scroll" style="display: none;">
+<fieldset>
+  <div class="heading">
+    <h3 class="fs-subtitle">Step 23</h3>
+    <h2 class="fs-title">Supporter Fundraising Declaration *</h2>
+  </div>
+  
+<div class="field-content-wrapper">
+  <p id="fundraising-declaration" class="">
+      <span>I have read Compassion Australia’s Fundraising Guidelines and agree to abide by them at all times.</span><br />
+      <br />
+      <span>I/We agree not to use Compassion Australia’s logo without the appropriate authority.</span><br />
+      <br />
+      <span>
+          I/We agree that the fundraising event/activity will be conducted in the name of the Fundraiser and is the sole responsibility of the Fundraiser. Compassion Australia will not take on a coordination role in the event/activity.
+      </span>
+      <br />
+      <br />
+      <span>The event/activity will not be Compassion Australia’s event/activity. It will be an event/activity to raise funds for donations to Compassion Australia.</span><br />
+      <br />
+      <span>I/We agree not to accept inappropriate company sponsorship or donations or in-kind support.</span><br />
+      <br />
+      <span>I/We agree not to be involved in any form of illegal activity, violence, aggression, undue risk-taking or in an activity that is seen to degrade, demean or exploit children in any way.</span><br />
+      <br />
+      <span>I/We indemnify Compassion Australia from any liability incurred as a result of a claim, incident or activity conducted by me/us.</span><br />
+      <br />
+      <span>I/We agree to notify Compassion Australia of any organisation’s sponsorship.</span><br />
+      <br />
+      <span>I/We understand that to resolve disputes between the parties, complaints from the public and grievances from employees must be submitted in writing to Compassion Australia.</span><br />
+      <br />
+      <span>I declare that all details on this form are correct to the best of my knowledge. </span><br />
+      <br />
+      <span>
+          By accepting this authority to fundraise, I agree that I am willing to comply with Compassion’s Fundraising Guidelines. I understand that Compassion Australia reserves the right to terminate this agreement at any time, and will do
+          so in writing.
+      </span>
+      <br />
+      <br />
+      <span>
+          I am aware that this agreement and other relevant documentation may need to be provided to the Department of Gaming and Racing, meaning that Compassion and can be audited at any time to ensure the conditions of this agreement are
+          met.
+      </span>
+      <br />
+      <br />
+  </p>
+
+</div>
+
+  <div class="radiobtn">
+    <input type="radio" name="declaration" id="radio-declaration-accept" class="radio-button" value="Accept"/>
+    <label for="radio-declaration-accept">Yes, I accept</label>
+  </div>
+             
+  <div class="action-wrapper required-field">
+        <input type="submit" name="submit" class="submit action-button" value="Submit" />
+  </div>
+
+</fieldset>
+</div>
+	
+<input type=hidden name="oid" id="salesforce-oid" value="00D5j000008zN11">
+
+</form>
+	
+<div class="" id="success-message" style="display: none;">
+	<div class="success-content">
+		<h3>Thank you! We'll be in touch shortly.</h3>
+	</div>
+</div>
+
+	
+</div>	<!-- CONTAINER CLOSE -->
+
+<!-- SCROLL -->
+<script>
+$(function() {
+      var blockScroller = $("#msform").blockScroll();
+});
+</script>
+
+
+<!-- VALIDATE -->	
+<script>
+$(document).ready(function() {
+	$("#msform").validate({
+		
+// SUBMIT 
+
+submitHandler: function(form) {
+var prod ="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8";
+console.log('valid form submission');
+  
+    $.ajax({
+        url: prod,
+        type: 'post',
+        dataType: 'jsonp',
+        jsonp: '$callback',
+        data: $('#msform *').serialize()
+        //success: function(data) {
+        //    $('#msform').hide();
+        //    $("#success-message").show();
+	//    console.log('Show success');
+        //}
+    });
+	
+	console.log("Submitted");
+	
+        $('#msform').hide();
+        $('#success-message').fadeIn(750);
+	
+    return false;
+},
+
+// other options
+		
+	  ignore: [],
+
+rules: {
+          name: {
+              required: true,
+              minlength: 3
+          },
+          address: {
+              required: true,
+              minlength: 3
+          },
+          suburb: {
+              required: true,
+              minlength: 3
+          },
+          state: {
+              required: true,
+              minlength: 2
+          },
+          postcode: {
+              required: true,
+              minlength: 4
+          },
+          phone: {
+              required: true,
+              minlength: 4
+          },
+          email: {
+              required: true,
+              email: true
+          },
+    	  contactpreference: {
+      		required: true
+    	  },
+	  fundraise: {
+      		required: true
+    	  },
+	  fundraise_pack: {
+      		//required: true
+    	  },
+	  event_title: {
+      		//required: true
+    	  },
+	  venue: {
+      		//required: true
+    	  },
+	  start_date: {
+      		//required: true
+    	  },
+	  start_day: {
+      		//required: true,
+		digits: true,
+		maxlength: 2
+    	  },
+	  start_month: {
+      		//required: true,
+		digits: true,
+		maxlength: 2
+    	  },
+	  start_year: {
+      		//required: true,
+		digits: true
+    	  },
+	  finish_date: {
+      		//required: true
+    	  },
+	  finish_day: {
+      		//required: true,
+		digits: true,
+		maxlength: 2
+    	  },
+	  finish_month: {
+      		//required: true,
+		digits: true,
+		maxlength: 2
+    	  },
+	  finish_year: {
+      		//required: true,
+		digits: true
+    	  },
+          time: {
+      		//required: true
+    	  },
+	  participants: {
+      		//required: true,
+		digits: true
+    	  },
+	  fundraising_activity: {
+      		//required: true
+    	  },
+	  fundraise_destination: {
+      		//required: true
+    	  },
+	  insurance: {
+      		//required: true
+    	  },
+	  guidelines: {
+      		//required: true
+    	  },
+	  declaration: {
+      		//required: true
+    	  }
+
+      },
+		
+    // change name of error class that is assigned to input fields and placement
+	
+errorPlacement:
+function( error, element ){
+if(element.is( ":radio" )){
+// error append here
+//error.appendTo('.active-div div.action-wrapper');
+error.prepend('.active-div div.action-wrapper');	
+}
+else {
+error.insertAfter(element);
+}
+}
+		
+    //errorClass: 'error_validate',
+    //errorPlacement: function (label, element) {
+		
+    //     default
+    //    if (element.is(':radio')) {
+           //label.insertAfter(element.next('label'));
+	   //label.insertBefore(element('div.action-wrapper'));
+
+      // }
+      //  else {
+      //      label.insertAfter(element);
+      //  }
+    //}
+		
+});
+
+//    $('input, textarea').on('blur', function() {
+//        if ($(".active-div input, .active-div textarea").not(':button').valid()) {
+//            $('.active-div .next').prop('disabled', false);  
+//        } else {
+//            $('.active-div .next').prop('disabled', 'disabled');
+//        }
+//    });
+
+
+//setup before functions
+var typingTimer;                // timer identifier
+var doneTypingInterval = 500;  // time in ms, 0.5 second for example
+var $input = $('input, textarea');
+
+//on keyup, start the countdown
+$input.on('keyup', function () {
+  clearTimeout(typingTimer);
+  typingTimer = setTimeout(doneTyping, doneTypingInterval);
+});
+
+//on keydown, clear the countdown 
+$input.on('keydown', function () {
+  clearTimeout(typingTimer);
+});
+
+//user is "finished typing," do something
+function doneTyping () {
+  //do something
+  if ($(".active-div input, .active-div textarea").not(':button').valid()) {
+    $('.active-div .next').prop('disabled', false);  
+} else {
+    $('.active-div .next').prop('disabled', 'disabled');
+}
+}
+
+});
+</script>
+
+	
+<!-- ADDITIONAL -->
+<script>
+	
+// Conditional for Question 11 and enable/disable required	
+	
+$(document).ready(function() {
+   $('#conditional input[type="radio"]').click(function() {
+    if($(this).attr('id') == 'checkbox-online') {
+    $('#submit-form-11').fadeIn('slow');
+    $('#continue-form-11').fadeOut('slow');
+    $('.conditional-section').hide();
+
+    $("input[name='fundraise_pack']").attr("required", false);
+    $("input[name='event_title']").attr("required", false);
+    $("input[name='venue']").attr("required", false);
+    $("input[name='start_date']").attr("required", false);
+    $("input[name='start_day']").attr("required", false);
+    $("input[name='start_month']").attr("required", false);
+    $("input[name='start_year']").attr("required", false);
+    $("input[name='finish_date']").attr("required", false);
+    $("input[name='finish_day']").attr("required", false);
+    $("input[name='finish_month']").attr("required", false);
+    $("input[name='finish_year']").attr("required", false);
+    $("input[name='time']").attr("required", false);
+    $("input[name='participants']").attr("required", false);
+    $("input[name='fundraising_activity']").attr("required", false);
+    $("input[name='fundraising_destination']").attr("required", false);
+    $("input[name='insurance']").attr("required", false);
+    $("input[name='guidelines']").attr("required", false);
+    $("input[name='declartion']").attr("required", false);
+    
+  } else {
+    $("input[name='fundraise_pack']").attr("required", true);
+    $("input[name='event_title']").attr("required", true);
+    $("input[name='venue']").attr("required", true);
+    $("input[name='start_date']").attr("required", true);
+    $("input[name='start_day']").attr("required", true);
+    $("input[name='start_month']").attr("required", true);
+    $("input[name='start_year']").attr("required", true);
+    $("input[name='finish_date']").attr("required", true);
+    $("input[name='finish_day']").attr("required", true);
+    $("input[name='finish_month']").attr("required", true);
+    $("input[name='finish_year']").attr("required", true);
+    $("input[name='time']").attr("required", true);
+    $("input[name='participants']").attr("required", true);
+    $("input[name='fundraising_activity']").attr("required", true);
+    $("input[name='fundraising_destination']").attr("required", true);
+    $("input[name='insurance']").attr("required", true);
+    $("input[name='guidelines']").attr("required", true);
+    $("input[name='declartion']").attr("required", true);
+                
+    $('#submit-form-11').fadeOut('slow');
+    $('#continue-form-11').fadeIn('slow');
+    $('.conditional-section:not("#declaration")').show();
+  }                   
+});
+	
+// Guidelines to Declaraction
+   $('#guidelines input[type="radio"]').click(function() {
+    //alert('Accept button clicked!');
+    //console.log("Accept button clicked!");
+    if($(this).attr('id') == 'radio-guidelines-accept') {
+    //$('.active-div .next').prop('disabled', false);
+    $('#guidelines .next').prop('disabled', false);	    
+    //console.log("Accepted!");	    
+    //$('#declaration').show();
+    $("#declaration").css("display", "block");
+  } else {
+    $('#declaration .next').prop('disabled', 'disabled');
+    $("#declaration").css("display", "none");
+  }
+});
+
+});
+
+</script>
+	
+<!-- DATE -->				     
+<script>
+$(document).ready(function(){
+  $("#startDay, #startMonth, #startYear").on("input", function() {
+    var startDayValue = $("#startDay").val(); // this gives textbox value   
+    var startMonthValue = $("#startMonth").val(); // this gives textbox value  
+    var startYearValue = $("#startYear").val(); // this gives textbox value
+
+    // put it all together
+    var startDateValue = startDayValue+'-'+startMonthValue+'-'+startYearValue;
+
+    $("input[name=start_date]").val(startDateValue); // this will set hidden field value
+    //alert(startDateValue);
+  });
+	
+  $("#finishDay, #finishMonth, #finishYear").on("input", function() {
+    var finishDayValue = $("#finishDay").val(); // this gives textbox value   
+    var finishMonthValue = $("#finishMonth").val(); // this gives textbox value  
+    var finishYearValue = $("#finishYear").val(); // this gives textbox value
+
+    // put it all together
+    var finishDateValue = finishDayValue+'-'+finishMonthValue+'-'+finishYearValue;
+
+    $("input[name=finish_date]").val(finishDateValue); // this will set hidden field value
+    //alert(finishDateValue);
+  });
+	
+});
+</script>
+	
+<!-- Guidelines & Declaraction - Detect top and bottom -->
+<!-- <script>
+$(document).ready(function(){	
+$('.allow-scroll.active-div fieldset').on('scroll', function() {
+  var scrollTop = $(this).scrollTop();
+  if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
+    $('.allow-scroll.active-div').addClass("scroll-down")  
+    console.log('Bottom!');
+  } else if (scrollTop <= 0) {
+    $('.allow-scroll.active-div').addClass("scroll-up") 	  
+    console.log('Top!');
+  } else {
+    // Nothing
+  }
+});
+});	
+</script> -->
+
+<script>
+$(document).ready(function() {					 
+    $('input[type=time]').on('blur', function() {
+        if ($(".active-div input[type=time]").valid()) {
+            $('.active-div .next').prop('disabled', false);  
+        } else {
+            $('.active-div .next').prop('disabled', 'disabled');
+        }
+    });
+});
+</script>
+	
+<!-- <script>
+$(document).ready(function() {
+						 
+//    $('input, textarea').on('blur', function() {
+//        if ($(".active-div input, .active-div textarea").not(':button').valid()) {
+//            $('.active-div .next').prop('disabled', false);  
+//        } else {
+//            $('.active-div .next').prop('disabled', 'disabled');
+//        }
+//    });	
+						       
+  $('.active-div .radiobtn').click(function() {
+  //$('input').on('blur', function() {
+    //if (!$("input[name='contactpreference']:checked").valid()) {
+    if (!$(".active-div input[type='radio']:checked").valid()) {
+	$('.active-div .next').prop('disabled', 'disabled'); 
+        alert('Nothing is checked!');
+        return false;
+    }
+    else {
+      $('.active-div .next').prop('disabled', false); 
+      alert('One of the radio buttons is checked!');
+    }
+  });
+});
+</script> -->
+						       
+</body>
+	
+</html>
