@@ -569,6 +569,11 @@ input.action-button:disabled {
 	height: calc(100vh - 200px);
 }
 
+.field-content-wrapper {
+	width: auto;
+	display: block;	
+}
+
 /* SUCCESS MESSAGE */
 
 #success-message {
