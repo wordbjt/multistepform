@@ -1,3 +1,9 @@
+@media screen and (max-width: 768px) {
+  #msform {
+   max-width: 200px;
+  }
+}
+
 /*
 #msform {
 	border: 1px solid red;
