@@ -123,6 +123,16 @@
     if(window.matchMedia("(max-width: 767px)").matches){
         // The viewport is less than 768 pixels wide
         console.log("This is a mobile device.");
+	    
+	$(window).bind('mousewheel', function(e){
+			if(e.originalEvent.wheelDelta > 119) {
+				goUp();
+			}
+			else if (e.originalEvent.wheelDelta < -119) {
+				goDown();
+			}
+		});
+	    
     } else{
         // The viewport is at least 768 pixels wide
         console.log("This is a tablet or desktop.");
