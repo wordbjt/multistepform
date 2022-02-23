@@ -1,13 +1,6 @@
-/* #guidelines,
-#declaration {
-display: none !important;
-} */
 
 #msform {
 	border: 1px solid red;
-	/*box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;*/	
 }
 
 #msform>div {
@@ -26,7 +19,6 @@ display: none !important;
 {
   position: relative;
   /*margin: auto;*/
-  border: 1px solid blue;
 }
 
 #block-up-arrow, #block-down-arrow {
@@ -593,12 +585,11 @@ input.action-button:disabled {
 }
 
 .field-content-wrapper {
-	width: auto;
-	display: block;	
+
 }
 
 #salesforce-oid {
-	width: auto;
+	width: 0px;
 }
 
 /* SUCCESS MESSAGE */
