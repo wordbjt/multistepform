@@ -164,6 +164,15 @@ $.fn.isInViewport = function () {
 			}
 		}); 
 	    
+	    	$(window).bind('DOMMouseScroll', function(e){
+			if(e.originalEvent.detail < 0) {
+				mobilegoUp();
+			}
+			else if (e.originalEvent.detail > 0) {
+				mobilegoDown();
+			}
+		});
+	    
         console.log("This is a mobile device.");
     
     } else {
