@@ -218,14 +218,14 @@ $(window).scroll(function () {
 
 	    
 	    
-		//$(window).bind('DOMMouseScroll', function(e){
-		//	if(e.originalEvent.detail < 0) {
-		//		goUp();
-		//	}
-		//	else if (e.originalEvent.detail > 0) {
-		//		goDown();
-		//	}
-		//});
+		$(window).bind('DOMMouseScroll', function(e){
+			if(e.originalEvent.detail < 0) {
+				goUp();
+			}
+			else if (e.originalEvent.detail > 0) {
+				goDown();
+			}
+		});
     }
 	 
 
