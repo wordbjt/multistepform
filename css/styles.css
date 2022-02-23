@@ -1,8 +1,5 @@
 @media screen and (max-width: 768px) {
 
-	.col-2 {
-	display: none;
-	}
 }
 
 /*
@@ -235,8 +232,8 @@ box-shadow: rgb(71 71 72 / 100%) 0px 2px;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNS4zIDEzLjIiPiAgPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE0LjcuOGwtLjQtLjRhMS43IDEuNyAwIDAgMC0yLjMuMUw1LjIgOC4yIDMgNi40YTEuNyAxLjcgMCAwIDAtMi4zLjFMLjQgN2ExLjcgMS43IDAgMCAwIC4xIDIuM2wzLjggMy41YTEuNyAxLjcgMCAwIDAgMi40LS4xTDE1IDMuMWExLjcgMS43IDAgMCAwLS4yLTIuM3oiIGRhdGEtbmFtZT0iUGZhZCA0Ii8+PC9zdmc+);
 }
 .radiobtn input[type=radio] {
-  /*display: none;*/
-  visibility: hidden;
+  display: none;
+  /*visibility: hidden;*/
   position: absolute;
   width: 100%;
   -webkit-appearance: none;
