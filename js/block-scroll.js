@@ -146,7 +146,8 @@ function onScroll(){
 	    
 	    
     
-$('#guidelines fieldset').on('scroll', function() {
+//$('#guidelines fieldset').on('scroll', function() {
+$('#guidelines fieldset').on('onScroll', function() {	
   var scrollTop = $(this).scrollTop();
   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
     $("#guidelines").addClass("scroll-down");
@@ -175,8 +176,9 @@ $.fn.isInViewport = function () {
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };	    
 
-$(window).scroll(function () {
-
+//$(window).scroll(function () {
+$(window).on('onScroll', function() {
+	
  if ($('#guidelines').isInViewport()) {
      //console.log('Guidelines in view');
 
