@@ -577,7 +577,7 @@ input.action-button:disabled {
 }
 
 #salesforce-oid {
-	with: auto;	
+	width: auto;
 }
 
 /* SUCCESS MESSAGE */
