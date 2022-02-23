@@ -119,6 +119,18 @@
 			//}
 		//});
 
+// ALLOW SCROLL - GUIDELINES AND DECLARATION
+	    
+$.fn.isInViewport = function () {
+    let elementTop = $(this).offset().top;
+    let elementBottom = elementTop + $(this).outerHeight();
+
+    let viewportTop = $(window).scrollTop();
+    let viewportBottom = viewportTop + $(window).height();
+
+    return elementBottom > viewportTop && elementTop < viewportBottom;
+};
+	    
 	    
     if(window.matchMedia("(max-width: 767px)").matches) {
         // The viewport is less than 768 pixels wide
