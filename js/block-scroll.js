@@ -118,7 +118,15 @@
 			//	goDown();
 			//}
 		//});
+
 	    
+    if(window.matchMedia("(max-width: 767px)").matches){
+        // The viewport is less than 768 pixels wide
+        console.log("This is a mobile device.");
+    } else{
+        // The viewport is at least 768 pixels wide
+        console.log("This is a tablet or desktop.");
+    }
 	    
     
 $('#guidelines fieldset').on('scroll', function() {
