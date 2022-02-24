@@ -41,6 +41,14 @@ $(document).ready(function() {
   else {
     $("#guidelines fieldset").height(0);
   }
+	
+  if ($('#declaration').isInViewport()) {
+    //console.log('Guidelines in view');
+  }
+  else {
+    $("#declaration fieldset").height(0);
+  }
+	
 });
 </script>
 	
