@@ -16,20 +16,22 @@
 <script>
     $(function() {
         var blockScroller = $("#main-wrap").blockScroll({fadeBlocks:true});
-        $("#Intro-button").click(function() { blockScroller.goto(1); });
-        $("#About-button").click(function() { blockScroller.goto(3); });
-        $("#Features-button").click(function() { blockScroller.goto(4); });
-        $("#Download-button").click(function() { blockScroller.goto(7); });
-        $("#Install-button").click(function() { blockScroller.goto(8); });
-        $("#Customize-button").click(function() { blockScroller.goto(12); });
-        $("#Use-button").click(function() { blockScroller.goto(16); });
-        $("#Dot-button").click(function() { blockScroller.goto(18); });
+        //$("#Intro-button").click(function() { blockScroller.goto(1); });
+        //$("#About-button").click(function() { blockScroller.goto(3); });
+        //$("#Features-button").click(function() { blockScroller.goto(4); });
+        //$("#Download-button").click(function() { blockScroller.goto(7); });
+        //$("#Install-button").click(function() { blockScroller.goto(8); });
+        //$("#Customize-button").click(function() { blockScroller.goto(12); });
+        //$("#Use-button").click(function() { blockScroller.goto(16); });
+        //$("#Dot-button").click(function() { blockScroller.goto(18); });
     });
   </script>
 </head>
 
 <body>
+	
 <div id="main-wrap">
+	
 <div class="intro-section">
 <h1>This is a simple plugin...</h1>
 </div>
@@ -156,19 +158,11 @@ blockScroller.goto([block #]);
 <p>Find a more graceful way to handle up/down events when actively scrolling--currently the event is ignored</p>
 </div>
 </div>
+	
 <div class="up-down-arrows">
 <span id="block-up-arrow" class="arrow"><img src="/web/20161116212541im_/http://www.dominikgorecki.com/p/block-scroll/images/up_arrow.png"/></span>
 <span id="block-down-arrow" class="arrow"><img src="/web/20161116212541im_/http://www.dominikgorecki.com/p/block-scroll/images/down_arrow.png"/></span>
 </div>
-<div class="top-menu">
-<span class="toc-button" id="Intro-button">Intro</span>
-<span class="toc-button" id="About-button">About</span>
-<span class="toc-button" id="Features-button">Features</span>
-<span class="toc-button" id="Download-button">Download</span>
-<span class="toc-button" id="Install-button">Install</span>
-<span class="toc-button" id="Customize-button">Customize</span>
-<span class="toc-button" id="Use-button">Use</span>
-<span class="toc-button" id="Dot-button">...</span>
-</div>
+
 </body>
 </html>
