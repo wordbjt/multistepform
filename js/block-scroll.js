@@ -198,14 +198,15 @@ $(window).scroll(function () {
   else if ($('#declaration').isInViewport()) {
     //console.log('Guidelines in view');
   }
-  else if (!$('#declaration').isInViewport()) { {
+  else if (!$('#declaration').isInViewport()) { 
     //$("#declaration fieldset").height(0);
     $("#declaration").css("font-size", "0px");
     $("#declaration #fundraising-declaration").css("font-size", "0px");	  
     //$("#declaration fieldset").remove();
   }
 	
-});	
+});
+	
 // GUIDELINES & DECLARATION MOBILE SCROLL FIX - END
 	
 $(window).scroll(function () {
