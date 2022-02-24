@@ -36,18 +36,18 @@
 	  
 // MOBILE TEST - START
 	    
-$(document.body).on('touchmove', onScroll); // for mobile
-$(window).on('scroll', onScroll);
+//$(document.body).on('touchmove', onScroll); // for mobile
+//$(window).on('scroll', onScroll);
 
 // callback
-function onScroll(){
+//function onScroll(){
     //if( $(window).scrollTop() + window.innerHeight >= document.body.scrollHeight ) {
     //    track_page++;
     //    load_contents(track_page);
     //}
-    console.log('Scroll Test!');
+//    console.log('Scroll Test!');
 	
-}
+//}
 	    
 // MOBILE TEST - END	  
 	  
@@ -505,12 +505,12 @@ $(window).scroll(function () {
   	// If input text or text area has value enable next
     
         if ($('.active-div input:not([type=radio], [type=button], [type=submit]), .active-div textarea').val() == '') {
-        console.log('Input text or textarea is empty - do nothing');
+        //console.log('Input text or textarea is empty - do nothing');
         }
         //else {
 	else if (!$('.active-div input:not([type=radio], [type=button], [type=submit]), .active-div textarea').val() == '') {
         $('.active-div .next').prop('disabled', false);
-        console.log('Input text or textarea has value - enable next button');
+        //console.log('Input text or textarea has value - enable next button');
         }
 	      
 	// If radio input is checked enable next
