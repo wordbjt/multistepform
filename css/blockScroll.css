@@ -1,0 +1,127 @@
+body {
+    font-family: Georgia, Times New Roman, Times, serif;
+}
+h1 {
+    font-size: 4em;
+    font-weight: normal;
+    margin: 0;
+    color: #000;
+    font-family: "Chelsea Market", Georgia, serif;
+    line-height: 1;
+}
+.ls-screen {
+    display: block;
+    background: red;
+    width: 300px;
+}
+.third {
+    background: blue;
+}
+#main-wrap > div {
+    position: relative;
+    margin: auto;
+    text-align: center;
+}
+#main-wrap > div > div {
+    margin: auto;
+    text-align: center;
+}
+.up-down-arrows {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.arrow {
+    cursor: pointer;
+}
+.intro1 {
+    background: red;
+}
+code {
+    background-color: #000;
+    font-style: normal;
+    font-size: 1.2em;
+    color: white;
+    padding: 5px 15px;
+    font-family: menlo, monospace;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    text-align: left;
+    width: 500px;
+}
+p {
+    margin: 40px auto;
+    color: #000;
+    font-size: 1.5em;
+    text-align: center;
+    max-width: 650px;
+    font-family: "Chelsea Market", Georgia, serif;
+}
+.top-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    font-family: "Chelsea Market", Georgia, serif;
+    font-size: 1em;
+}
+.toc-button {
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border-radius: 5px;
+    padding: 3px 5px;
+}
+a {
+    color: #1b1b1b;
+}
+#Intro-button {
+    background: #e54028;
+}
+#About-button {
+    background: #113f8c;
+}
+#Features-button {
+    background: #00a1cb;
+}
+#Download-button {
+    background: #01a4a4;
+}
+#Install-button {
+    background: #61ae24;
+}
+#Customize-button {
+    background: #32742c;
+}
+#Use-button {
+    background: #f18d05;
+}
+#Dot-button {
+    background: #fff;
+}
+.intro-section {
+    background: #e54028;
+}
+.about-section {
+    background: #113f8c;
+}
+.features-section {
+    background: #00a1cb;
+}
+.download-section {
+    background: #01a4a4;
+}
+.install-section {
+    background: #61ae24;
+}
+.customize-section {
+    background: #32742c;
+}
+.use-section {
+    background: #f18d05;
+}
