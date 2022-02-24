@@ -21,6 +21,7 @@ h1 {
     position: relative;
     margin: auto;
     text-align: center;
+    max-height: 100vh;
 }
 #msform > div > div {
     margin: auto;
