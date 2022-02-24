@@ -39,11 +39,6 @@
 
 html {
 	height: 100%;
-	/*Image only BG fallback*/
-
-	/*background = gradient + image pattern combo*/
-	/*background:
-		linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));*/
 }
 
 body {
@@ -98,7 +93,7 @@ p.content {
 #msform fieldset {
 	border: 0 none;
 	padding: 20px 30px;
-	/*box-sizing: border-box;*/
+	box-sizing: border-box;
 	width: 100%;
 	margin: 0 auto;
 
@@ -106,9 +101,11 @@ p.content {
 	position: relative;
 }
 /*Hide all except first fieldset*/
+/*
 #msform fieldset:not(:first-of-type) {
 	display: none;
 }
+*/
 
 /*inputs*/
 #msform input:not(.action-button):not(.radio-button),
