@@ -265,7 +265,32 @@ $(window).scroll(function () {
       }
     });  
 	  
+// DATE
+	  
+  $("#startDay, #startMonth, #startYear").on("input", function() {
+    var startDayValue = $("#startDay").val(); // this gives textbox value
+    var startMonthValue = $("#startMonth").val(); // this gives textbox value
+    var startYearValue = $("#startYear").val(); // this gives textbox value
 
+    // put it all together
+    var startDateValue = startDayValue+'-'+startMonthValue+'-'+startYearValue;
+
+    $("input[name=start_date]").val(startDateValue); // this will set hidden field value
+    //alert(startDateValue);
+  });
+
+  $("#finishDay, #finishMonth, #finishYear").on("input", function() {
+    var finishDayValue = $("#finishDay").val(); // this gives textbox value
+    var finishMonthValue = $("#finishMonth").val(); // this gives textbox value
+    var finishYearValue = $("#finishYear").val(); // this gives textbox value
+
+    // put it all together
+    var finishDateValue = finishDayValue+'-'+finishMonthValue+'-'+finishYearValue;
+
+    $("input[name=finish_date]").val(finishDateValue); // this will set hidden field value
+    //alert(finishDateValue);
+  });	  
+	  
 	  
 // UP
 	  
