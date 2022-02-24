@@ -17,12 +17,12 @@ h1 {
 .third {
     background: blue;
 }
-#main-wrap > div {
+#msform > div {
     position: relative;
     margin: auto;
     text-align: center;
 }
-#main-wrap > div > div {
+#msform > div > div {
     margin: auto;
     text-align: center;
 }
