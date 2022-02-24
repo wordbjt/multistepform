@@ -24,6 +24,7 @@
 {
   position: relative;
   /*margin: auto;*/
+	max-height: 100vh;
 }
 
 #block-up-arrow, #block-down-arrow {
