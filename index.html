@@ -39,14 +39,16 @@ $(document).ready(function() {
     //console.log('Guidelines in view');
   }
   else {
-    $("#guidelines fieldset").height(0);
+    //$("#guidelines fieldset").height(0);
+    $("#guidelines fieldset").hide(); 
   }
 	
   if ($('#declaration').isInViewport()) {
     //console.log('Guidelines in view');
   }
   else {
-    $("#declaration fieldset").height(0);
+    //$("#declaration fieldset").height(0);
+    $("#declaration fieldset").hide();	  
   }
 	
 });
