@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<title></title>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="js/block-scroll-original.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Chelsea+Market" rel="stylesheet" type="text/css">
+<!--<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.12.0/build/cssreset/cssreset-min.css">-->
+<link rel="stylesheet" type="text/css" href="styles/blockScroll.css">
+<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+<script>
+    $(function() {
+        var blockScroller = $("#main-wrap").blockScroll({fadeBlocks:false});
+        $("#Intro-button").click(function() { blockScroller.goto(1); });
+        $("#About-button").click(function() { blockScroller.goto(3); });
+        $("#Features-button").click(function() { blockScroller.goto(4); });
+        $("#Download-button").click(function() { blockScroller.goto(7); });
+        $("#Install-button").click(function() { blockScroller.goto(8); });
+        $("#Customize-button").click(function() { blockScroller.goto(12); });
+        $("#Use-button").click(function() { blockScroller.goto(16); });
+        $("#Dot-button").click(function() { blockScroller.goto(18); });
+    });
+  </script>
+</head>
+
+<body>
+<div id="main-wrap">
+<div class="intro-section">
+<h1>This is a simple plugin...</h1>
+</div>
+<div class="intro-section">
+<h1>...for a simple purpose</h1>
+<p>
+It breaks down information into chunks and presents them one screen at a time.</p>
+<img src="/web/20161116212541im_/http://www.dominikgorecki.com/p/block-scroll/images/02-blocks-of-info.png" height="143" style="margin: auto; ">
+</div>
+<div class="about-section">
+<h1>About</h1>
+<p>Created by <a href="https://web.archive.org/web/20161116212541/http://www.dominikgorecki.com/">Dominik Gorecki</a>. You can find the documentation <a href="https://web.archive.org/web/20161116212541/http://www.dominikgorecki.com/block-scroll/">here</a>. The git-hub page <a href="https://web.archive.org/web/20161116212541/https://github.com/DominikGorecki/block-scroll">here</a>.</p>
+<p>Current Version: 0.01a</p>
+</div>
+<div class="features-section">
+<h1>Responsive Design</h1>
+<p>BlockScroll is responsive and will automatically adjust to any resolution.</p>
+</div>
+<div class="features-section">
+<h1>Keyboard controls</h1>
+<p><img src="/web/20161116212541im_/http://www.dominikgorecki.com/p/block-scroll/images/right-arrow.png" height="48px"> <img src="/web/20161116212541im_/http://www.dominikgorecki.com/p/block-scroll/images/down-arrow-icon.png" height="48px"><br/>
+Will go down one block<br/>
+<img src="/web/20161116212541im_/http://www.dominikgorecki.com/p/block-scroll/images/left-arrow.png" height="48px"> <img src="/web/20161116212541im_/http://www.dominikgorecki.com/p/block-scroll/images/up-arrow-icon.png" height="48px"><br/>
+Will go up one block</p>
+</div>
+<div class="features-section">
+<h1>Sticky</h1>
+<p>The blocks are "sticky" and the scroll automatically adjusts the location so that the active block sticks to the top</p>
+</div>
+<div class="download-section">
+<h1>Download with git</h1>
+<p>Use the following git command to download</p>
+<code>git clone https://github.com/DominikGorecki/block-scroll.git</code>
+</div>
+<div class="install-section">
+<h1>Install the JS...</h1>
+<p>Include the js file</p>
+<code>
+&lt;script src=&quot;js/blockScroll.js&quot;&gt;&lt;script/&gt;
+</code>
+<p></p>
+</div>
+<div class="install-section">
+<h1>...and the CSS</h1>
+<p>Include the css in the head</p>
+<code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;css/blockScroll.css&quot;&gt;
+</code>
+</div>
+<div class="install-section">
+<h1>Add a wrapper</h1>
+<p>Add a wrapper that will hold all your blocks</p>
+<code>&lt;div id=&quot;main-wrap&quot;&gt;</code>
+<p>The blocks must be direct children &lt;div&gt;s of the wrapper</p>
+</div>
+<div class="install-section">
+<h1>Run the JS</h1>
+<p>Assign the return to a var so you can control it</p>
+<code>
+var blockScroller = $("#main-wrap").blockScroll();
+</code>
+</div>
+<div class="customize-section">
+<h1>Customize</h1>
+<p>The scrollBlock plugin takes several arguments passed in as a JSON:</p>
+<code style="width: 500px; display: block; margin: auto;">
+$("#main-wrap").blockScroll({<br/>
+&nbsp;&nbsp;&nbsp;scrollDuration: [jQuery duration],<br/>
+&nbsp;&nbsp;&nbsp;fadeBlocks: [bool],<br/>
+&nbsp;&nbsp;&nbsp;fadeDuration: [jQuery duration]<br/>
+});
+</code>
+</div>
+<div class="customize-section">
+<h1>Scroll Duration</h1>
+<p>Default: "fast" <br/>
+Accepted input: Int or String<br/>
+Check out the duration property in <a href="https://web.archive.org/web/20161116212541/http://api.jquery.com/animate/">jQuery animate</a></p>
+<code>
+$("#main-wrap").blockScroll({scrollDuration:[int or str]});
+</code>
+</div>
+<div class="customize-section">
+<h1>Fade Blocks?</h1>
+<p>Default: true<br/>
+Accepted input: true or false<br/>
+Set whether to fade in the block on first load.</p>
+<code>
+$("#main-wrap").blockScroll({fadeBlocks:[true] or [false]});
+</code>
+</div>
+<div class="customize-section">
+<h1>Fade Duration</h1>
+<p>Default: "slow"<br/>
+Accepted input: Int or String<br/>
+Check out the duration property in <a href="https://web.archive.org/web/20161116212541/http://api.jquery.com/animate/">jQuery animate</a></p>
+<code>
+$("#main-wrap").blockScroll({fadeDuration: [int] or [string]});
+</code>
+</div>
+<div class="use-section">
+<h1>Use - Up/Down buttons</h1>
+<p>Setting up &amp; down buttons is easy. Follow the following format and names and they will automatically work (be sure to put them in a fixed block div):</p>
+<code>&lt;span id=&quot;block-up-arrow&quot;&gt;&lt;img/&gt;&lt;/span&gt;
+</code><br/>&nbsp;<br/>
+<code>&lt;span id=&quot;block-down-arrow&quot;&gt;&lt;img/&gt;&lt;/span&gt;</code>
+</div>
+<div class="use-section">
+<h1>Use - Goto Block</h1>
+<p>To go to a specific block use the code from the second line:</p>
+<code style="width: 550px; display: block; margin: auto;">
+var blockScroller = $("#main-wrap").blockScroll();<br/>
+blockScroller.goto([block #]);
+</code>
+<p>Input: int</p>
+</div>
+<div><h1>Apendix: known issues</h1>
+<p>Scroll wheel in firefox doesn't work as it should because Mozilla doesn't expose that event.</p>
+<p>When resizing the window manually it can cause the view to adjust slowly (in special cases).</p>
+<p>The height dimension for all images needs to be added in order for block scroll to perform the centering properly</p>
+</div>
+<div><h1>Apendix: the future of block scroll</h1>
+<p>Add more options for setup such as turn off key bindings, ability to control height of a block.</p>
+<p>Better integration for all cases--ensure that if a block is longer than a window, it doesn't cause problems</p>
+<p>Find a more graceful way to handle up/down events when actively scrolling--currently the event is ignored</p>
+</div>
+</div>
+<div class="up-down-arrows">
+<span id="block-up-arrow" class="arrow"><img src="/web/20161116212541im_/http://www.dominikgorecki.com/p/block-scroll/images/up_arrow.png"/></span>
+<span id="block-down-arrow" class="arrow"><img src="/web/20161116212541im_/http://www.dominikgorecki.com/p/block-scroll/images/down_arrow.png"/></span>
+</div>
+<div class="top-menu">
+<span class="toc-button" id="Intro-button">Intro</span>
+<span class="toc-button" id="About-button">About</span>
+<span class="toc-button" id="Features-button">Features</span>
+<span class="toc-button" id="Download-button">Download</span>
+<span class="toc-button" id="Install-button">Install</span>
+<span class="toc-button" id="Customize-button">Customize</span>
+<span class="toc-button" id="Use-button">Use</span>
+<span class="toc-button" id="Dot-button">...</span>
+</div>
+</body>
+</html>
