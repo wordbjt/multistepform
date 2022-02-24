@@ -1180,8 +1180,8 @@
 	
 </div>	<!-- CONTAINER CLOSE -->
 
-						       
 </body>
+	
 	
 <!-- SCROLL -->
 <script>
@@ -1506,24 +1506,6 @@ $(document).ready(function(){
 });
 </script>
 
-<!-- Guidelines & Declaraction - Detect top and bottom -->
-<!-- <script>
-$(document).ready(function(){
-$('.allow-scroll.active-div fieldset').on('scroll', function() {
-  var scrollTop = $(this).scrollTop();
-  if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
-    $('.allow-scroll.active-div').addClass("scroll-down")
-    console.log('Bottom!');
-  } else if (scrollTop <= 0) {
-    $('.allow-scroll.active-div').addClass("scroll-up")
-    console.log('Top!');
-  } else {
-    // Nothing
-  }
-});
-});
-</script> -->
-
 <script>
 $(document).ready(function() {
     $('input[type=time]').on('blur', function() {
@@ -1536,31 +1518,6 @@ $(document).ready(function() {
 });
 </script>
 
-<!-- <script>
-$(document).ready(function() {
 
-//    $('input, textarea').on('blur', function() {
-//        if ($(".active-div input, .active-div textarea").not(':button').valid()) {
-//            $('.active-div .next').prop('disabled', false);
-//        } else {
-//            $('.active-div .next').prop('disabled', 'disabled');
-//        }
-//    });
-
-  $('.active-div .radiobtn').click(function() {
-  //$('input').on('blur', function() {
-    //if (!$("input[name='contactpreference']:checked").valid()) {
-    if (!$(".active-div input[type='radio']:checked").valid()) {
-	$('.active-div .next').prop('disabled', 'disabled');
-        alert('Nothing is checked!');
-        return false;
-    }
-    else {
-      $('.active-div .next').prop('disabled', false);
-      alert('One of the radio buttons is checked!');
-    }
-  });
-});
-</script> -->
 	
 </html>
