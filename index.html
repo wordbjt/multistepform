@@ -22,6 +22,17 @@ $(function() {
 });
 </script>
 	
+<script>
+$(document).ready(function() {
+  if ($('#guidelines').isInViewport()) {
+    //console.log('Guidelines in view');
+  }
+  else {
+    $("#guidelines fieldset").height(0);
+  }
+});
+</script>
+	
 <link rel="stylesheet" href="css/styles.css">
 	
 <!--<link rel="stylesheet" href="css/blockScroll.css">-->
