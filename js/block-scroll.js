@@ -186,6 +186,8 @@ $.fn.isInViewport = function () {
 	    
 $(window).scroll(function () {
   if ($('#guidelines').isInViewport()) {
+    $("#legal-description-intro").css("font-size", "13px");
+    $("#legal-description").css("font-size", "12px");
     //console.log('Guidelines in view');
   }
   else if (!$('#guidelines').isInViewport()) {
@@ -196,6 +198,8 @@ $(window).scroll(function () {
   }
 	
   else if ($('#declaration').isInViewport()) {
+    $("#declaration").css("font-size", "12px");
+    $("#declaration #fundraising-declaration").css("font-size", "12px");	 
     //console.log('Guidelines in view');
   }
   else if (!$('#declaration').isInViewport()) { 
