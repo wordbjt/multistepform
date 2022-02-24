@@ -150,35 +150,7 @@ $.fn.isInViewport = function () {
 
     return elementBottom > viewportTop && elementTop < viewportBottom;
 };
-	    
-	    
-    if(window.matchMedia("(max-width: 767px)").matches) {
-        // The viewport is less than 768 pixels wide
-	    
-		$(window).bind('mousewheel', function(e){
-			if(e.originalEvent.wheelDelta > 119) {
-				mobilegoUp();
-			}
-			else if (e.originalEvent.wheelDelta < -119) {
-				mobilegoDown();
-			}
-		}); 
-	    
-	    	$(window).bind('DOMMouseScroll', function(e){
-			if(e.originalEvent.detail < 0) {
-				mobilegoUp();
-			}
-			else if (e.originalEvent.detail > 0) {
-				mobilegoDown();
-			}
-		});
-	    
-        console.log("This is a mobile device.");
-    
-    } else {
-	    
-        // The viewport is at least 768 pixels wide
-	        
+	            
     
 $('#guidelines fieldset').on('scroll', function() {
 //$('#guidelines fieldset').on('onScroll', function() {	
@@ -208,8 +180,34 @@ $.fn.isInViewport = function () {
     let viewportBottom = viewportTop + $(window).height();
 
     return elementBottom > viewportTop && elementTop < viewportBottom;
-};	    
+};
 
+// GUIDELINES & DECLARATION MOBILE SCROLL FIX - START
+	    
+$(window).scroll(function () {
+  if ($('#guidelines').isInViewport()) {
+    //console.log('Guidelines in view');
+  }
+  else if (!$('#guidelines').isInViewport()) {
+    //$("#guidelines fieldset").height(0);
+    $("#legal-description-intro").css("font-size", "0px");
+    $("#legal-description").css("font-size", "0px");  
+    //$("#guidelines fieldset").remove(); 
+  }
+	
+  else if ($('#declaration').isInViewport()) {
+    //console.log('Guidelines in view');
+  }
+  else if (!$('#declaration').isInViewport()) { {
+    //$("#declaration fieldset").height(0);
+    $("#declaration").css("font-size", "0px");
+    $("#declaration #fundraising-declaration").css("font-size", "0px");	  
+    //$("#declaration fieldset").remove();
+  }
+	
+});	
+// GUIDELINES & DECLARATION MOBILE SCROLL FIX - END
+	
 $(window).scroll(function () {
 //$(window).on('onScroll', function() {
 	
@@ -276,11 +274,7 @@ $(window).scroll(function () {
 }	
 
 }); 
-
-	    
-        console.log("This is a tablet or desktop.");
-    }	    
-	    
+  
 		//$(window).bind('DOMMouseScroll', function(e){
 		//	if(e.originalEvent.detail < 0) {
 		//		goUp();
