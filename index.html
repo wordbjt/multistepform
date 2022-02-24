@@ -14,6 +14,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="js/block-scroll.js"></script>
 <!-- <script src="js/block-scroll-original.js"></script> -->
+<script src="js/val.js"></script>
 	
 <!-- SCROLL -->
 <script>
@@ -22,43 +23,6 @@ $(function() {
 });
 </script>
 	
-<!--	
-<script>
-	
-$.fn.isInViewport = function () {
-    let elementTop = $(this).offset().top;
-    let elementBottom = elementTop + $(this).outerHeight();
-
-    let viewportTop = $(window).scrollTop();
-    let viewportBottom = viewportTop + $(window).height();
-
-    return elementBottom > viewportTop && elementTop < viewportBottom;
-};
-	
-$('window').on('scroll', function() {
-  if ($('#guidelines').isInViewport()) {
-    //console.log('Guidelines in view');
-  }
-  else {
-    //$("#guidelines fieldset").height(0);
-    $("#legal-description-intro").css("font-size", "0px");
-    $("#legal-description").css("font-size", "0px");  
-    //$("#guidelines fieldset").remove(); 
-  }
-	
-  if ($('#declaration').isInViewport()) {
-    //console.log('Guidelines in view');
-  }
-  else {
-    //$("#declaration fieldset").height(0);
-    $("#declaration").css("font-size", "0px");
-    $("#declaration #fundraising-declaration").css("font-size", "0px");	  
-    //$("#declaration fieldset").remove();
-  }
-	
-});
-</script>
--->
 	
 <link rel="stylesheet" href="css/styles.css">
 	
