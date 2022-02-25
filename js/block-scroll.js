@@ -4,7 +4,7 @@
     var settings = $.extend({
       // These are the defaults.
       startDiv : 1,
-      fadeDuration : "slow",
+      fadeDuration : "fast",
       paddingRatio : 0.05,
       triggerRatio : 0.005,
       scrollDuration: "fast",
