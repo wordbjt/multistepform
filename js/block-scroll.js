@@ -112,7 +112,7 @@
 
 	    // ORIGINAL MOUSEWHEEL 
 	    
-	    	//$(window).bind('mousewheel', function(e){
+	    	//$(window).bind('wheel', function(e){
 			//if(e.originalEvent.wheelDelta > 119) {
 			//	goUp();
 			//}
@@ -152,28 +152,21 @@ $(window).scroll(function () {
   if ($('#guidelines').isInViewport()) {
     $("#legal-description-intro").css("font-size", "13px");
     $("#legal-description").css("font-size", "12px");
-    //console.log('Guidelines in view');
   }
   else if (!$('#guidelines').isInViewport()) {
-    //$("#guidelines fieldset").height(0);
     $("#legal-description-intro").css("font-size", "0px");
     $("#legal-description").css("font-size", "0px");  
-    //$("#guidelines fieldset").remove(); 
   }
 	
   else if ($('#declaration').isInViewport()) {
     $("#declaration").css("font-size", "12px");
     $("#declaration #fundraising-declaration").css("font-size", "12px");	 
-    //console.log('Guidelines in view');
   }
   else if (!$('#declaration').isInViewport()) { 
-    //$("#declaration fieldset").height(0);
     $("#declaration").css("font-size", "0px");
     $("#declaration #fundraising-declaration").css("font-size", "0px");	  
-    //$("#declaration fieldset").remove();
-  }
-	
-});	
+  }	
+}); 
 // GUIDELINES & DECLARATION MOBILE SCROLL FIX - END
 	
 $(window).scroll(function () {
@@ -188,19 +181,15 @@ $(window).scroll(function () {
          if ($('#guidelines').hasClass('scroll-up')) {
          goUp();
          //console.log('Guidelines - Scroll Up');
-         //return false;
          } else if (!$('#guidelines').hasClass('scroll-up')) {
          //console.log('Guidelines - No Scroll Up');
-         //return false;
          }
      } else if (e.originalEvent.wheelDelta > -119) {
          if ($('#guidelines').hasClass('scroll-down')) {
          goDown();
          //console.log('Guidelines - Scroll Down');
-         //return false;
          } else if (!$('#guidelines').hasClass('scroll-down')) {
          //console.log('Guidelines - No Scroll Down');
-         //return false;
          }
      }
    });
@@ -211,19 +200,15 @@ $(window).scroll(function () {
      //console.log('Guidelines not in view');
 
    $(window).bind('wheel', function(e){	
-   //$(window).bind('mousewheel', function(e){
-
      if (e.originalEvent.wheelDelta > 119) {
         if ($('#msform>div').not('#guidelines')) {
         goUp();
         //console.log('Not guidelines - Scroll Up');
-        //return false;
-      } 
+        }
     } else if (e.originalEvent.wheelDelta < -119) {
         if ($('#msform>div').not('#guidelines')) {
         goDown();
         //console.log('Not guidelines - Scroll Down');
-        //return false;
         }
     }
    });
@@ -280,7 +265,7 @@ $(window).scroll(function () {
     var startDateValue = startDayValue+'-'+startMonthValue+'-'+startYearValue;
 
     $("input[name=start_date]").val(startDateValue); // this will set hidden field value
-    //alert(startDateValue);
+    //console.log(startDateValue);
   });
 
   $("#finishDay, #finishMonth, #finishYear").on("input", function() {
@@ -292,7 +277,7 @@ $(window).scroll(function () {
     var finishDateValue = finishDayValue+'-'+finishMonthValue+'-'+finishYearValue;
 
     $("input[name=finish_date]").val(finishDateValue); // this will set hidden field value
-    //alert(finishDateValue);
+    //console.log(finishDateValue);
   });	  
 	  
 	  
@@ -326,12 +311,11 @@ $(window).scroll(function () {
 	$(".active-div .radiobtn").unbind("click").bind("click", function() {
     		if ($(".active-div input[type='radio']").is(':checked')) {
 			$('.active-div .next').prop('disabled', false); 
-      			//alert('One of the radio buttons is checked!');
-        		//return false;
+      			//console.log('One of the radio buttons is checked!');
     		}
     		else {
 			$('.active-div .next').prop('disabled', 'disabled'); 
-        		//alert('Nothing is checked!');
+        		//console.log('Nothing is checked!');
     		}
   	});
 	      
@@ -339,25 +323,21 @@ $(window).scroll(function () {
 	if ($('.active-div').hasClass("radio-field")) {
 		if ($(".active-div input[type='radio']").is(':checked')) {
 			$('.active-div .next').prop('disabled', false); 
-      			//alert('One of the radio buttons is checked!');
-        		//return false;
+      			//console.log('One of the radio buttons is checked!');
     		}
     		else {
       			$('.active-div .next').prop('disabled', 'disabled'); 
-        		//alert('Nothing is checked!');
+        		//console.log('Nothing is checked!');
     		}
 	}
 	      
 	// Guidelines - If radio input is checked enable next
     	if ($('#guidelines input[type=radio]').length > 0 ) {
-     	//alert('Radio input exists');
 	//console.log('Guidelines input exists');
 		
 		// If radio input is checked enable next
-	      
         	if ($("#guidelines input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', false);
-        	//alert('Radio input is checked - enable next button');
 		//console.log('Guidelines input is checked - enable next button');	
 		}
         	else if (!$("#guidelines input[type='radio']").is(':checked')) {
@@ -380,39 +360,39 @@ $(window).scroll(function () {
   	// If input text or text area has value enable next
     
         if ($('.active-div input:not([type=radio], [type=button], [type=submit]), .active-div textarea').val() == '') {
-        console.log('Input text or textarea is empty - do nothing');
+        //console.log('Input text or textarea is empty - do nothing');
         }
         //else {
 	else if (!$('.active-div input:not([type=radio], [type=button], [type=submit]), .active-div textarea').val() == '') {
         $('.active-div .next').prop('disabled', false);
-        console.log('Input text or textarea has value - enable next button');
+        //console.log('Input text or textarea has value - enable next button');
         }
 	      
 	// If radio input is checked enable next
 
     	if ($('.active-div input[type=radio]').length > 0 ) {
-     	//alert('Radio input exists');
+     	//console.log('Radio input exists');
 		
 		// If radio input is checked enable next
 	      
         	if ($(".active-div input[type='radio']").is(':checked')) {
 		$('.active-div .next').prop('disabled', false);
-        	//alert('Radio input is checked - enable next button');
+        	//console.log('Radio input is checked - enable next button');
 		}
         	else if (!$(".active-div input[type='radio']").is(':checked')) {
 		$('.active-div .next').prop('disabled', 'disabled');
-        	//alert('Radio input is not checked - disable next button');
+        	//console.log('Radio input is not checked - disable next button');
         	}
 		
 	} else {
-	//alert('Radio input does not exist');
+	//console.log('Radio input does not exist');
 	}
 
 	      
       }
     }
 
-// DOWN  
+// DOWN
 
     function goDown()
     {
@@ -431,75 +411,61 @@ $(window).scroll(function () {
 	      
 	// If has required-field disable next button
 						       
-        //if ($('.required-field.active-div input, .required-field.active-div textarea').not(':button').valid()) {
 	  if ($('.active-div .action-wrapper').hasClass("required-field")) {
 	      $('.active-div .required-field .next').prop('disabled', 'disabled');
-	    //$('.required-field.active-div .next').css("display", "inline-block");
         } else {
 	      $('.active-div .required-field .next').prop('disabled', false);
-	    //$('.required-field.active-div .next').css("display", "none");
         }
 	      
 	// Radio button on click
-	      
-	//$('.active-div .radiobtn').click(function() {
+	    
 	$(".active-div .radiobtn").unbind("click").bind("click", function() {
-		//if (!$(".active-div input[type='radio']:checked").valid()) {
     		if ($(".active-div input[type='radio']").is(':checked')) {
 			$('.active-div .next').prop('disabled', false); 
-      			//alert('One of the radio buttons is checked!');
-        		//return false;
+      			//console.log('One of the radio buttons is checked!');
     		}
     		else {
 			$('.active-div .next').prop('disabled', 'disabled'); 
-        		//alert('Nothing is checked!');
+        		//console.log('Nothing is checked!');
     		}
   	});
 	      
 	// Radio button on active div next
 	if ($('.active-div').hasClass("radio-field")) {
-		//if (!$(".active-div input[type='radio']:checked").valid()) {
 		if ($(".active-div input[type='radio']").is(':checked')) {
 			$('.active-div .next').prop('disabled', false); 
-      			//alert('One of the radio buttons is checked!');
-        		//return false;
+      			//console.log('One of the radio buttons is checked!');
     		}
     		else {
       			$('.active-div .next').prop('disabled', 'disabled'); 
-        		//alert('Nothing is checked!');
+        		//console.log('Nothing is checked!');
     		}
 	}
 	      
 	// Guidelines - If radio input is checked enable next
     	if ($('#guidelines input[type=radio]').length > 0 ) {
-     	//alert('Radio input exists');
 	//console.log('Guidelines input exists');
 		
 		// If radio input is checked enable next
 	      
         	if ($("#guidelines input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', false);
-        	//alert('Radio input is checked - enable next button');
 		//console.log('Guidelines input is checked - enable next button');	
 		}
         	else if (!$("#guidelines input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', 'disabled');
-        	//alert('Radio input is not checked - disable next button');
 		//console.log('Guidelines input is not checked - disable next button');
         	}
         	else if ($(".scroll-down input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', false);
-        	//alert('Radio input is checked - enable next button');
 		//console.log('Guidelines input is checked - enable next button');	
 		}
         	else if (!$(".scroll-down input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', 'disabled');
-        	//alert('Radio input is not checked - disable next button');
 		//console.log('Guidelines input is not checked - disable next button');
         	}
 	      
 	} else {
-	//alert('Radio input does not exist');
 	//console.log('Guidelines input does not exist');
 	}
 	      
@@ -523,38 +489,17 @@ $(window).scroll(function () {
 	      
         	if ($(".active-div input[type='radio']").is(':checked')) {
 		$('.active-div .next').prop('disabled', false);
-        	//alert('Radio input is checked - enable next button');
+        	//console.log('Radio input is checked - enable next button');
 		}
         	else if (!$(".active-div input[type='radio']").is(':checked')) {
 		$('.active-div .next').prop('disabled', 'disabled');
-        	//alert('Radio input is not checked - disable next button');
+        	//console.log('Radio input is not checked - disable next button');
         	}
 		
 	} else {
-	//alert('Radio input does not exist');
+	//console.log('Radio input does not exist');
 	}
 	
-	    
-	
-	      
-      }
-    }
-	  
-    // ALLLOW SCROLL
-	  
-    function allowScrollUp ()
-    {
-      if(activeDiv > 0 && !activelyScrolling)
-      {
-        // Do nothing
-      }
-    }
-	  
-    function allowScrollDown ()
-    {
-      if(activeDiv < totalDivs - 1 && !activelyScrolling)
-      {
-        // Do nothing
       }
     }
 	  
