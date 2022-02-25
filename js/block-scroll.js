@@ -181,7 +181,8 @@ $(window).scroll(function () {
  if ($('#guidelines').isInViewport()) {
      //console.log('Guidelines in view');
 
-   $(window).bind('mousewheel', function(e){
+   $(window).bind('wheel', function(e){
+   //$(window).bind('mousewheel', function(e){
      
        if (e.originalEvent.wheelDelta > 119) {
          if ($('#guidelines').hasClass('scroll-up')) {
@@ -208,8 +209,9 @@ $(window).scroll(function () {
      $("#guidelines").removeClass("scroll-down");
      $("#guidelines").removeClass("scroll-up");
      //console.log('Guidelines not in view');
-	
-   $(window).bind('mousewheel', function(e){
+
+   $(window).bind('wheel', function(e){	
+   //$(window).bind('mousewheel', function(e){
 
      if (e.originalEvent.wheelDelta > 119) {
         if ($('#msform>div').not('#guidelines')) {
