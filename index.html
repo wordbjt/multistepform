@@ -21,119 +21,6 @@ $(function() {
 });
 </script>
 	
-<script>
-	
-$(document).ready(function(){	
-// ALLOW SCROLL - GUIDELINES AND DECLARATION
-	    
-$.fn.isInViewport = function () {
-    let elementTop = $(this).offset().top;
-    let elementBottom = elementTop + $(this).outerHeight();
-
-    let viewportTop = $(window).scrollTop();
-    let viewportBottom = viewportTop + $(window).height();
-
-    return elementBottom > viewportTop && elementTop < viewportBottom;
-};
-	                
-$('#guidelines fieldset').on('scroll', function() {
-  var scrollTop = $(this).scrollTop();
-  if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
-    $("#guidelines").addClass("scroll-down");
-    $("#guidelines").removeClass("scroll-up");
-    //console.log('Bottom!');
-  } else if (scrollTop <= 0) {
-    $("#guidelines").addClass("scroll-up");
-    $("#guidelines").removeClass("scroll-down");	  
-    //console.log('Top!');
-  } 
-});	    
-	    
-// GUIDELINES & DECLARATION MOBILE SCROLL FIX - START
-	    
-$(window).scroll(function () {
-  if ($('#guidelines').isInViewport()) {
-    $("#legal-description-intro").css("font-size", "13px");
-    $("#legal-description").css("font-size", "12px");
-  }
-  else if (!$('#guidelines').isInViewport()) {
-    $("#legal-description-intro").css("font-size", "0px");
-    $("#legal-description").css("font-size", "0px");  
-  }
-	
-  else if ($('#declaration').isInViewport()) {
-    $("#declaration").css("font-size", "12px");
-    $("#declaration #fundraising-declaration").css("font-size", "12px");	 
-  }
-  else if (!$('#declaration').isInViewport()) { 
-    $("#declaration").css("font-size", "0px");
-    $("#declaration #fundraising-declaration").css("font-size", "0px");	  
-  }	
-}); 
-// GUIDELINES & DECLARATION MOBILE SCROLL FIX - END
-	
-$(window).scroll(function () {
-	
- if ($('#guidelines').isInViewport()) {
-     //console.log('Guidelines in view');
-
-   $(window).bind('wheel', function(e){
-     
-       if (e.originalEvent.wheelDelta > 119) {
-         if ($('#guidelines').hasClass('scroll-up')) {
-         goUp();
-         //console.log('Guidelines - Scroll Up');
-         } else if (!$('#guidelines').hasClass('scroll-up')) {
-         //console.log('Guidelines - No Scroll Up');
-         }
-     } else if (e.originalEvent.wheelDelta > -119) {
-         if ($('#guidelines').hasClass('scroll-down')) {
-         goDown();
-         //console.log('Guidelines - Scroll Down');
-         } else if (!$('#guidelines').hasClass('scroll-down')) {
-         //console.log('Guidelines - No Scroll Down');
-         }
-     }
-   });
-   
-} else if (!$('#guidelines').isInViewport()) {
-     $("#guidelines").removeClass("scroll-down");
-     $("#guidelines").removeClass("scroll-up");
-     //console.log('Guidelines not in view');
-
-   $(window).bind('wheel', function(e){	
-     if (e.originalEvent.wheelDelta > 119) {
-        if ($('#msform>div').not('#guidelines')) {
-        goUp();
-        //console.log('Not guidelines - Scroll Up');
-        }
-    } else if (e.originalEvent.wheelDelta < -119) {
-        if ($('#msform>div').not('#guidelines')) {
-        goDown();
-        //console.log('Not guidelines - Scroll Down');
-        }
-    }
-   });
-	
-} else if (!$('#guidelines').isInViewport()) {
-     $("#guidelines").removeClass("scroll-down");
-     $("#guidelines").removeClass("scroll-up");
-     //console.log('Guidelines not in view');
-	
-        if ($('#msform>div').not('#guidelines')) {
-        goUp();
-        //console.log('Not guidelines - Scroll Up');
-    	} else if ($('#msform>div').not('#guidelines')) {
-        goDown();
-        //console.log('Not guidelines - Scroll Down');
-        }
-}	
-
-});
-});	
-</script>
-	
-	
 <link rel="stylesheet" href="css/styles.css">
 	
 <!--<link rel="stylesheet" href="css/blockScroll.css">-->
@@ -166,7 +53,7 @@ $(window).scroll(function () {
     <p>Thanks for using your time and talents to fundraise for Compassion and help give children a hope more powerful than poverty. Please tell us about how you are going to fundraise so we can best support you.</p>
     <br>
     <div class="action-wrapper">
-    <input type="button" name="next" class="next action-button" value="Next" />
+    <input type="button" name="next" class="next action-button" value="Start" />
     </div>
   </fieldset>	
   </div>
