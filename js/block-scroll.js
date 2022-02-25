@@ -291,6 +291,17 @@ $(window).scroll(function () {
     $("input[name=finish_date]").val(finishDateValue); // this will set hidden field value
     //console.log(finishDateValue);
   });	  
+
+	  
+// GUIDELINES IF ACCEPTED
+	  
+$("input[name='guidelines']").click(function() {
+        if($(this).is(':checked'))
+	    goDown();
+            console.log('Guidelines accepted go down');
+        //else
+        //    alert('unchecked');
+    });
 	  
 	  
 // UP
