@@ -1,12 +1,16 @@
 // VALIDATE
 
 $(document).ready(function() {
+	
+var oid ="00D5j000008zN11";
+$("input[name=oid]").val(oid);
+	
 	$("#msform").validate({
 
 // SUBMIT
 
 submitHandler: function(form) {
-var prod ="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8";
+var prod ="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8";	
 console.log('valid form submission');
 
     $.ajax({
