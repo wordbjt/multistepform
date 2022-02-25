@@ -150,11 +150,11 @@ $('#guidelines fieldset').scroll(function () {
   if ($('#guidelines').isInViewport()) {
 	  if ($("input[name='guidelines']").is(':checked')) {
     		$("#declaration").css("display", "block");
-		console.log('Guidelines in view checked');
+		//console.log('Guidelines in view checked');
 	  }
 	  else if (!$("input[name='guidelines']").is(':checked')) {
     		$("#declaration").css("display", "none");
-    		console.log('Guidelines in view not checked');
+    		//console.log('Guidelines in view not checked');
   	  }
   }
 });
@@ -297,7 +297,8 @@ $(window).scroll(function () {
 	  
 $("input[name='guidelines']").click(function() {
         if($(this).is(':checked'))
-	    goDown();
+	     $('#guidelines .next').prop('disabled', false);
+	    //goDown();
             console.log('Guidelines accepted go down');
         //else
         //    alert('unchecked');
