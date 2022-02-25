@@ -67,11 +67,13 @@
       });
 
       $("#block-up-arrow").click(function() {
-        navgoUp();
+        goUp();
+	//navgoUp();
       });
 
       $("#block-down-arrow").click(function() {
-        navgoDown();
+        goDown();
+	//navgoDown();
       });
 	    
 	    
