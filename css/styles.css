@@ -21,6 +21,10 @@
   cursor: pointer;
 }
 
+#block-up-arrow:hover, #block-down-arrow:hover {
+  opacity: 0.8;
+}
+
 #block-up-arrow {
     position: relative;
     font-family: inherit;
