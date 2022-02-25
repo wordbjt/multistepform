@@ -3,7 +3,7 @@
   $.fn.blockScroll = function(options) {
     var settings = $.extend({
       // These are the defaults.
-      startDiv : 1,
+      startDiv : 0,
       fadeDuration : "fast",
       paddingRatio : 0.05,
       triggerRatio : 0.005,
