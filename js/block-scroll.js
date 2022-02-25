@@ -145,15 +145,9 @@ $('#guidelines fieldset').on('scroll', function() {
     //console.log('Top!');
   } 
 });	    
-	    
-// GUIDELINES & DECLARATION MOBILE SCROLL FIX - START
-	    
-$(window).scroll(function () {
+
+$('#guidelines fieldset').scroll(function () {
   if ($('#guidelines').isInViewport()) {
-    $("#legal-description-intro").css("font-size", "13px");
-    $("#legal-description").css("font-size", "12px");
-  }
-  else if ($('#guidelines').isInViewport()) {
 	  if ($("input[name='guidelines']").is(':checked')) {
     		$("#declaration").css("display", "block");
 		console.log('Guidelines in view checked');
@@ -162,6 +156,16 @@ $(window).scroll(function () {
     		$("#declaration").css("display", "none");
     		console.log('Guidelines in view not checked');
   	  }
+  }
+});
+	    
+	    
+// GUIDELINES & DECLARATION MOBILE SCROLL FIX - START
+	    
+$(window).scroll(function () {
+  if ($('#guidelines').isInViewport()) {
+    $("#legal-description-intro").css("font-size", "13px");
+    $("#legal-description").css("font-size", "12px");
   }
   else if (!$('#guidelines').isInViewport()) {
     $("#legal-description-intro").css("font-size", "0px");
