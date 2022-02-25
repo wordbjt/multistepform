@@ -66,13 +66,13 @@
         arrange();
       });
 
-      //$("#block-up-arrow").click(function() {
-      //  goUp();
-      //});
+      $("#block-up-arrow").click(function() {
+        navgoUp();
+      });
 
-      //$("#block-down-arrow").click(function() {
-      //  goDown();
-      //});
+      $("#block-down-arrow").click(function() {
+        navgoDown();
+      });
 	    
 	    
       $(".previous").click(function() {
@@ -555,9 +555,9 @@ $(window).scroll(function () {
     }
 	  
 	  
-// MOBILE GO UP DOWN	  
+// NAV GO UP DOWN	  
 	  
-function mobilegoUp()
+function navgoUp()
 {
   if(activeDiv > 0 && !activelyScrolling)
   {
@@ -567,7 +567,7 @@ function mobilegoUp()
   }
 }
 
-function mobilegoDown()
+function navgoDown()
 {
   if(activeDiv < totalDivs - 1 && !activelyScrolling)
   {
@@ -583,8 +583,8 @@ function mobilegoDown()
     function gotoDiv(number)
     {
       if(number == 0)
-        //$("#block-up-arrow").hide();
-	  $("#block-up-arrow").show();
+        $("#block-up-arrow").hide();
+	//$("#block-up-arrow").show();
       else
         $("#block-up-arrow").show();
       if(number == totalDivs-1)
