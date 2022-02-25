@@ -125,18 +125,18 @@ p.content {
 }
 
 #msform input:not(.action-button):not(.radio-button)::placeholder,
-#msform textarea { /* Chrome, Firefox, Opera, Safari 10.1+ */
+#msform textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgba(71, 71, 72, 0.3);
   opacity: 0.3; /* Firefox */
 }
 
 #msform input:not(.action-button):not(.radio-button):-ms-input-placeholder,
-#msform textarea { /* Internet Explorer 10-11 */
+#msform textarea::placeholder { /* Internet Explorer 10-11 */
   color: rgba(71, 71, 72, 0.3);
 }
 
 #msform input:not(.action-button):not(.radio-button)::-ms-input-placeholder,
-#msform textarea { /* Microsoft Edge */
+#msform textarea::placeholder { /* Microsoft Edge */
   color: rgba(71, 71, 72, 0.3);
 }
 
