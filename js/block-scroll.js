@@ -152,10 +152,12 @@ $(window).scroll(function () {
   if ($('#guidelines').isInViewport()) {
     $("#legal-description-intro").css("font-size", "13px");
     $("#legal-description").css("font-size", "12px");
+    $("#declaration").css("display", "none");
   }
   else if (!$('#guidelines').isInViewport()) {
     $("#legal-description-intro").css("font-size", "0px");
-    $("#legal-description").css("font-size", "0px");  
+    $("#legal-description").css("font-size", "0px");
+    $("#declaration").css("display", "block");
   }
 	
   else if ($('#declaration').isInViewport()) {
