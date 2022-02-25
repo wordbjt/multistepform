@@ -418,6 +418,12 @@ $(window).scroll(function () {
     		   //$("#declaration").css("display", "none");
     		   console.log('Func Guidelines in view not checked');
   	  	}
+		else if ($("input[name='guidelines']").is(':checked')) {
+		   gotoDiv(activeDiv+1);
+	           $(theDivs[activeDiv]).addClass("active-div");
+		   $(theDivs[activeDiv-1]).removeClass("active-div");
+    		   console.log('Func Guidelines in view checked');
+  	  	}
 	} else {
         gotoDiv(activeDiv+1);
 	$(theDivs[activeDiv]).addClass("active-div");
