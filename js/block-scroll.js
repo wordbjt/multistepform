@@ -155,9 +155,11 @@ $(window).scroll(function () {
   }
   else if (($('#guidelines').isInViewport()) && ($("#guidelines input[type='radio']").is(':checked'))) {
     $("#declaration").css("display", "block");
+    console.log('Guidelines in view checked');
   }
   else if (($('#guidelines').isInViewport()) && (!$("#guidelines input[type='radio']").is(':checked'))) {
     $("#declaration").css("display", "none");
+    console.log('Guidelines in view not checked');
   }
   else if (!$('#guidelines').isInViewport()) {
     $("#legal-description-intro").css("font-size", "0px");
