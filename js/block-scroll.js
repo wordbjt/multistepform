@@ -3,7 +3,7 @@
   $.fn.blockScroll = function(options) {
     var settings = $.extend({
       // These are the defaults.
-      startDiv : 0,
+      startDiv : 1,
       fadeDuration : "fast",
       paddingRatio : 0.05,
       triggerRatio : 0.005,
@@ -14,7 +14,7 @@
     if(settings.triggerRatio > settings.paddingRatio*.95) { settings.triggerRatio = settings.paddingRatio*.95 }
 
     var theDivs = this.children().filter("div");
-    var activeDiv = settings.startDiv-1; //Active did is 0-index, settings is 1-index
+    var activeDiv = settings.startDiv-1; //Active div is 0-index, settings is 1-index
     var windowHeight;
     var paddingHeight;
     var triggerHeight;
