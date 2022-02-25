@@ -21,6 +21,52 @@
   cursor: pointer;
 }
 
+#block-up-arrow {
+    position: relative;
+    font-family: inherit;
+    line-height: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    transition-property: background-color, color, border-color, opacity, box-shadow;
+    transition-timing-function: ease-out;
+    outline: none;
+    border: 1px solid transparent;
+    margin: 0px;
+    padding: 0px;
+    width: 36px;
+    min-width: 36px;
+    height: 32px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgb(23, 152, 205);
+    color: rgb(255, 255, 255);
+    border-radius: 4px 0px 0px 4px;	
+}
+
+#block-down-arrow {
+    position: relative;
+    font-family: inherit;
+    line-height: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition-duration: 0.1s;
+    transition-property: background-color, color, border-color, opacity, box-shadow;
+    transition-timing-function: ease-out;
+    outline: none;
+    border: 1px solid transparent;
+    margin: 0px;
+    padding: 0px;
+    width: 36px;
+    min-width: 36px;
+    height: 32px;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background-color: rgb(23, 152, 205);
+    color: rgb(255, 255, 255);
+    border-radius: 0px 4px 4px 0px;
+}
+
 #block-up-arrow svg, 
 #block-down-arrow svg {
     display: block;
