@@ -152,14 +152,14 @@ $(window).scroll(function () {
   if ($('#guidelines').isInViewport()) {
     $("#legal-description-intro").css("font-size", "13px");
     $("#legal-description").css("font-size", "12px");
-    $("#declaration").css("display", "none");
+  }
+  else if (($('#guidelines').isInViewport()) && ($("#guidelines input[type='radio']").is(':checked'))) {
+    $("#declaration").css("display", "block");
   }
   else if (!$('#guidelines').isInViewport()) {
     $("#legal-description-intro").css("font-size", "0px");
     $("#legal-description").css("font-size", "0px");
-    $("#declaration").css("display", "block");
-  }
-	
+  }	
   else if ($('#declaration').isInViewport()) {
     $("#declaration").css("font-size", "12px");
     $("#declaration #fundraising-declaration").css("font-size", "12px");	 
@@ -177,7 +177,6 @@ $(window).scroll(function () {
      //console.log('Guidelines in view');
 
    $(window).bind('wheel', function(e){
-   //$(window).bind('mousewheel', function(e){
      
        if (e.originalEvent.wheelDelta > 119) {
          if ($('#guidelines').hasClass('scroll-up')) {
