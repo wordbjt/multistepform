@@ -2,29 +2,12 @@
 	
 }
 
-/*
-#msform {
-	border: 1px solid red;
-}
-
-#msform>div {
-  border: 1px solid blue;
-}
-
-#msform fieldset {
-  border: 1px solid green !important;	
-}
-*/
-
-
-
 /* BLOCK SCROLL */
 
 #msform>div
 {
   position: relative;
-  /*margin: auto;*/
-	max-height: 100vh;
+  max-height: 100vh;
 }
 
 #block-up-arrow, #block-down-arrow {
@@ -111,16 +94,6 @@ p.content {
 /*inputs*/
 #msform input:not(.action-button):not(.radio-button),
 #msform textarea {
-	/*padding: 15px;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	margin-bottom: 10px;
-	width: 100%;
-	box-sizing: border-box;
-	font-family: montserrat;
-	color: #2C3E50;
-	font-size: 13px;*/
-
     display: block;
     width: 100%;
     font-family: inherit;
@@ -151,17 +124,20 @@ p.content {
     -webkit-appearance: none;
 }
 
-#msform input:not(.action-button):not(.radio-button)::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+#msform input:not(.action-button):not(.radio-button)::placeholder,
+#msform textarea { /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: rgba(71, 71, 72, 0.3);
   opacity: 0.3; /* Firefox */
 }
 
-#msform input:not(.action-button):not(.radio-button):-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: gba(71, 71, 72, 0.3);
+#msform input:not(.action-button):not(.radio-button):-ms-input-placeholder,
+#msform textarea { /* Internet Explorer 10-11 */
+  color: rgba(71, 71, 72, 0.3);
 }
 
-#msform input:not(.action-button):not(.radio-button)::-ms-input-placeholder { /* Microsoft Edge */
-  color: gba(71, 71, 72, 0.3);
+#msform input:not(.action-button):not(.radio-button)::-ms-input-placeholder,
+#msform textarea { /* Microsoft Edge */
+  color: rgba(71, 71, 72, 0.3);
 }
 
 
