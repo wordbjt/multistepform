@@ -413,12 +413,15 @@ $(window).scroll(function () {
 	if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up')) && (!$('#guidelines').hasClass('scroll-down'))) {
 	// Do Nothing
 	//console.log('Guidelines no Scroll Up or Scroll Down');
+	} else if ($('#guidelines').isInViewport()) {
+		if (!$("input[name='guidelines']").is(':checked')) {
+    		   //$("#declaration").css("display", "none");
+    		   console.log('Func Guidelines in view not checked');
+  	  	}
 	} else {
-				
         gotoDiv(activeDiv+1);
 	$(theDivs[activeDiv]).addClass("active-div");
 	$(theDivs[activeDiv-1]).removeClass("active-div");
-	
 	}
 	      
 	// If has required-field disable next button
