@@ -43,7 +43,8 @@
     height: 32px;
     -webkit-box-pack: center;
     justify-content: center;
-    background-color: rgb(23, 152, 205);
+    /*background-color: rgb(23, 152, 205);*/
+    background-color: #215EAC;
     color: rgb(255, 255, 255);
     border-radius: 4px 0px 0px 4px;
     display: inline-block;
@@ -67,7 +68,8 @@
     height: 32px;
     -webkit-box-pack: center;
     justify-content: center;
-    background-color: rgb(23, 152, 205);
+    /*background-color: rgb(23, 152, 205);*/
+    background-color: #215EAC;
     color: rgb(255, 255, 255);
     border-radius: 0px 4px 4px 0px;
     display: inline-block;
@@ -168,7 +170,8 @@ p.content {
     display: block;
     width: 100%;
     font-family: inherit;
-    color: rgb(71, 71, 72);
+    /*color: rgb(71, 71, 72);*/
+    color: rgba(255, 255, 255, 1.0);
     padding: 0px 0px 8px;
     border: none;
     outline: none;
@@ -186,10 +189,12 @@ p.content {
     -webkit-font-smoothing: antialiased;
     line-height: unset;
     /* -webkit-text-fill-color: rgba(71, 71, 72, 0.3); */
-    -webkit-text-fill-color: rgba(71, 71, 72, 1.0);
+    /*-webkit-text-fill-color: rgba(71, 71, 72, 1.0);*/
+    -webkit-text-fill-color: rgba(255, 255, 255, 1.0);	
     animation: 1ms ease 0s 1 normal none running native-autofill-in;
     transition: background-color 1e+08s ease 0s, box-shadow 0.1s ease-out 0s;
-    box-shadow: rgb(71 71 72 / 30%) 0px 1px;
+    /*box-shadow: rgb(71 71 72 / 30%) 0px 1px;*/
+    box-shadow: rgb(255 255 255 / 30%) 0px 1px;	
     background-color: transparent !important;
     margin-top: 25px;
     -webkit-appearance: none;
@@ -197,32 +202,41 @@ p.content {
 
 #msform input:not(.action-button):not(.radio-button)::placeholder,
 #msform textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: rgba(71, 71, 72, 0.3);
+  /*color: rgba(71, 71, 72, 0.3);*/
+  color: rgba(255, 255, 255, 0.3);	
   opacity: 0.3; /* Firefox */
 }
 
 #msform input:not(.action-button):not(.radio-button):-ms-input-placeholder,
 #msform textarea::placeholder { /* Internet Explorer 10-11 */
-  color: rgba(71, 71, 72, 0.3);
+  /*color: rgba(71, 71, 72, 0.3);*/
+  color: rgba(255, 255, 255, 0.3);
 }
 
 #msform input:not(.action-button):not(.radio-button)::-ms-input-placeholder,
 #msform textarea::placeholder { /* Microsoft Edge */
-  color: rgba(71, 71, 72, 0.3);
+  /*color: rgba(71, 71, 72, 0.3);*/
+  color: rgba(255, 255, 255, 0.3);	
 }
 
 
 #msform input:focus,
 #msform textarea:focus {
-color: rgba(71, 71, 72, 1.0);
+/*color: rgba(71, 71, 72, 1.0);
 -webkit-text-fill-color: rgba(71, 71, 72, 1.0);
-box-shadow: rgb(71 71 72 / 100%) 0px 2px;
+box-shadow: rgb(71 71 72 / 100%) 0px 2px;*/
+color: rgba(255, 255, 255, 1.0);
+-webkit-text-fill-color: rgba(255, 255, 255, 1.0);
+box-shadow: rgb(255 255 255 / 100%) 0px 2px	
 }
 
 #msform input:not(.action-button):not(.radio-button):focus {
-color: rgba(71, 71, 72, 1.0);
+/*color: rgba(71, 71, 72, 1.0);
 -webkit-text-fill-color: rgba(71, 71, 72, 1.0);
-box-shadow: rgb(71 71 72 / 100%) 0px 2px;
+box-shadow: rgb(71 71 72 / 100%) 0px 2px;*/
+color: rgba(255, 255, 255, 1.0);
+-webkit-text-fill-color: rgba(255, 255, 255, 1.0);
+box-shadow: rgb(255 255 255 / 100%) 0px 2px;	
 }
 
 /* RADIO INPUT */
