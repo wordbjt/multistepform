@@ -106,12 +106,14 @@ body {
 }
 
 p {
-	color: rgba(71, 71, 72, 0.7);
+	/*color: rgba(71, 71, 72, 0.7);*/
+	color: #FFF;
 	line-height: 1.5em;
 }
 
 p.content {
-	color: rgba(71, 71, 72, 0.7);
+	/*color: rgba(71, 71, 72, 0.7);*/
+	color: #FFF;
 }
 
 #legal-description-intro,
@@ -513,7 +515,8 @@ display: none;
 	font-weight: 600;
 	text-transform: none;
 	/*color: #2C3E50;*/
-	color: rgb(71, 71, 72);
+	color: color: #215EAC;
+	/*color: rgb(71, 71, 72);*/
 	margin-bottom: 10px;
 }
 
@@ -522,7 +525,8 @@ display: none;
 	font-size: 25px;
 	font-weight: 700;
 	text-transform: none;
-	color: #2C3E50;
+	/*color: #2C3E50;*/
+	color: #215EAC;
 	/*color: rgb(71, 71, 72);*/
 	margin-bottom: 10px;
 }
