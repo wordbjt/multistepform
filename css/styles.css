@@ -125,10 +125,12 @@ p.content {
 	}
 
 #legal-description {
+  color: rgba(71, 71, 72, 1.0);
 	text-align: left;
 	font-size: 12px;
   background-color: rgba(255,255,255, 0.7);
   padding: 25px;
+  margin-bottom: 20px;
 	}
 
 /*form styles*/
@@ -508,7 +510,7 @@ display: none;
 	margin-bottom: 10px;
 }
 .fs-subtitle {
-	font-weight: normal;
+	font-weight: bold;
 	font-size: 13px;
 	/*color: #666;*/
   color: #FFB914;
