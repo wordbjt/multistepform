@@ -472,23 +472,14 @@ display: none;
     box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
     padding: 6px 14px;
     min-height: 40px;
-    background-color: rgb(23, 152, 205);
+    /*background-color: rgb(23, 152, 205);*/
+    background-color: #215EAC;
     color: rgb(255, 255, 255);
     border-radius: 4px;
     -webkit-appearance: none;
 }
 
 #msform .action-button {
-	/*width: 100px;
-	background: #27AE60;
-	font-weight: bold;
-	color: white;
-	border: 0 none;
-	border-radius: 1px;
-	cursor: pointer;
-	padding: 10px 5px;
-	margin: 10px 5px;*/
-
     position: relative;
     font-family: inherit;
     font-weight: 700;
@@ -502,18 +493,21 @@ display: none;
     box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
     padding: 6px 14px;
     min-height: 40px;
-    background-color: rgb(23, 152, 205) !important;
+    /*background-color: rgb(23, 152, 205) !important;*/
+    background-color: rgba(33, 94, 172, 1) !important;	
     color: rgb(255, 255, 255);
     border-radius: 4px;
 }
 #msform .action-button:hover, #msform .action-button:focus {
-	/*box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;*/
-	background-color: rgba(23, 152, 205, 0.8) !important;
+	/*background-color: rgba(23, 152, 205, 0.8) !important;*/
+	background-color: rgba(33, 94, 172, 0.8) !important;
+	
 }
 
 #msform input.action-button:hover, #msform input.action-button:focus {
 	box-shadow: 0 0 0 0px white, 0 0 0 0px #27AE60 !important;
-	background-color: rgba(23, 152, 205, 0.8) !important;
+	/*background-color: rgba(23, 152, 205, 0.8) !important;*/
+	background-color: rgba(33, 94, 172, 0.8) !important;
 }
 
 /*headings*/
