@@ -1,5 +1,5 @@
 @media screen and (max-width: 768px) {
-	
+
 }
 
 /* BLOCK SCROLL */
@@ -75,7 +75,7 @@
     display: inline-block;
 }
 
-#block-up-arrow svg, 
+#block-up-arrow svg,
 #block-down-arrow svg {
     display: block;
     fill: rgb(255, 255, 255);
@@ -104,7 +104,7 @@ body {
 }
 
 #container-wrapper {
-	overflow: hidden;	
+	overflow: hidden;
 }
 
 p {
@@ -153,18 +153,11 @@ p.content {
 	box-sizing: border-box;
 	width: 100%;
 	margin: 0 auto;
-
-	/*stacking fieldsets above each other*/
 	position: relative;
 }
-/*Hide all except first fieldset*/
-/*
-#msform fieldset:not(:first-of-type) {
-	display: none;
-}
-*/
 
-/*inputs*/
+/*Inputs*/
+
 #msform input:not(.action-button):not(.radio-button),
 #msform textarea {
     display: block;
@@ -190,11 +183,11 @@ p.content {
     line-height: unset;
     /* -webkit-text-fill-color: rgba(71, 71, 72, 0.3); */
     /*-webkit-text-fill-color: rgba(71, 71, 72, 1.0);*/
-    -webkit-text-fill-color: rgba(255, 255, 255, 1.0);	
+    -webkit-text-fill-color: rgba(255, 255, 255, 1.0);
     animation: 1ms ease 0s 1 normal none running native-autofill-in;
     transition: background-color 1e+08s ease 0s, box-shadow 0.1s ease-out 0s;
     /*box-shadow: rgb(71 71 72 / 30%) 0px 1px;*/
-    box-shadow: rgb(255 255 255 / 30%) 0px 1px;	
+    box-shadow: rgb(255 255 255 / 30%) 0px 1px;
     background-color: transparent !important;
     margin-top: 25px;
     -webkit-appearance: none;
@@ -203,20 +196,20 @@ p.content {
 #msform input:not(.action-button):not(.radio-button)::placeholder,
 #msform textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
   /*color: rgba(71, 71, 72, 0.3);*/
-  color: rgba(255, 255, 255, 0.3);	
+  color: rgba(255, 255, 255, 0.7);
   opacity: 0.3; /* Firefox */
 }
 
 #msform input:not(.action-button):not(.radio-button):-ms-input-placeholder,
 #msform textarea::placeholder { /* Internet Explorer 10-11 */
   /*color: rgba(71, 71, 72, 0.3);*/
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 #msform input:not(.action-button):not(.radio-button)::-ms-input-placeholder,
 #msform textarea::placeholder { /* Microsoft Edge */
   /*color: rgba(71, 71, 72, 0.3);*/
-  color: rgba(255, 255, 255, 0.3);	
+  color: rgba(255, 255, 255, 0.7);
 }
 
 
@@ -227,7 +220,7 @@ p.content {
 box-shadow: rgb(71 71 72 / 100%) 0px 2px;*/
 color: rgba(255, 255, 255, 1.0);
 -webkit-text-fill-color: rgba(255, 255, 255, 1.0);
-box-shadow: rgb(255 255 255 / 100%) 0px 2px	
+box-shadow: rgb(255 255 255 / 100%) 0px 2px
 }
 
 #msform input:not(.action-button):not(.radio-button):focus {
@@ -236,7 +229,7 @@ box-shadow: rgb(255 255 255 / 100%) 0px 2px
 box-shadow: rgb(71 71 72 / 100%) 0px 2px;*/
 color: rgba(255, 255, 255, 1.0);
 -webkit-text-fill-color: rgba(255, 255, 255, 1.0);
-box-shadow: rgb(255 255 255 / 100%) 0px 2px;	
+box-shadow: rgb(255 255 255 / 100%) 0px 2px;
 }
 
 /* RADIO INPUT */
@@ -300,17 +293,14 @@ box-shadow: rgb(255 255 255 / 100%) 0px 2px;
           appearance: none;
 }
 .radiobtn input[type=radio]:checked + label {
-  /*background: #fdcb77;*/
   backgroud: rgba(71, 71, 72, 0.2);
   -webkit-animation-name: blink;
           animation-name: blink;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
   border-color: rgba(71, 71, 72, 0.8);
-  /*border-color: #fcae2c;*/
 }
 .radiobtn input[type=radio]:checked + label:after {
-  /*background: #fcae2c;*/
   background: rgba(71, 71, 72, 0.8);
 }
 .radiobtn input[type=radio]:checked + label:before {
@@ -320,78 +310,60 @@ box-shadow: rgb(255 255 255 / 100%) 0px 2px;
 
 @-webkit-keyframes blink {
   0% {
-    /*background-color: #fdcb77;*/
     background-color: rgba(71, 71, 72, 0.2);
   }
   10% {
-    /*background-color: #fdcb77;*/
     background-color: rgba(71, 71, 72, 0.2);
   }
   11% {
-    /*background-color: #fdd591;*/
     background-color: rgba(71, 71, 72, 0.5);
   }
   29% {
-    /*background-color: #fdd591;*/
     background-color: rgba(71, 71, 72, 0.5);
   }
   30% {
-    /*background-color: #fdcb77;*/
     background-color: rgba(71, 71, 72, 0.2);
   }
   50% {
-    /*background-color: #fdd591;*/
     background-color: rgba(71, 71, 72, 0.5);
   }
   45% {
-    /*background-color: #fdcb77;*/
     background-color: rgba(71, 71, 72, 0.2);
   }
   50% {
-    /*background-color: #fdd591;*/
     background-color: rgba(71, 71, 72, 0.5);
   }
   100% {
-    /*background-color: #fdcb77;*/
     background-color: rgba(71, 71, 72, 0.2);
   }
 }
 
 @keyframes blink {
   0% {
-    /*background-color: #fdcb77;*/
     background-color: rgba(71, 71, 72, 0.2);
   }
   10% {
-    /*background-color: #fdcb77;*/
     background-color: rgba(71, 71, 72, 0.2);
   }
   11% {
-    /*background-color: #fdd591;*/
     background-color: rgba(71, 71, 72, 0.5);
   }
   29% {
-    /*background-color: #fdd591;*/
     background-color: rgba(71, 71, 72, 0.5);
   }
   30% {
-    /*background-color: #fdcb77;*/
     background-color: rgba(71, 71, 72, 0.2);
   }
   50% {
-    /*background-color: #fdd591;*/
     background-color: rgba(71, 71, 72, 0.5);
   }
   45% {
-    /*background-color: #fdcb77;*/
     background-color: rgba(71, 71, 72, 0.2);
   }
   50% {
-    /*background-color: #fdd591;*/
     background-color: rgba(71, 71, 72, 0.5);
   }
   100% {
-    /*background-color: #fdcb77;*/
     background-color: rgba(71, 71, 72, 0.2);
   }
 }
@@ -404,19 +376,18 @@ font-size: 12px;
 }
 
 #msform .date-wrapper input {
-/*width: 25%;*/
 width: 100%;
 display: inline-block
 }
 
 #msform .date-wrapper input:not(.action-button):not(.radio-button),
 #msform .date-wrapper textarea {
-/*width: 25%;*/
 width: 100%;
 display: inline-block
 }
 
 #msform .date-wrapper .date-spacer {
+color: #FFF;
 padding: 0 5px;
 display: inline-block;
 font-size: 30px;
@@ -425,7 +396,6 @@ margin-top: 45px;
 
 .date-wrapper .column {
   float: left;
-  /*width: 33.33%;*/
   width: 28.33%;
 	}
 .date-wrapper .column-xs {
@@ -447,7 +417,7 @@ margin-top: 25px;
 }
 
 .previous {
-display: none;	
+display: none;
 }
 
 
@@ -457,7 +427,6 @@ display: none;
     /*display: block;*/
     position: relative;
     font-family: "Open Sans", sans-serif;
-    /*font-family: inherit;*/
     font-size: 20px;
     font-weight: 700;
     text-transform: uppercase;
@@ -494,14 +463,14 @@ display: none;
     padding: 6px 14px;
     min-height: 40px;
     /*background-color: rgb(23, 152, 205) !important;*/
-    background-color: rgba(33, 94, 172, 1) !important;	
+    background-color: rgba(33, 94, 172, 1) !important;
     color: rgb(255, 255, 255);
     border-radius: 4px;
 }
 #msform .action-button:hover, #msform .action-button:focus {
 	/*background-color: rgba(23, 152, 205, 0.8) !important;*/
 	background-color: rgba(33, 94, 172, 0.8) !important;
-	
+
 }
 
 #msform input.action-button:hover, #msform input.action-button:focus {
@@ -523,7 +492,7 @@ display: none;
 	font-weight: 600;
 	text-transform: none;
 	/*color: #2C3E50;*/
-	color: color: #215EAC;
+	color: #215EAC;
 	/*color: rgb(71, 71, 72);*/
 	margin-bottom: 10px;
 }
@@ -541,7 +510,8 @@ display: none;
 .fs-subtitle {
 	font-weight: normal;
 	font-size: 13px;
-	color: #666;
+	/*color: #666;*/
+  color: #FFB914;
 	margin-bottom: 20px;
 }
 
@@ -615,7 +585,7 @@ display: none;
 	font-size: 10px;
 	margin-top: 25px;
 	margin-left: 15px;
-	display: inline-block;	
+	display: inline-block;
 }
 
 /* VALIDATION */
@@ -655,17 +625,8 @@ input.action-button:disabled {
 /* SUCCESS MESSAGE */
 
 #success-message {
+    color: #FFF;
     width: 100%;
-    max-width: 720px;
-    margin: 0px auto;
-    text-align: center;
-    position: relative;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    -webkit-box-pack: center;
-    justify-content: center;
-	    width: 100%;
     max-width: 720px;
     margin: 0px auto;
     text-align: center;
