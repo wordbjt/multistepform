@@ -1,14 +1,11 @@
 // VALIDATE
-
 $(document).ready(function() {
 	
 var oid ="00D5j000008zN11";
-$("input[name=oid]").val(oid);
-	
+$("input[name=oid]").val(oid);	
 	$("#msform").validate({
 
 // SUBMIT
-
 submitHandler: function(form) {
 var prod ="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8";	
 console.log('valid form submission');
@@ -26,7 +23,7 @@ console.log('valid form submission');
         //}
     });
 
-	console.log("Submitted");
+	//console.log("Submitted");
 
         $('#msform').hide();
         $('#success-message').fadeIn(750);
@@ -34,7 +31,7 @@ console.log('valid form submission');
     return false;
 },
 
-// other options
+// Other Validate Options
 
 	  ignore: [],
 
@@ -74,110 +71,75 @@ rules: {
       		required: true
     	  },
 	  fundraise_pack: {
-      		//required: true
     	  },
 	  event_title: {
-      		//required: true
     	  },
 	  venue: {
-      		//required: true
     	  },
 	  start_date: {
-      		//required: true
     	  },
 	  start_day: {
-      		//required: true,
 		digits: true,
 		maxlength: 2
     	  },
 	  start_month: {
-      		//required: true,
 		digits: true,
 		maxlength: 2
     	  },
 	  start_year: {
-      		//required: true,
 		digits: true
     	  },
 	  finish_date: {
-      		//required: true
     	  },
 	  finish_day: {
-      		//required: true,
 		digits: true,
 		maxlength: 2
     	  },
 	  finish_month: {
-      		//required: true,
 		digits: true,
 		maxlength: 2
     	  },
 	  finish_year: {
-      		//required: true,
 		digits: true
     	  },
           time: {
-      		//required: true
     	  },
 	  participants: {
-      		//required: true,
 		digits: true
     	  },
 	  fundraising_activity: {
-      		//required: true
     	  },
 	  fundraise_destination: {
-      		//required: true
     	  },
 	  insurance: {
-      		//required: true
     	  },
 	  guidelines: {
-      		//required: true
-    	  },
+=    	  },
 	  declaration: {
-      		//required: true
     	  }
-
       },
 
-    // change name of error class that is assigned to input fields and placement
+    // Change name of error class that is assigned to input fields and placement
 
-errorPlacement:
-function( error, element ){
-if(element.is( ":radio" )){
-// error append here
-//error.appendTo('.active-div div.action-wrapper');
-error.prepend('.active-div div.action-wrapper');
-}
-else {
-error.insertAfter(element);
-}
-}
-
-    //errorClass: 'error_validate',
-    //errorPlacement: function (label, element) {
-
-    //     default
-    //    if (element.is(':radio')) {
-           //label.insertAfter(element.next('label'));
-	   //label.insertBefore(element('div.action-wrapper'));
-
-      // }
-      //  else {
-      //      label.insertAfter(element);
-      //  }
-    //}
-
+	errorPlacement:
+	function( error, element ){
+	  if(element.is( ":radio" )){
+	  // error append here
+	  error.prepend('.active-div div.action-wrapper');
+	  }
+	  else {
+	  error.insertAfter(element);
+	  }
+	}
 });
-
   
    $('#conditional input[type="radio"]').click(function() {
     if($(this).attr('id') == 'checkbox-online') {
     $('#submit-form-11').fadeIn('slow');
     $('#continue-form-11').fadeOut('slow');
     $('.conditional-section').hide();
-
+	    
+    // Disable required for path 2
     $("input[name='fundraise_pack']").attr("required", false);
     $("input[name='event_title']").attr("required", false);
     $("input[name='venue']").attr("required", false);
@@ -198,6 +160,7 @@ error.insertAfter(element);
     $("input[name='declaration']").attr("required", false);
 
   } else {
+    // Enable required for path 2
     $("input[name='fundraise_pack']").attr("required", true);
     $("input[name='event_title']").attr("required", true);
     $("input[name='venue']").attr("required", true);
@@ -242,15 +205,14 @@ $input.on('keydown', function () {
 
 //user is "finished typing," do something
 function doneTyping () {
-  //do something
   if ($(".active-div input, .active-div textarea").not(':button').valid()) {
     $('.active-div .next').prop('disabled', false);
-} else {
+  } else {
     $('.active-div .next').prop('disabled', 'disabled');
-}
+  }
 }
   
-// Enable Disable Next Button
+// Enable or Disable Next Button
     $('input[type=time]').on('blur', function() {
         if ($(".active-div input[type=time]").valid()) {
             $('.active-div .next').prop('disabled', false);
