@@ -32,7 +32,7 @@ console.log('valid form submission');
 },
 
 // Other Validate Options
-
+		
 	  ignore: [],
 
 rules: {
@@ -114,13 +114,12 @@ rules: {
 	  insurance: {
     	  },
 	  guidelines: {
-=    	  },
+    	  },
 	  declaration: {
     	  }
       },
 
     // Change name of error class that is assigned to input fields and placement
-
 	errorPlacement:
 	function( error, element ){
 	  if(element.is( ":radio" )){
