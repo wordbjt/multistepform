@@ -74,8 +74,7 @@
       $("#block-down-arrow").click(function() {
         goDown();
 	//navgoDown();
-      });
-	    
+      });    
 	    
       $(".previous").click(function() {
         goUp();
@@ -84,7 +83,6 @@
       $(".next").click(function() {
         goDown();
       });
-
 
       $(document).keydown(function(e){
           if (e.keyCode == 37 || e.keyCode == 38) {
@@ -103,26 +101,10 @@
     	if(keycode == '13') {
 	     goDown();
              return false;	
-             //alert('You pressed a "enter" key in input');
     	}
       });
 
-	    
-	    
-
-	    // ORIGINAL MOUSEWHEEL 
-	    
-	    	//$(window).bind('wheel', function(e){
-			//if(e.originalEvent.wheelDelta > 119) {
-			//	goUp();
-			//}
-			//else if (e.originalEvent.wheelDelta < -119) {
-			//	goDown();
-			//}
-		//});
-
 // ALLOW SCROLL - GUIDELINES AND DECLARATION
-	    
 $.fn.isInViewport = function () {
     let elementTop = $(this).offset().top;
     let elementBottom = elementTop + $(this).outerHeight();
@@ -157,11 +139,9 @@ $('#guidelines fieldset').scroll(function () {
     		//console.log('Guidelines in view not checked');
   	  }
   }
-});
+});	    
 	    
-	    
-// GUIDELINES & DECLARATION MOBILE SCROLL FIX - START
-	    
+// GUIDELINES & DECLARATION MOBILE SCROLL FIX - START	    
 $(window).scroll(function () {
   if ($('#guidelines').isInViewport()) {
     $("#legal-description-intro").css("font-size", "13px");
@@ -180,8 +160,8 @@ $(window).scroll(function () {
     $("#declaration #fundraising-declaration").css("font-size", "0px");	  
   }	
 }); 
-// GUIDELINES & DECLARATION MOBILE SCROLL FIX - END
-	
+
+// SCROLL
 $(window).scroll(function () {
 	
  if ($('#guidelines').isInViewport()) {
@@ -238,21 +218,10 @@ $(window).scroll(function () {
         //console.log('Not guidelines - Scroll Down');
         }
 }	
-
-}); 
-  
-		//$(window).bind('DOMMouseScroll', function(e){
-		//	if(e.originalEvent.detail < 0) {
-		//		goUp();
-		//	}
-		//	else if (e.originalEvent.detail > 0) {
-		//		goDown();
-		//	}
-		//});
+});
 	    
-    }
+}
 	
-
     // Guidelines to Declaraction
        $('#guidelines input[type="radio"]').click(function() {
         //console.log("Accept button clicked!");
@@ -266,8 +235,7 @@ $(window).scroll(function () {
       }
     });  
 	  
-// DATE
-	  
+// DATE	  
   $("#startDay, #startMonth, #startYear").on("input", function() {
     var startDayValue = $("#startDay").val(); // this gives textbox value
     var startMonthValue = $("#startMonth").val(); // this gives textbox value
@@ -294,25 +262,20 @@ $(window).scroll(function () {
 
 	  
 // GUIDELINES IF ACCEPTED
-	  
 $("input[name='guidelines']").click(function() {
         if($(this).is(':checked'))
 	     $('#guidelines .next').prop('disabled', false);
-	    //goDown();
-            console.log('Guidelines accepted go down');
-        //else
-        //    alert('unchecked');
+            //console.log('Guidelines accepted go down');
     });
 	  
 	  
 // UP
-	  
     function goUp()
     {
       if(activeDiv > 0 && !activelyScrolling)
       {
 	if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up')) && (!$('#guidelines').hasClass('scroll-down'))) {
-	// Do Nothing	
+	// Do Nothing
 	//console.log('Guidelines no Scroll Up or Scroll Down');
 	} else {
 				
@@ -323,7 +286,6 @@ $("input[name='guidelines']").click(function() {
 	}
 	      
 	// If has required-field disable next button
-						       
 	  if ($('.active-div .action-wrapper').hasClass("required-field")) {
 	      $('.active-div .required-field .next').prop('disabled', 'disabled');
         } else {
@@ -331,7 +293,6 @@ $("input[name='guidelines']").click(function() {
         }
 	      
 	// Radio button on click
-	      
 	$(".active-div .radiobtn").unbind("click").bind("click", function() {
     		if ($(".active-div input[type='radio']").is(':checked')) {
 			$('.active-div .next').prop('disabled', false); 
@@ -393,12 +354,10 @@ $("input[name='guidelines']").click(function() {
         }
 	      
 	// If radio input is checked enable next
-
     	if ($('.active-div input[type=radio]').length > 0 ) {
      	//console.log('Radio input exists');
 		
 		// If radio input is checked enable next
-	      
         	if ($(".active-div input[type='radio']").is(':checked')) {
 		$('.active-div .next').prop('disabled', false);
         	//console.log('Radio input is checked - enable next button');
@@ -417,7 +376,6 @@ $("input[name='guidelines']").click(function() {
     }
 
 // DOWN
-
     function goDown()
     {
       if(activeDiv < totalDivs - 1 && !activelyScrolling)
@@ -442,7 +400,6 @@ $("input[name='guidelines']").click(function() {
 	}
 	      
 	// If has required-field disable next button
-						       
 	  if ($('.active-div .action-wrapper').hasClass("required-field")) {
 	      $('.active-div .required-field .next').prop('disabled', 'disabled');
         } else {
@@ -450,7 +407,6 @@ $("input[name='guidelines']").click(function() {
         }
 	      
 	// Radio button on click
-	    
 	$(".active-div .radiobtn").unbind("click").bind("click", function() {
     		if ($(".active-div input[type='radio']").is(':checked')) {
 			$('.active-div .next').prop('disabled', false); 
@@ -479,7 +435,6 @@ $("input[name='guidelines']").click(function() {
 	//console.log('Guidelines input exists');
 		
 		// If radio input is checked enable next
-	      
         	if ($("#guidelines input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', false);
 		//console.log('Guidelines input is checked - enable next button');	
@@ -502,7 +457,6 @@ $("input[name='guidelines']").click(function() {
 	}
 	      
   	// If input text or text area has value enable next
-    
         if ($('.active-div input:not([type=radio], [type=button], [type=submit]), .active-div textarea').val() == '') {
         //console.log('Input text or textarea is empty - do nothing');
         }
@@ -513,12 +467,10 @@ $("input[name='guidelines']").click(function() {
         }
 	      
 	// If radio input is checked enable next
-
     	if ($('.active-div input[type=radio]').length > 0 ) {
      	//alert('Radio input exists');
 		
 		// If radio input is checked enable next
-	      
         	if ($(".active-div input[type='radio']").is(':checked')) {
 		$('.active-div .next').prop('disabled', false);
         	//console.log('Radio input is checked - enable next button');
@@ -537,7 +489,6 @@ $("input[name='guidelines']").click(function() {
 	  
 	  
 // NAV GO UP DOWN	  
-	  
 function navgoUp()
 {
   if(activeDiv > 0 && !activelyScrolling)
@@ -557,9 +508,6 @@ function navgoDown()
     $(theDivs[activeDiv-1]).removeClass("active-div");
   }
 }
-
-	        
-
 
     function gotoDiv(number)
     {
