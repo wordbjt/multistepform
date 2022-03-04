@@ -8,7 +8,7 @@ $("input[name=oid]").val(oid);
 // SUBMIT
 submitHandler: function(form) {
 var prod ="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8";	
-console.log('valid form submission');
+//console.log('valid form submission');
 
     $.ajax({
         url: prod,
@@ -16,11 +16,6 @@ console.log('valid form submission');
         dataType: 'jsonp',
         jsonp: '$callback',
         data: $('#msform *').serialize()
-        //success: function(data) {
-        //    $('#msform').hide();
-        //    $("#success-message").show();
-	//    console.log('Show success');
-        //}
     });
 
 	//console.log("Submitted");
@@ -138,7 +133,7 @@ rules: {
     $('#continue-form-11').fadeOut('slow');
     $('.conditional-section').hide();
 	    
-    // Disable required for path 2
+    // Disable required for online
     $("input[name='fundraise_pack']").attr("required", false);
     $("input[name='event_title']").attr("required", false);
     $("input[name='venue']").attr("required", false);
@@ -159,7 +154,7 @@ rules: {
     $("input[name='declaration']").attr("required", false);
 
   } else {
-    // Enable required for path 2
+    // Enable required for face to face
     $("input[name='fundraise_pack']").attr("required", true);
     $("input[name='event_title']").attr("required", true);
     $("input[name='venue']").attr("required", true);
