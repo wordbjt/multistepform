@@ -2,7 +2,7 @@
 
   $.fn.blockScroll = function(options) {
     var settings = $.extend({
-      // These are the defaults.
+      // These are the defaults
       startDiv : 1,
       fadeDuration : "fast",
       paddingRatio : 0.05,
@@ -120,11 +120,9 @@ $('#guidelines fieldset').on('scroll', function() {
   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
     $("#guidelines").addClass("scroll-down");
     $("#guidelines").removeClass("scroll-up");
-    //console.log('Bottom!');
   } else if (scrollTop <= 0) {
     $("#guidelines").addClass("scroll-up");
     $("#guidelines").removeClass("scroll-down");	  
-    //console.log('Top!');
   } 
 });	    
 
@@ -132,11 +130,9 @@ $('#guidelines fieldset').scroll(function () {
   if ($('#guidelines').isInViewport()) {
 	  if ($("input[name='guidelines']").is(':checked')) {
     		$("#declaration").css("display", "block");
-		//console.log('Guidelines in view checked');
 	  }
 	  else if (!$("input[name='guidelines']").is(':checked')) {
     		$("#declaration").css("display", "none");
-    		//console.log('Guidelines in view not checked');
   	  }
   }
 });	    
@@ -165,23 +161,17 @@ $(window).scroll(function () {
 $(window).scroll(function () {
 	
  if ($('#guidelines').isInViewport()) {
-     //console.log('Guidelines in view');
-
    $(window).bind('wheel', function(e){
      
        if (e.originalEvent.wheelDelta > 119) {
          if ($('#guidelines').hasClass('scroll-up')) {
          goUp();
-         //console.log('Guidelines - Scroll Up');
          } else if (!$('#guidelines').hasClass('scroll-up')) {
-         //console.log('Guidelines - No Scroll Up');
          }
      } else if (e.originalEvent.wheelDelta > -119) {
          if ($('#guidelines').hasClass('scroll-down')) {
          goDown();
-         //console.log('Guidelines - Scroll Down');
          } else if (!$('#guidelines').hasClass('scroll-down')) {
-         //console.log('Guidelines - No Scroll Down');
          }
      }
    });
@@ -189,18 +179,15 @@ $(window).scroll(function () {
 } else if (!$('#guidelines').isInViewport()) {
      $("#guidelines").removeClass("scroll-down");
      $("#guidelines").removeClass("scroll-up");
-     //console.log('Guidelines not in view');
 
    $(window).bind('wheel', function(e){	
      if (e.originalEvent.wheelDelta > 119) {
         if ($('#msform>div').not('#guidelines')) {
         goUp();
-        //console.log('Not guidelines - Scroll Up');
         }
     } else if (e.originalEvent.wheelDelta < -119) {
         if ($('#msform>div').not('#guidelines')) {
         goDown();
-        //console.log('Not guidelines - Scroll Down');
         }
     }
    });
@@ -208,14 +195,11 @@ $(window).scroll(function () {
 } else if (!$('#guidelines').isInViewport()) {
      $("#guidelines").removeClass("scroll-down");
      $("#guidelines").removeClass("scroll-up");
-     //console.log('Guidelines not in view');
 	
         if ($('#msform>div').not('#guidelines')) {
         goUp();
-        //console.log('Not guidelines - Scroll Up');
     	} else if ($('#msform>div').not('#guidelines')) {
         goDown();
-        //console.log('Not guidelines - Scroll Down');
         }
 }	
 });
@@ -224,10 +208,8 @@ $(window).scroll(function () {
 	
     // Guidelines to Declaraction
        $('#guidelines input[type="radio"]').click(function() {
-        //console.log("Accept button clicked!");
         if($(this).attr('id') == 'radio-guidelines-accept') {
         $('#guidelines .next').prop('disabled', false);
-        //console.log("Accepted!");
         $("#declaration").css("display", "block");
       } else {
         $('#declaration .next').prop('disabled', 'disabled');
@@ -245,7 +227,6 @@ $(window).scroll(function () {
     var startDateValue = startDayValue+'-'+startMonthValue+'-'+startYearValue;
 
     $("input[name=start_date]").val(startDateValue); // this will set hidden field value
-    //console.log(startDateValue);
   });
 
   $("#finishDay, #finishMonth, #finishYear").on("input", function() {
@@ -257,7 +238,6 @@ $(window).scroll(function () {
     var finishDateValue = finishDayValue+'-'+finishMonthValue+'-'+finishYearValue;
 
     $("input[name=finish_date]").val(finishDateValue); // this will set hidden field value
-    //console.log(finishDateValue);
   });	  
 
 	  
@@ -265,7 +245,6 @@ $(window).scroll(function () {
 $("input[name='guidelines']").click(function() {
         if($(this).is(':checked'))
 	     $('#guidelines .next').prop('disabled', false);
-            //console.log('Guidelines accepted go down');
     });
 	  
 	  
@@ -276,7 +255,6 @@ $("input[name='guidelines']").click(function() {
       {
 	if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up')) && (!$('#guidelines').hasClass('scroll-down'))) {
 	// Do Nothing
-	//console.log('Guidelines no Scroll Up or Scroll Down');
 	} else {
 				
         gotoDiv(activeDiv-1);
@@ -296,11 +274,9 @@ $("input[name='guidelines']").click(function() {
 	$(".active-div .radiobtn").unbind("click").bind("click", function() {
     		if ($(".active-div input[type='radio']").is(':checked')) {
 			$('.active-div .next').prop('disabled', false); 
-      			//console.log('One of the radio buttons is checked!');
     		}
     		else {
 			$('.active-div .next').prop('disabled', 'disabled'); 
-        		//console.log('Nothing is checked!');
     		}
   	});
 	      
@@ -308,70 +284,55 @@ $("input[name='guidelines']").click(function() {
 	if ($('.active-div').hasClass("radio-field")) {
 		if ($(".active-div input[type='radio']").is(':checked')) {
 			$('.active-div .next').prop('disabled', false); 
-      			//console.log('One of the radio buttons is checked!');
     		}
     		else {
       			$('.active-div .next').prop('disabled', 'disabled'); 
-        		//console.log('Nothing is checked!');
     		}
 	}
 	      
 	// Guidelines - If radio input is checked enable next
     	if ($('#guidelines input[type=radio]').length > 0 ) {
-	//console.log('Guidelines input exists');
 		
 		// If radio input is checked enable next
         	if ($("#guidelines input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', false);
-		//console.log('Guidelines input is checked - enable next button');	
 		}
         	else if (!$("#guidelines input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', 'disabled');
-		//console.log('Guidelines input is not checked - disable next button');
         	}
         	else if ($(".scroll-down input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', false);
-		//console.log('Guidelines input is checked - enable next button');	
 		}
         	else if (!$(".scroll-down input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', 'disabled');
-		//console.log('Guidelines input is not checked - disable next button');
         	}
 	      
 	} else {
-	//console.log('Guidelines input does not exist');
+	// Nothing
 	}
 	      
   	// If input text or text area has value enable next
     
         if ($('.active-div input:not([type=radio], [type=button], [type=submit]), .active-div textarea').val() == '') {
-        //console.log('Input text or textarea is empty - do nothing');
         }
         //else {
 	else if (!$('.active-div input:not([type=radio], [type=button], [type=submit]), .active-div textarea').val() == '') {
         $('.active-div .next').prop('disabled', false);
-        //console.log('Input text or textarea has value - enable next button');
         }
 	      
 	// If radio input is checked enable next
     	if ($('.active-div input[type=radio]').length > 0 ) {
-     	//console.log('Radio input exists');
-		
 		// If radio input is checked enable next
         	if ($(".active-div input[type='radio']").is(':checked')) {
 		$('.active-div .next').prop('disabled', false);
-        	//console.log('Radio input is checked - enable next button');
 		}
         	else if (!$(".active-div input[type='radio']").is(':checked')) {
 		$('.active-div .next').prop('disabled', 'disabled');
-        	//console.log('Radio input is not checked - disable next button');
         	}
 		
 	} else {
-	//console.log('Radio input does not exist');
-	}
-
-	      
+	// Nothing
+	}      
       }
     }
 
@@ -381,17 +342,13 @@ $("input[name='guidelines']").click(function() {
       if(activeDiv < totalDivs - 1 && !activelyScrolling)
       {
 	if (($('#guidelines').isInViewport()) && (!$('#guidelines').hasClass('scroll-up')) && (!$('#guidelines').hasClass('scroll-down'))) {
-	// Do Nothing
-	//console.log('Guidelines no Scroll Up or Scroll Down');
 	} else if ($('#guidelines').isInViewport()) {
 		if (!$("input[name='guidelines']").is(':checked')) {
-    		   //console.log('Func Guidelines in view not checked');
   	  	}
 		else if ($("input[name='guidelines']").is(':checked')) {
 		   gotoDiv(activeDiv+1);
 	           $(theDivs[activeDiv]).addClass("active-div");
 		   $(theDivs[activeDiv-1]).removeClass("active-div");
-    		   //console.log('Func Guidelines in view checked');
   	  	}
 	} else {
         gotoDiv(activeDiv+1);
@@ -410,11 +367,9 @@ $("input[name='guidelines']").click(function() {
 	$(".active-div .radiobtn").unbind("click").bind("click", function() {
     		if ($(".active-div input[type='radio']").is(':checked')) {
 			$('.active-div .next').prop('disabled', false); 
-      			//console.log('One of the radio buttons is checked!');
     		}
     		else {
 			$('.active-div .next').prop('disabled', 'disabled'); 
-        		//console.log('Nothing is checked!');
     		}
   	});
 	      
@@ -422,66 +377,54 @@ $("input[name='guidelines']").click(function() {
 	if ($('.active-div').hasClass("radio-field")) {
 		if ($(".active-div input[type='radio']").is(':checked')) {
 			$('.active-div .next').prop('disabled', false); 
-      			//console.log('One of the radio buttons is checked!');
     		}
     		else {
       			$('.active-div .next').prop('disabled', 'disabled'); 
-        		//console.log('Nothing is checked!');
     		}
 	}
 	      
 	// Guidelines - If radio input is checked enable next
     	if ($('#guidelines input[type=radio]').length > 0 ) {
-	//console.log('Guidelines input exists');
 		
 		// If radio input is checked enable next
         	if ($("#guidelines input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', false);
-		//console.log('Guidelines input is checked - enable next button');	
 		}
         	else if (!$("#guidelines input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', 'disabled');
-		//console.log('Guidelines input is not checked - disable next button');
         	}
         	else if ($(".scroll-down input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', false);
-		//console.log('Guidelines input is checked - enable next button');	
 		}
         	else if (!$(".scroll-down input[type='radio']").is(':checked')) {
 		$('#guidelines .next').prop('disabled', 'disabled');
-		//console.log('Guidelines input is not checked - disable next button');
         	}
 	      
 	} else {
-	//console.log('Guidelines input does not exist');
+	// Nothing
 	}
 	      
   	// If input text or text area has value enable next
         if ($('.active-div input:not([type=radio], [type=button], [type=submit]), .active-div textarea').val() == '') {
-        //console.log('Input text or textarea is empty - do nothing');
         }
         //else {
 	else if (!$('.active-div input:not([type=radio], [type=button], [type=submit]), .active-div textarea').val() == '') {
         $('.active-div .next').prop('disabled', false);
-        //console.log('Input text or textarea has value - enable next button');
         }
 	      
 	// If radio input is checked enable next
     	if ($('.active-div input[type=radio]').length > 0 ) {
-     	//alert('Radio input exists');
 		
 		// If radio input is checked enable next
         	if ($(".active-div input[type='radio']").is(':checked')) {
 		$('.active-div .next').prop('disabled', false);
-        	//console.log('Radio input is checked - enable next button');
 		}
         	else if (!$(".active-div input[type='radio']").is(':checked')) {
 		$('.active-div .next').prop('disabled', 'disabled');
-        	//console.log('Radio input is not checked - disable next button');
         	}
 		
 	} else {
-	//console.log('Radio input does not exist');
+	// Nothing
 	}
 	
       }
